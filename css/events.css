@@ -156,6 +156,7 @@ a {
     margin: auto;
     mix-blend-mode: color-dodge;
     opacity: 40%;
+    pointer-events: none;
 }
 canvas {
     width: 100%;
