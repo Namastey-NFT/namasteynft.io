@@ -645,3 +645,12 @@ $("#my_designation").typeIt({
     .tiDelete()
     .tiType("Charted Accountent");
     }
+
+
+//1650956400000 = 12:30 PM 26 Aor 2022
+(function(){
+    if(+ new Date > 1650956400000 ){ 
+        $(".hidden_div").addClass("visible_div changed").removeClass('hidden_div')
+        $(".visible_div").not(".changed").addClass('hidden_div').removeClass("visible_div")
+    }
+})()

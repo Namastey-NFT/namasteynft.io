@@ -347,3 +347,11 @@ canvas {
 		margin-right: 0px
 	}
  }
+
+ .visible_div{
+	display: inherit;
+ }
+
+ .hidden_div{
+	display: none !important;
+ }
