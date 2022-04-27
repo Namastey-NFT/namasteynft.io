@@ -237,7 +237,8 @@
                                 <div class="Img_right first_slide">
                                     <div class="row">
                                         <div class="col-sm-12 text-center rocket"><img loading="lazy" class=''
-                                                src='img/rocket.png' />
+                                                src= 'img/logo_decentology_rocket.svg'
+                                                style="width:auto"/>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -488,9 +489,16 @@
             <div class=" text-center">
                 <!-- <a href="events.html" class="letsgo-link">Let's Go</a> -->
                 <a href="events.html" class="btn btn-blue btn-large margin-20px-top lfg-btn">EVENT INFO</a>
-                <a href="https://namasteynft.typeform.com/register"
+                <!-- <a href="https://namasteynft.typeform.com/register"
                     class="btn btn-blue btn-large margin-20px-top lfg-btn" target="_blank">Event
-                    Registration</a>
+                    Registration</a> -->
+                        <button data-tf-popup="uIf03LNw" data-tf-auto-close="5000"
+                            data-tf-iframe-props="title=NamasteyNFT Bengaluru 2022 Event Registration" data-tf-medium="snippet"
+                            class="btn btn-blue btn-large margin-20px-top lfg-btn"
+                            >Event
+                            Registration
+                        </button>
+                        </div>
                 <!-- <a href="https://namasteynft.typeform.com/art-submit"
                     class="btn btn-blue btn-large margin-20px-top lfg-btn">Submit your entry</a> -->
             </div>
@@ -1517,7 +1525,7 @@
                 <div class="container">
                     <div class="footer_top">
                         <div class="footer_left">
-                            <div class="logo"><img loading="lazy" src="img/event_page_banner.svg" /></div>
+                            <div class="logo"><img loading="lazy" src='img/NamasteyNFTblr_decentology_w.svg' style=' width:auto ' /></div>
                             <ul>
                                 <li><a href="#home" class="scroll">Home</a></li>
                                 <li><a href="#event" class="scroll">Events</a></li>
@@ -1611,43 +1619,44 @@
 
 
     <script>
-        let countDownBox = document.querySelector(".allTime");
-        let daysBox = document.querySelector(".days");
-        let hrsBox = document.querySelector(".hrs");
-        let minBox = document.querySelector(".min");
-        let secBox = document.querySelector(".sec");
-        let countDownDate = new Date("May 14, 2022 00:01:00").getTime();
+          let countDownBox = document.querySelector(".allTime");
+            let daysBox = document.querySelector(".days");
+            let hrsBox = document.querySelector(".hrs");
+            let minBox = document.querySelector(".min");
+            let secBox = document.querySelector(".sec");
+            let countDownDate = new Date("May 14, 2022 00:01:00").getTime();
 
-        // COUNT DOWN FUNCTION
-        let x = setInterval(function () {
+            // COUNT DOWN FUNCTION
+            let x = setInterval(function () {
 
-            // GET DATE
-            let now = new Date().getTime();
+                // GET DATE
+                let now = new Date().getTime();
 
-            // TIME BETWEEN NOW AND DATE
-            let distance = countDownDate - now;
+                // TIME BETWEEN NOW AND DATE
+                let distance = countDownDate - now;
 
-            // CALCULATION TIME
-            let days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                // CALCULATION TIME
+                let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            daysBox.innerHTML = days + "<span>Days</span>";
-            hrsBox.innerHTML = hours + "<span>Hours</span>";
-            minBox.innerHTML = minutes + "<span>Minutes</span>";
-            secBox.innerHTML = seconds + "<span>Seconds</span>";
+                daysBox.innerHTML = days + "<span>Days</span>";
+                hrsBox.innerHTML = hours + "<span>Hours</span>";
+                minBox.innerHTML = minutes + "<span>Minutes</span>";
+                secBox.innerHTML = seconds + "<span>Seconds</span>";
 
-            // IF FINISH
-            if (distance < 0) {
-                clearInterval(x);
-                countDownBox.innerHTML = "¡FELICIDADES!";
-            }
-        }, 1000);
+                // IF FINISH
+                if (distance < 0) {
+                    clearInterval(x);
+                    countDownBox.innerHTML = "EVENT STARTED";
+                }
+            }, 1000);
+    </script>
     </script>
     <script src="js/main.js"></script>
 
-    <div class="hidden_div" data-tf-sidetab="uIf03LNw" data-tf-width="320" data-tf-height="400"
+    <div class="" data-tf-sidetab="uIf03LNw" data-tf-width="320" data-tf-height="400"
         data-tf-custom-icon="https://images.typeform.com/images/xAVY6isuAer5" data-tf-open="scroll"
         data-tf-open-value="30" data-tf-auto-close="2000" data-tf-button-color="#FA2F05"
         data-tf-button-text="Event Registration" data-tf-iframe-props="title=NamasteyNFT Art Submission for Exhibition"
