@@ -282,28 +282,28 @@ $(document).ready(function () {
         }
     });
 
-    var owl4 = $('.owl-testimonial');
-    owl4.owlCarousel({
-        loop: true,
-        dots: true,
-        autoplay: true,
-        autoplayTimeout: 5000,
-        autoplayHoverPause: false,
-        responsiveClass: true,
-        responsive: {
-            0: {
-                items: 1,
+        var owl4 = $('.owl-testimonial');
+        owl4.owlCarousel({
+            loop: true,
+            dots: true,
+            autoplay: false,
+            autoplayTimeout: 5000,
+            autoplayHoverPause: false,
+            responsiveClass: true,
+            responsive: {
+                0: {
+                    items: 1,
 
-            },
-            600: {
-                items: 1,
+                },
+                600: {
+                    items: 1,
 
-            },
-            1000: {
-                items: 1,
+                },
+                1000: {
+                    items: 1,
+                }
             }
-        }
-    });
+        });
 
     /* ===================================
      owl end
