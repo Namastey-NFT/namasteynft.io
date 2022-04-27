@@ -73,7 +73,7 @@ a {
     width:50%; padding-right:0px; position:relative; z-index:1;
 }
 
-.btn.btn-blue.event_hero_entry_btn{ width:100%; color:#FF4320 !important; text-align:center; background:rgba(0,0,0,0.6) !important; border-color:#FF4320 !important; border-radius:16px; font-size:25px; margin-bottom:5px;}
+.btn.btn-blue.event_hero_entry_btn{    height: 70px; width:100%; color:#FF4320 !important; text-align:center; background:rgba(0,0,0,0.6) !important; border-color:#FF4320 !important; border-radius:16px; font-size:25px; margin-bottom:5px;}
 .submit_date{display: flex; flex-wrap: wrap; justify-content: space-between; align-items:center;}
 .submit_date p{ font-style: normal; font-weight: 400; font-size: 16px; line-height: 28px; color: #FFFFFF; font-family: 'Rubik', sans-serif; margin:0;}
 .submit_date p strong{font-weight:600;}

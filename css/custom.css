@@ -18,7 +18,7 @@ backdrop-filter: blur(50px); border-radius: 20px; border:3px solid #ffffff;}
 .rocket_action{background:rgba(0,0,0,0.50); border-radius: 8px; padding:20px; margin-top:20px;}
 .rocket_action .rocket_button{justify-content: space-between; align-items: center; display: flex;}
 .rocket_action .rocket_button a{font-family: 'Montserrat', sans-serif; font-size:20px; font-weight:600; padding:9px 18px; color:#ffffff;}
-.rocket_action .rocket_button a.event_detail_btn{ background:#00EE6C !important; color:#000000 !important; border-color: #00EE6C!important;}
+.rocket_action .rocket_button a.event_detail_btn{ background:#00EE6C !important; color:#000000 !important; border-color: #00EE6C!important; width:100%; font-size: 20px; padding: 10px;margin-left: 18px;}
 .rocket_action p{color:rgba(255,255,255,0.50); text-align:right; font-family: 'Montserrat', sans-serif; font-size:12px; margin:0; padding:0;}
 
 .allTime {align-items: center; display: flex; flex-wrap: nowrap; flex-direction: row; font-size: 4rem; font-weight: 800; justify-content: center;}
