@@ -1,4 +1,4 @@
-export const abi = [
+const abi = [
   {
     inputs: [{ internalType: "address", name: "_treasury", type: "address" }],
     stateMutability: "nonpayable",
