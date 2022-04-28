@@ -5,5 +5,5 @@
 - [x] ~~LOGOS & ALIGNMENT~~
 - [ ] SPONSORSHIP
   - [x] SECTION MADE, _waiting for logos_
-  -[ ] waiting for html structure from jalpesh
+  - [ ] waiting for html structure from jalpesh
 - [ ] speaker and workshops  
