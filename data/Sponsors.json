@@ -1,0 +1,35 @@
+{
+    "Sponsers":[
+        {
+            "name":"Decentology",
+            "img":"https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png",
+            "title": "Title Sponsor"
+        },
+        {
+            "name": "NifyDreams",
+            "img": "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png",
+            "title": "Brand Partner"
+        },
+        {
+            "name": "TryCrypto",
+            "img": "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png",
+            "title": "Brand Partner"
+        },
+        {
+            "name": "Yourstory",
+            "img": "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png",
+            "title": "Digital Media Partner"
+        },
+        {
+            "name": "Draper House",
+            "img": "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png",
+            "title": "Outreach Partner"
+        },
+        {
+            "name": "MetaSky",
+            "img": "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png",
+            "title": "Startup Partner"
+        }
+        
+    ]
+}
