@@ -1,7 +1,7 @@
 {
   "Speakers": [
     {
-      "__EMPTY": "Cyber Shakti",
+      "Name": "Cyber Shakti",
       "Genre ": "Art",
       "Specialization": "AVP Marketing, NFTically ",
       "Short description": "Cyber Shakti Glitch Art Queen Supreme from Mumbai! A multidisciplinary artist, she is the voice of the Divine feminine. She is a MICA Alumni with over 10 years in Marketing for the advertising, media & Entertainment industries.",
@@ -13,7 +13,7 @@
       "Contact Number ": 9022994320
     },
     {
-      "__EMPTY": "Vishwas Bhushan",
+      "Name": "Vishwas Bhushan",
       "Genre ": "Art",
       "Specialization": "Founder, Codemire                                                                      3D and generative",
       "Short description": "Vishwas Bhushan is a 3D and generative artist who have been in the NFT space for more than a year. I do run a game studio and we are working on gamefi project. ",
@@ -23,7 +23,7 @@
       "Travelling from": "Bangalore"
     },
     {
-      "__EMPTY": "Mayura Balasubrmnin",
+      "Name": "Mayura Balasubrmnin",
       "Genre ": "Art",
       "Short description": "Mayura Balasubramanian is the founder and CEO of Craftizen Foundation, a social enterprise that enables craft based livelihoods for traditional artisans as well as marginalized communities who have limited access to mainstream opportunities for income earning. To date Craftizen has positively impacted over 2,500 beneficiaries including underprivileged women in urban, rural & tribal areas, adults with intellectual disability, and women rehabilitated from trafficking, by providing support across the crafts value chain from skill training to design development, group enterprise based production and marketing. Craftizen works with over 30 different craft skills from hand embroidery, block-printing and tailoring to wooden toys, folk art paintings and leather work to recycling and upcycling a range of discards including Temple flowers, paper waste and single-use plastics.",
       "Short": "Founder and CEO Mayura Balasubramanian, through her Craftizen Foundation, have positively impacted over 2,500 beneficiaries by providing support across the crafts value chain with over 30 different craft skills, so that anyone can be a part.",
@@ -34,7 +34,7 @@
       "Contact Number ": 9618106333
     },
     {
-      "__EMPTY": "Dheeraj Shah",
+      "Name": "Dheeraj Shah",
       "Genre ": "Web 3 Enthusiast",
       "Short description": "Dheeraj Shah is a Crypto Content Creator and Podcaster. He is a host at Web3 with Dhee, an educational show about web3 also runs an experimental NFT project called Kewl Club. Dheeraj has studied Psychology but enjoys his time talking about Crypto and collecting NFTs.",
       "Short": "A podcaster & crypto content creator, Dheeraj Shah is also a host at Web3 with Dhee, an educational show about web3. He also runs an NFT project called Kewl Club. ",
@@ -44,7 +44,7 @@
       "Travelling from": "Pune"
     },
     {
-      "__EMPTY": "Prasad Bhat",
+      "Name": "Prasad Bhat",
       "Genre ": "Art",
       "Short description": "Prasad Bhat known for his signature style of vector caricatures for over 13 years, Prasad Bhat has gathered a vast array of patrons and clients. Although an engineer by academics, he always found solace in art which helped him channel his creativity and express his opinions without restraint.\n\nThey say behind every great man there’s a woman. The story of Prasad Bhat bears testimony to this proverb to its core. The timely advice from his partner led him to explore fields of creativity from being a graphic designer to stage/stall design for many premium Indian brands and finally to the establishment of Graphicurry — an independent Artist firm store and Design studio based out of Bangalore, India.\n\nThe journey of Prasad has been featured several times in the Indian Express, Deccan Herald, Deccan Chronicles, Student Magazine, and Creative Gaga magazine as one of the most promising illustrators from India. Many online forums such as YourStory, Buzzfeed, BoredPanda, BlueGape, and several others graciously featured him as an artist with an exceptional style and uncommon appeal.\n\n",
       "Short": "Illustrating history through his signature style of vector caricatures for over 13 years, Prasad Bhat has gathered a vast array of patrons and clients. An engineer by academics, his love for art has made him one of India's most promising illustrators for his exceptional style and uncommon appeal.\n",
@@ -54,7 +54,7 @@
       "Contact Number ": 9916758811
     },
     {
-      "__EMPTY": "Guru Charan",
+      "Name": "Guru Charan",
       "Genre ": "Photography ",
       "Specialization": "Documentary ",
       "Short": "Through his incredible vision of portraying life, laughter and emotions, Guru Charan is masterful storyteller through his camera lenses. His photographs capture moments, colours and smiles from across the country.",
@@ -64,10 +64,10 @@
       "Contact Number ": 7829416737
     },
     {
-      "__EMPTY": "Harsha MV"
+      "Name": "Harsha MV"
     },
     {
-      "__EMPTY": "Sachin Rai",
+      "Name": "Sachin Rai",
       "Genre ": "Photography ",
       "Specialization": "Wildlife Photographer",
       "Short description": "Sachin is a professional photographer from India and he has travelled to many countries in search of rare, elusive and curious animals. He has been photographing wildlife and their threatened habitats for about two decades before which he was involved with a digital media design venture. In the last decade, he has have more than 100 photography tours and 140 class room workshops across the world.",
@@ -76,7 +76,7 @@
       "Travelling from": "Bangalore"
     },
     {
-      "__EMPTY": "Nik Kalyani",
+      "Name": "Nik Kalyani",
       "Twitter Handle": "https://twitter.com/sachin_rai",
       "PFP Link": "https://drive.google.com/file/d/1dPHeik1URo678tHLDGlN1Ew9fcMg0i34/view?usp=sharing"
     }

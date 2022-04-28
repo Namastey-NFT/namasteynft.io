@@ -1,10 +1,10 @@
 {
   "Photography workshop speakers": [
     {
-      " ": "Vineet Vohra",
+      "Name ": "Vineet Vohra",
       "Genre ": "Photography",
       "Specialization": "Street",
-      "Description": "\nI’m a Leica Ambassador, first ever Indian in the history of Leica, and conducting workshops as a Leica ambassador in Leica Akademie, with various publications on Leica blog. Before Leica I was an official Fuji X photographer, member of APF collective & thestreetcollective. Author of the successful book “the serendipity” Currently I am doing workshops globally, including Miami street photography festival, Miami street photography festival, Italian street photography festival, San Francisco street photography festival, London street photography festival, Xposure photography festival Sharjah, SIPA and India photo festival. I am also in the leading judging panel of all these festivals. I have been awarded thrice in a row at the Xposure photo festival by His Highness Sheikh Sultan Bin Ahmed Al Qasimi for excellence. I’ve also been giving lectures and conducting workshops in leading colleges of India for past 15 years. My works and stories have been published on various prestigious magazines, newspapers & blogs all over the world including National Geographic, NYT, The Guardian U.K.\n",
+      "Description": "I’m a Leica Ambassador, first ever Indian in the history of Leica, and conducting workshops as a Leica ambassador in Leica Akademie, with various publications on Leica blog. Before Leica I was an official Fuji X photographer, member of APF collective & thestreetcollective. Author of the successful book “the serendipity” Currently I am doing workshops globally, including Miami street photography festival, Miami street photography festival, Italian street photography festival, San Francisco street photography festival, London street photography festival, Xposure photography festival Sharjah, SIPA and India photo festival. I am also in the leading judging panel of all these festivals. I have been awarded thrice in a row at the Xposure photo festival by His Highness Sheikh Sultan Bin Ahmed Al Qasimi for excellence. I’ve also been giving lectures and conducting workshops in leading colleges of India for past 15 years. My works and stories have been published on various prestigious magazines, newspapers & blogs all over the world including National Geographic, NYT, The Guardian U.K.",
       "Short": "Vineet Vohra is a Leica Ambassador, a photographer, an author and the first Indian in the history of Leica. He conducts workshops as a Leica Ambassador in Leica Akademie and at festivals all over the world. He has been awarded thrice in a row at the Xposure photo festival by His Highness Sheikh Sultan Bin Ahmed Al Qasimi for excellence. His work has been published in the National Geographic, NYT, The Guardian U.K.",
       "Twitter Handle": "https://twitter.com/vineetvohraa",
       "DOB": 26970,
@@ -13,10 +13,10 @@
       "Return Ticket": "BLR- DEL"
     },
     {
-      " ": "\nFikret Dilek Uyar ",
+      "Name ": "Fikret Dilek Uyar ",
       "Genre ": "Photography",
       "Specialization": "Docuementry",
-      "Description": "I am National Geographic Travel Photographer of the Year Winner also won many prestigious awards all over the world and my photos exhibited in famous galleries.\nI am still C.Photographer of National Geographic YS and Turkey.\nI like taking travel and documentary photos. I like telling stories of people I meet during my travels with my photos. For six years I have been working on social responsibility projects and trying to photograph socially important issues such as Cancer , Covid 19 education equality .As a woman photographer, lawyer, and mother from Turkey, I made many speeches in Universities, Photograph Associations and as a Tedx Speaker, I touched on the significance of being a woman and saying yes to change. My biggest aim is to increase social awareness and recognition with my stories and continue  inspiring young women in my country.",
+      "Description": "I am National Geographic Travel Photographer of the Year Winner also won many prestigious awards all over the world and my photos exhibited in famous galleries.I am still C.Photographer of National Geographic YS and Turkey.I like taking travel and documentary photos. I like telling stories of people I meet during my travels with my photos. For six years I have been working on social responsibility projects and trying to photograph socially important issues such as Cancer , Covid 19 education equality .As a woman photographer, lawyer, and mother from Turkey, I made many speeches in Universities, Photograph Associations and as a Tedx Speaker, I touched on the significance of being a woman and saying yes to change. My biggest aim is to increase social awareness and recognition with my stories and continue  inspiring young women in my country.",
       "Short": "Fikret Dilek Uyak is a Travel & Landscape Photographer, a TEDx Speaker and a Lawyer from Turkey. Dilek is the winner of many prestigious international awards & has her photographs exhibited in many galleries across the world.",
       "Twitter Handle": "https://twitter.com/FDilekUyar",
       "PFP link": "https://drive.google.com/file/d/168-Ux-oX3qJ2qG5_zZIi2ouXA0qZVsci/view?usp=sharing",
@@ -26,7 +26,7 @@
       "__EMPTY_2": "FIKRET DILEK UYAR"
     },
     {
-      " ": "\nDipanjan Pal ",
+      "Name ": "Dipanjan Pal ",
       "Genre ": "Photography",
       "Specialization": "Aerial",
       "Description": "Dipanjan Pal is an international award winning aerial and landscape photographer from Kolkata, India. He loves finding different and unique patterns in the natural world from an elevated perspective which often go unnoticed. His aerial images have been published in multiple international publications like The Guardian, BBC News, DailyMail etc. ",
@@ -38,10 +38,10 @@
       "Contact Number ": 9748869018
     },
     {
-      " ": "\nJassi Oberai",
+      "Name ": "Jassi Oberai",
       "Genre ": "Photography",
       "Specialization": "Landscape",
-      "Description": "Jassi Oberai is a multi-speciality photographer from India. With Travel and Landscape as his focus, Jassi delves into portraits, fashion, boudoir, and fine art as well. Jassi loves taking challenges and that took him into exploring black and white photography, which requires an in-depth understanding of tonality in an image. \n\nJassi’s passion is much more than capturing stunning visuals, he is all about giving the knowledge that he has garnered in his professional journey and so ventured into creating ’Xploring Light’ a company that delivers in its core competence- photography at all levels. He is a Brand Ambassador with Lumix India and Leofoto. ",
+      "Description": "Jassi Oberai is a multi-speciality photographer from India. With Travel and Landscape as his focus, Jassi delves into portraits, fashion, boudoir, and fine art as well. Jassi loves taking challenges and that took him into exploring black and white photography, which requires an in-depth understanding of tonality in an image. Jassi’s passion is much more than capturing stunning visuals, he is all about giving the knowledge that he has garnered in his professional journey and so ventured into creating ’Xploring Light’ a company that delivers in its core competence- photography at all levels. He is a Brand Ambassador with Lumix India and Leofoto. ",
       "Short": "With Travel and Landscape Photography as his focus, Jassi delves into portraits, fashion, boudoir, and fine art as well. He is the founder of ’Xploring Light’ & a Brand Ambassador with Lumix India and Leofoto.",
       "Twitter Handle": "https://twitter.com/OberaiJassi",
       "PFP link": "https://drive.google.com/file/d/1EDx68c7FS6maMors8N6F-HS_v0HtXP8l/view?usp=sharing",
@@ -52,18 +52,18 @@
       "__EMPTY_2": "JASSI OBERAI"
     },
     {
-      " ": "\nNatalie amrossi",
+      "Name ": "Natalie amrossi",
       "Genre ": "Photography",
       "Specialization": "Travel",
-      "Description": "Misshattan is a fine art photographer, director + official canon ambassador based in NYC.\n\nAfter leaving her corporate job in finance 7 years ago to pursue her passion for photography, Misshattan consistently creates inspiring imagery by blending her love for aerial perspectives and exciting destinations, forming an inspiring sensory experience.  \n",
-      "Short": "Natalie, aka Misshattan, is a fine art photographer, director, and an official Canon Ambassador based in NYC. After leaving her corporate job in finance 7 years ago to pursue her passion for photography, she's been consistently blending her love for aerial perspectives and exciting destinations, to form captivating sensory experiences.\n",
+      "Description": "Misshattan is a fine art photographer, director + official canon ambassador based in NYC.After leaving her corporate job in finance 7 years ago to pursue her passion for photography, Misshattan consistently creates inspiring imagery by blending her love for aerial perspectives and exciting destinations, forming an inspiring sensory experience.  ",
+      "Short": "Natalie, aka Misshattan, is a fine art photographer, director, and an official Canon Ambassador based in NYC. After leaving her corporate job in finance 7 years ago to pursue her passion for photography, she's been consistently blending her love for aerial perspectives and exciting destinations, to form captivating sensory experiences.",
       "Twitter Handle": "https://twitter.com/Misshattan",
       "Travelling from": "Newyork",
       "__EMPTY_1": "Natalie amrossi",
       "__EMPTY_2": "NATALIE AMROSSI"
     },
     {
-      " ": "\n\nDebarati Sanyal",
+      "Name ": "Debarati Sanyal",
       "Genre ": "Photography",
       "Specialization": "Fashion",
       "Description": "Debarati Sanyal is an alumna of National Institute of Fashion Technology. She has also received a Masters in Fashion Photography from the renowned London College of Fashion. Her decade long career spans across UK & India and includes Indian & international publications like Verve, Grazia, Gaylettter, Homegrown as well as acclaimed brands & designers in every subset of fashion like Uber, Max Fashion, FastTrack, SprayGround, SS Homme, Shades of India etc. She is a well-regarded regular in the Mumbai fashion and lifestyle industry, and she is currently working as a faculty and academician at Pearl Academy. ",
@@ -77,7 +77,7 @@
       "__EMPTY_2": "DEBARATI SANYAL"
     },
     {
-      " ": "Sreeranj Sreedhar",
+      "Name ": "Sreeranj Sreedhar",
       "Genre ": "Photography",
       "Specialization": "Culture and Festivals",
       "Description": "Sreeranj is a street and documentary photographer from Kerala, India. Having worked in Dubai for 28 years, he has now retired from corporate life and pursuing full time photography in India since 2018, capturing the culture and traditions of Kerala.",
@@ -90,7 +90,7 @@
       "__EMPTY_2": "SREERANJ SREEDHAR"
     },
     {
-      " ": "Pranay Bhatnagar",
+      "Name ": "Pranay Bhatnagar",
       "Genre ": "Photography",
       "Specialization": "Wildlife",
       "Description": "Pranay is a wildlife biologist and photographer, capturing the serene depths of nature and the animal kingdom. Based in Delhi, his photographs have been featured in BBC wildlife and Wildlife India magazines. Pranay is also a national-level athlete and is a Master's in Zoology, currently pursuing his PhD.",
@@ -100,19 +100,6 @@
       "DOB": 36453,
       "Travelling from": "Delhi",
       "Contact Number ": 9068819957
-    },
-    {
-      "Specialization": "\n"
-    },
-    {
-      " ": "\n",
-      "Specialization": "\n\n"
-    },
-    {
-      " ": "\n"
-    },
-    {
-      " ": "\n"
-    }
+    }    
   ]
 }
