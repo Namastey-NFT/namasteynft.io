@@ -1,0 +1,34 @@
+{
+    "Sponsers": [
+        {
+            "name": "Decentology",
+            "img": "img/sponsorLogos/decentology_logo.png",
+            "title": "Title Sponsor"
+        },
+        {
+            "name": "NifyDreams",
+            "img": "img/sponsorLogos/NftyDreams_Logo_1000.png",
+            "title": "Brand Partner"
+        },
+        {
+            "name": "TryCrypto",
+            "img": "img/sponsorLogos/TryCrypto_logo.png",
+            "title": "Brand Partner"
+        },
+        {
+            "name": "Yourstory",
+            "img": "img/sponsorLogos/YS%20logo-02.png",
+            "title": "Digital Media Partner"
+        },
+        {
+            "name": "Draper House",
+            "img": "img/sponsorLogos/DrapperHouse1.png",
+            "title": "Outreach Partner"
+        },
+        {
+            "name": "MetaSky",
+            "img": "img/sponsorLogos/metasky_logo.png",
+            "title": "Startup Partner"
+        }
+    ]
+}

@@ -240,7 +240,9 @@
           <div class="row">
             <div class="col-sm-12">
               <div class="inner">
-                <div class="thumb"><img src="img/tickets_thumb1.jpg" /></div>
+                <div class="thumb">
+                  <img loading="lazy" src="img/tickets_thumb1.jpg" />
+                </div>
                 <div class="detail text-white">
                   <h5
                     class="text-capitalize alt-font no-margin font-weight-600 sm-width-100 xs-width-100"
@@ -291,7 +293,7 @@
                 <ul>
                   <li class="moon_pass">
                     <div class="thumb">
-                      <img src="img/tickets_thumb2.jpg" />
+                      <img loading="lazy" src="img/tickets_thumb2.jpg" />
                     </div>
                     <div class="details">
                       <h3>EXPERIENCE ZONE PASS</h3>
@@ -330,7 +332,7 @@
                   </li>
                   <li class="sun_pass">
                     <div class="thumb">
-                      <img src="img/tickets_thumb3.jpg" />
+                      <img loading="lazy" src="img/tickets_thumb3.jpg" />
                     </div>
                     <div class="details">
                       <h3>EXPERIENCE ZONE PASS</h3>
@@ -369,7 +371,7 @@
                   </li>
                   <li class="stars_pass">
                     <div class="thumb">
-                      <img src="img/tickets_thumb4.jpg" />
+                      <img loading="lazy" src="img/tickets_thumb4.jpg" />
                     </div>
                     <div class="details">
                       <h3>EXPERIENCE ZONE PASS</h3>
@@ -420,10 +422,16 @@
           <div class="container">
             <div class="footer_top">
               <div class="footer_left">
-                <div class="logo"><img src="img/footer_logo.png" /></div>
+                <div class="logo">
+                  <img
+                    loading="lazy"
+                    src="img/NamasteyNFTblr_decentology_w.svg"
+                    style="width: auto"
+                  />
+                </div>
                 <ul>
                   <li><a href="index.html">Home</a></li>
-                  <li><a href="index.html#event">Events</a></li>
+                  <li><a href="index.html#event">Event</a></li>
                   <li><a href="index.html#about">About us</a></li>
                   <li><a href="index.html#team">Team</a></li>
                   <li><a href="index.html#showcase">Showcase</a></li>
@@ -437,8 +445,12 @@
                   class="btn btn-blue btn-medium margin-20px-top footer_btn"
                   target="_blank"
                   onclick="event.stopPropagation()"
-                  ><img src="img/discord.png" class="join-button" /> Join
-                  Discord</a
+                  ><img
+                    loading="lazy"
+                    src="img/discord.png"
+                    class="join-button"
+                  />
+                  Join Discord</a
                 >
                 <a
                   href="https://namasteynft.typeform.com/volunteer"
@@ -488,7 +500,7 @@
                     href="https://discord.gg/namasteynft"
                     target="_blank"
                   >
-                    <span><img src="img/discord.png" /></span>
+                    <span><img loading="lazy" src="img/discord.png" /></span>
                   </a>
                   <a
                     class="twitter text-white twitter-bg-hvr wow fadeInDown"
@@ -564,7 +576,7 @@
       });*/
     </script>
     <script src="js/main.js"></script>
-    <script src="/abi.js"></script>
+    <script src="js/abi.js"></script>
     <script>
       let web3 = new Web3(Web3.givenProvider || "https://polygon-rpc.com/");
       let address = "0x55452eE058491527632d2DB135C201dB51612101";

@@ -282,28 +282,28 @@ $(document).ready(function () {
         }
     });
 
-    var owl4 = $('.owl-testimonial');
-    owl4.owlCarousel({
-        loop: true,
-        dots: true,
-        autoplay: true,
-        autoplayTimeout: 5000,
-        autoplayHoverPause: false,
-        responsiveClass: true,
-        responsive: {
-            0: {
-                items: 1,
+        var owl4 = $('.owl-testimonial');
+        owl4.owlCarousel({
+            loop: true,
+            dots: true,
+            autoplay: false,
+            autoplayTimeout: 5000,
+            autoplayHoverPause: false,
+            responsiveClass: true,
+            responsive: {
+                0: {
+                    items: 1,
 
-            },
-            600: {
-                items: 1,
+                },
+                600: {
+                    items: 1,
 
-            },
-            1000: {
-                items: 1,
+                },
+                1000: {
+                    items: 1,
+                }
             }
-        }
-    });
+        });
 
     /* ===================================
      owl end
@@ -645,3 +645,12 @@ $("#my_designation").typeIt({
     .tiDelete()
     .tiType("Charted Accountent");
     }
+
+
+//1650956400000 = 12:30 PM 26 Aor 2022
+(function(){
+    if(+ new Date > 1650956400000 ){ 
+        $(".hidden_div").addClass("visible_div changed").removeClass('hidden_div')
+        $(".visible_div").not(".changed").addClass('hidden_div').removeClass("visible_div")
+    }
+})()
