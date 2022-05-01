@@ -5,21 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js" defer></script>
-<link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />
-</head>
+    
 <body>
   
-    <div class="my-dropzone"> hello
+    <!-- <div > 
+        <img src="./overlay.png" alt="">
 
-    </div>
+        
+    </div> -->
 
-<script>
-  // Dropzone has been added as a global variable.
-  const dropzone = new Dropzone("div.my-dropzone", { url: "/file/post" });
-</script><button></button>
+<canvas></canvas>
+
 </body>
-<script>
 
+
+<script>
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+
+var img1 = loadImage('http://upload.wikimedia.org/wikipedia/en/2/24/Lenna.png', main);
+var img2 = loadImage('overlay.png', main);
+
+var imagesLoaded = 0;
+function main() {
+    imagesLoaded += 1;
+
+    if(imagesLoaded == 2) {
+        // composite now
+        ctx.drawImage(img1, 0, 0);
+        
+        ctx.globalAlpha = 0.5;
+        ctx.drawImage(img2, 0, 0);
+    }
+}
 </script>
 </html>
