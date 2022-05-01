@@ -367,8 +367,7 @@
         <!-- pfp start-->
         <!-- /PFPs & Banners -->
 
-        <section class="section_header text-white" id="pfp" style=" background-image: 'img/event_background.jpeg';
-        background-position: center;">
+        <section class="section_header text-white" id="pfp">
             <div class="container_center text-center width-auto">
                 <h2 style="background: linear-gradient(135deg, rgba(255, 67, 32, 1) 0%, rgba(109, 70, 255, 1) 30%, rgba(0, 238, 108, 1) 100%);
                 -webkit-background-clip: text;
@@ -389,44 +388,39 @@
             </div>
 
 
-            <div class="row flex-center-col sm-padding-20px-all no-margin inner">
+            <div class="row flex-center-col sm-padding-20px-all no-margin">
 
                 <div class=" col flex-center">
 
-                    <div id="upload" class="text-center  width-auto bg-charcoal-gray ">
+                    <div id="upload" class="text-center width-auto ">
+
+
                         <div id="upload-text" style="cursor: grab; color: aquamarine ;">
 
                             Drop you images here or click to upload.
 
-
-
-
-                        </div>
-
-                        <canvas id="c" style="max-width: 300px; max-height: 300px; padding: 2rem" ;></canvas>
-
-                        <div class=" col">
-
-                            <div class="controls w-full ">
-                                <div class="pt-6">
-                                    <label for="angle-control" class="">Rotation:</label>
-                                    <input type="range" id="angle-control" value="0" min="0" max="360" class="w-full" disabled>
-                                </div>
-                                <div class="pt-6">
-                                    <label for="scale-control" class="5">Scale:</label>
-                                    <input type="range" id="scale-control" value="250" min="0" max="500" class="w-full" disabled>
-                                </div>
-                                <button class="" style="margin-top: 2rem;" disabled>
-                                    Download profile picture
-                                </button>
-                            </div>
+                            <canvas id="c" style="max-width: 300px; max-height: 300px; padding: 2rem" ;></canvas>
 
                         </div>
+
+
                     </div>
+                </div>
+                <div class=" col">
 
-
-
-
+                    <div class="controls w-full ">
+                        <div class="pt-6">
+                            <label for="angle-control" class="">Rotation:</label>
+                            <input type="range" id="angle-control" value="0" min="0" max="360" class="w-full" disabled>
+                        </div>
+                        <div class="pt-6">
+                            <label for="scale-control" class="5">Scale:</label>
+                            <input type="range" id="scale-control" value="250" min="0" max="500" class="w-full" disabled>
+                        </div>
+                        <button class="block max-w-56 mt-4 px-8 py-5 rounded bg-primary text-gray text-sm font-bold text-center w-full" style="margin-top: 2rem;" id="download" disabled>
+                            Download profile picture
+                        </button>
+                    </div>
 
                 </div>
 
@@ -435,7 +429,14 @@
 
 
 
-                <script src="js/bundle.js" defer></script>
+            </div>
+
+
+
+
+
+
+            <script src="js/bundle.js" defer></script>
 
         </section>
 
