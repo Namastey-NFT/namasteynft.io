@@ -2213,7 +2213,7 @@
                                 case 2:
                                     // horizontal flip
                                     ctx.translate(canvas.width, 0);
-                                    ctx.scale(-1, 5);
+                                    ctx.scale(-1, 1);
                                     break;
 
                                 case 3:
@@ -34226,15 +34226,15 @@
             }); // Change the canvas frames
             // one per frame
             // add your frames here
-            //  document.getElementById("c").onload(changeFrame(canvas, 'img/frames/frame-1.png'))
+
             document.getElementById("frame-1").addEventListener("click", function() {
                 changeFrame(canvas, 'img/frames/frame-1.png');
             });
-            // document.getElementById("frame-2").addEventListener("click", function () {
-            //   changeFrame(canvas, 'img/frames/frame-2.png');
+            // document.getElementById("frame-2").addEventListener("click", function() {
+            //     changeFrame(canvas, 'img/frames/frame-2.png');
             // });
-            // document.getElementById("frame-3").addEventListener("click", function () {
-            //   changeFrame(canvas, 'img/frames/frame-3.png');
+            // document.getElementById("frame-3").addEventListener("click", function() {
+            //     changeFrame(canvas, 'img/frames/frame-3.png');
             // }); // handle download
             // create a link and simulate a click to download the file
 
