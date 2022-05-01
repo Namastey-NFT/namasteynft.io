@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+<body>
+  
+    <!-- <div > 
+        <img src="./overlay.png" alt="">
+
+        
+    </div> -->
+
+<canvas></canvas>
+
+</body>
+
+
+<script>
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+
+var img1 = loadImage('http://upload.wikimedia.org/wikipedia/en/2/24/Lenna.png', main);
+var img2 = loadImage('overlay.png', main);
+
+var imagesLoaded = 0;
+function main() {
+    imagesLoaded += 1;
+
+    if(imagesLoaded == 2) {
+        // composite now
+        ctx.drawImage(img1, 0, 0);
+        
+        ctx.globalAlpha = 0.5;
+        ctx.drawImage(img2, 0, 0);
+    }
+}
+</script>
+</html>
