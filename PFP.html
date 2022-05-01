@@ -98,6 +98,9 @@
 	    reader.onload = function() {
 	      createOverlay(reader.result);
 	    };
+	    reader.onerror = function() {
+    		console.log(reader.error);
+  	   };
 	    reader.readAsDataURL(event.target.files[0]);
 	  };
 
