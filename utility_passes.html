@@ -133,13 +133,13 @@
               <div class="col-md-2 col-xs-5">
                 <a href="index.html" title="Logo" class="logo">
                   <img
-                    src="img/logo-blue-white.png"
+                    src="img/logo.svg"
                     class="logo-dark"
-                    alt="Finza"
+                    alt="Namastey NFT Logo"
                   />
                   <img
-                    src="img/logo-blue-white.png"
-                    alt="Finza"
+                    src="img/logo.svg"
+                    alt="Namastey NFT Logo"
                     class="logo-light default"
                   />
                 </a>
@@ -216,12 +216,13 @@
               <h5
                 class="text-white text-capitalize alt-font margin-5px-bottom font-weight-700 sm-width-100 xs-width-100"
               >
-                Tickets and Passes
+                Expereince Zone Utility Passes
               </h5>
               <h6
                 class="text-white text-capitalize alt-font margin-5px-bottom font-weight-400"
               >
-                Here comes the description
+                Collect for IRL utilities at NamasteyNFT Bengaluru 2022 and
+                future perks
               </h6>
             </div>
             <div class="col-sm-4 fadeInLeft text-right">
@@ -235,14 +236,12 @@
       <!-- Hero Banner end -->
 
       <!-- ENTRY TICKET -->
-      <section class="entry_ticket">
+      <!-- <section class="entry_ticket">
         <div class="container">
           <div class="row">
             <div class="col-sm-12">
               <div class="inner">
-                <div class="thumb">
-                  <img loading="lazy" src="img/tickets_thumb1.jpg" />
-                </div>
+                <div class="thumb"><img loading="lazy" src="img/tickets_thumb1.jpg" /></div>
                 <div class="detail text-white">
                   <h5
                     class="text-capitalize alt-font no-margin font-weight-600 sm-width-100 xs-width-100"
@@ -268,13 +267,13 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
       <!-- ENTRY TICKET end -->
 
       <!-- Zone Passes Start -->
       <section class="zone_passes">
         <div class="container">
-          <div class="row">
+          <!-- <div class="row">
             <div class="col-sm-12 title">
               <h5
                 class="text-white text-capitalize alt-font margin-5px-bottom font-weight-600 sm-width-100 xs-width-100"
@@ -286,7 +285,7 @@
                 future
               </p>
             </div>
-          </div>
+          </div> -->
           <div class="row">
             <div class="col-md-12">
               <div class="list-main">
@@ -298,10 +297,10 @@
                     <div class="details">
                       <h3>EXPERIENCE ZONE PASS</h3>
                       <h2>TO THE MOON</h2>
-                      <p>
-                        Here comes the description of eexperience zone passes
-                        details and uses...
+                      <p class="margin-25px-bottom">
+                        Collect and Gain 1 time access to 1 experience zone.
                       </p>
+                      <p>5% Discount for Future Events</p>
                       <div class="price">0.005 <span>($15.22)</span></div>
                     </div>
                     <div class="action">
@@ -337,10 +336,10 @@
                     <div class="details">
                       <h3>EXPERIENCE ZONE PASS</h3>
                       <h2>TO THE SUN</h2>
-                      <p>
-                        Here comes the description of eexperience zone passes
-                        details and uses...
+                      <p class="margin-25px-bottom">
+                        Collect and Gain 2 time(s) access to 2 experience zones.
                       </p>
+                      <p>10% Discount for Future Events</p>
                       <div class="price">0.01 <span>($30.43)</span></div>
                     </div>
                     <div class="action">
@@ -376,10 +375,11 @@
                     <div class="details">
                       <h3>EXPERIENCE ZONE PASS</h3>
                       <h2>TO THE STARS</h2>
-                      <p>
-                        Here comes the description of eexperience zone passes
-                        details and uses...
+                      <p class="margin-25px-bottom">
+                        Collect and Gain *Unlimited* access to all the
+                        experience zones.
                       </p>
+                      <p>20% Discount for Future Events</p>
                       <div class="price">0.02<span>($60.87)</span></div>
                     </div>
                     <div class="action">
@@ -559,26 +559,13 @@
     <script src="revolution/js/extensions/revolution.extension.video.min.js"></script>
     <!-- setting -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script>
-      /*jQuery(document).ready(($) => {
-        $(".quantity").on("click", ".plus", function (e) {
-          let $input = $(this).prev("input.qty");
-          let val = parseInt($input.val());
-          $input.val(val + 1).change();
-        });
-        $(".quantity").on("click", ".minus", function (e) {
-          let $input = $(this).next("input.qty");
-          var val = parseInt($input.val());
-          if (val > 0) {
-            $input.val(val - 1).change();
-          }
-        });
-      });*/
-    </script>
+
     <script src="js/main.js"></script>
     <script src="js/abi.js"></script>
     <script>
-      let web3 = new Web3(Web3.givenProvider || "https://polygon-rpc.com/");
+      let web3 = new Web3(
+        Web3.givenProvider || "https://rinkeby.infura.io/v3/"
+      );
       let address = "0xe67FF89c1D51CAC380AAf71c220351bc4243580F";
 
       let contract = new web3.eth.Contract(abi, address);
@@ -593,13 +580,9 @@
             res[0].length
           )}`;
           document.getElementById("wallet-connect").innerText = add1;
-          let tickets = await contract.methods
-            .returnUserPassesForEvent(res[0], "ticket")
-            .call();
 
           let userObj = {
             address: res[0],
-            tickets: tickets,
           };
 
           window.user = userObj;
@@ -632,41 +615,6 @@
         });
       }
 
-      async function hasTicket() {
-        let userAddress = window.user.address;
-        console.log(window.user);
-
-        let tickets = window.user.tickets;
-        if (tickets > 0) {
-          console.log(tickets);
-          return true;
-        }
-        return false;
-      }
-
-      async function mintTicket() {
-        if (!window.user) {
-          await connect();
-        } else {
-          let userHasTicket = await hasTicket();
-          if (userHasTicket) {
-            alert("You already have the ticket");
-          } else {
-            let userAddress = window.user.address;
-            console.log(userAddress);
-            try {
-              await contract.methods
-                .mintPasses("ticket", 1)
-                .send({ from: userAddress });
-              window.user.tickets = 1;
-              alert("Ticket minted");
-            } catch (err) {
-              console.log(err);
-            }
-          }
-        }
-      }
-
       async function getAllCategories() {
         let categories = await contract.methods.returnAllCategories().call();
 
@@ -692,26 +640,6 @@
       }
 
       getAllCategories();
-
-      // display details for free tickets
-      async function getTicketDetails() {
-        let tokenId = await contract.methods
-          .returnTokenIdForEvent("ticket")
-          .call();
-
-        let uri = await contract.methods.uri(tokenId).call();
-
-        fetch(uri)
-          .then((response) => {
-            return response.json();
-          })
-          .then((data) => {
-            document.getElementById("ticket-name").innerText = data.name;
-            document.getElementById("ticket-des").innerText = data.description;
-          });
-      }
-
-      getTicketDetails();
 
       async function mintCategoryPass(category, amount) {
         if (!window.user) {
@@ -745,7 +673,6 @@
         mintCategoryPass("moon", parseInt(elements[2].value));
 
       document.getElementById("wallet-connect").onclick = connect;
-      document.getElementById("wallet-connect2").onclick = mintTicket;
 
       (function () {
         document
