@@ -301,7 +301,7 @@
                         Collect and Gain 1 time access to 1 experience zone.
                       </p>
                       <p>5% Discount for Future Events</p>
-                      <div class="price">0.005 <span>($15.22)</span></div>
+                      <div class="price">15</div>
                     </div>
                     <div class="action">
                       <div class="quantity">
@@ -340,7 +340,7 @@
                         Collect and Gain 2 time(s) access to 2 experience zones.
                       </p>
                       <p>10% Discount for Future Events</p>
-                      <div class="price">0.01 <span>($30.43)</span></div>
+                      <div class="price">25</div>
                     </div>
                     <div class="action">
                       <div class="quantity">
@@ -380,7 +380,7 @@
                         experience zones.
                       </p>
                       <p>20% Discount for Future Events</p>
-                      <div class="price">0.02<span>($60.87)</span></div>
+                      <div class="price">50</div>
                     </div>
                     <div class="action">
                       <div class="quantity">
@@ -563,10 +563,8 @@
     <script src="js/main.js"></script>
     <script src="js/abi.js"></script>
     <script>
-      let web3 = new Web3(
-        Web3.givenProvider || "https://rinkeby.infura.io/v3/"
-      );
-      let address = "0xe67FF89c1D51CAC380AAf71c220351bc4243580F";
+      let web3 = new Web3(Web3.givenProvider || "https://polygon-rpc.com/");
+      let address = "0x48dbbC2a9da1efB2671bbF7910b3Ca02f1e3f581";
 
       let contract = new web3.eth.Contract(abi, address);
       console.log(contract);
@@ -590,7 +588,7 @@
           try {
             await window.ethereum.request({
               method: "wallet_switchEthereumChain",
-              params: [{ chainId: "0x4" }],
+              params: [{ chainId: "0x89" }],
             });
           } catch (switchError) {
             // This error code indicates that the chain has not been added to MetaMask.
@@ -600,9 +598,9 @@
                   method: "wallet_addEthereumChain",
                   params: [
                     {
-                      chainId: "0x4",
-                      chainName: "Rinkeby Test Network",
-                      rpcUrls: ["https://rinkeby.infura.io/v3/"] /* ... */,
+                      chainId: "0x89",
+                      chainName: "Matic Mainnet",
+                      rpcUrls: ["https://polygon-rpc.com/"] /* ... */,
                     },
                   ],
                 });
@@ -647,16 +645,36 @@
         } else {
           try {
             let userAddress = window.user.address;
-            let price = await contract.methods
-              .returnPassPriceForEvent(category)
+            let availablepasses = await contract.methods
+              .returnAvailablePassesForEvent(category)
+              .call();
+            let userPasses = await contract.methods
+              .returnUserPassesForEvent(userAddress, category)
+              .call();
+            let walletLimit = await contract.methods
+              .walletLimitForEachEvent()
               .call();
 
-            await contract.methods.mintPasses(category, amount).send({
-              from: userAddress,
-              value: Number(price) * amount,
-            });
+            if (Number(amount) > Number(availablepasses)) {
+              alert("Passes sold out!");
+            } else if (Number(userPasses) + Number(amount) > walletLimit) {
+              alert("Wallet limit exceeded!");
+            } else {
+              let price = await contract.methods
+                .returnPassPriceForEvent(category)
+                .call();
 
-            alert("passes minted");
+              await contract.methods.mintPasses(category, amount).send({
+                from: userAddress,
+                value: Number(price) * amount,
+              });
+              let tokenId = await contract.methods
+                .returnTokenIdForEvent(category)
+                .call();
+              alert(
+                `Passes minted! You can checkout your pass here: https://opensea.io/assets/matic/0x48dbbc2a9da1efb2671bbf7910b3ca02f1e3f581/${tokenId}`
+              );
+            }
           } catch (err) {
             console.log(err);
           }
@@ -668,9 +686,9 @@
         mintCategoryPass("moon", parseInt(elements[0].value));
 
       document.getElementById("mint-sun").onclick = () =>
-        mintCategoryPass("moon", parseInt(elements[1].value));
+        mintCategoryPass("sun", parseInt(elements[1].value));
       document.getElementById("mint-stars").onclick = () =>
-        mintCategoryPass("moon", parseInt(elements[2].value));
+        mintCategoryPass("star", parseInt(elements[2].value));
 
       document.getElementById("wallet-connect").onclick = connect;
 
