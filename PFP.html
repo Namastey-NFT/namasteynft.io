@@ -109,6 +109,11 @@
 	  	Caman("#overlay-img", function () {
 			this.brightness(5).render();
 			
+			this.newLayer(function() {
+			    this.setBlendingMode("normal");
+			    this.opacity(100);
+			    this.overlayImage(baseImg);
+		  	});
 
 		  	this.newLayer(function() {
 			    this.setBlendingMode("normal");
@@ -116,12 +121,6 @@
 			    this.overlayImage('img/overlay.png');
 		  	});
 			
-			this.newLayer(function() {
-			    this.setBlendingMode("normal");
-			    this.opacity(30);
-			    this.overlayImage(baseImg);
-		  	});
-
 		  	$('#overlay-img').removeAttr('style');
 		});
 
