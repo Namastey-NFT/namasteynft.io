@@ -566,6 +566,128 @@
         </div>
     </section>
     <!-- Art Purchased End -->
+   <!-- Minting -->
+   <style>
+    .minting_soon { padding:140px 0;}
+    .minting_soon img {
+        display: block;
+        max-width: 100%;
+        border-radius: 20px;
+    }
+
+    .minting_soon .imgs{
+        position: relative;
+    } 
+    .minting_soon .logo{
+        position: absolute;
+        width: 24%;
+        top: 33%;
+        left: 10%;
+    }
+    .minting_soon .background{
+        background: url('img/frame_mint.png');
+        height: 265px;
+    }
+
+    @media(max-width:767px){
+        .minting_soon { padding:50px 0;}
+        .minting_soon .background{
+        background: url('img/frame_mint_mobile.png');
+        height: 227px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    .minting_soon .logo{
+        display: none;
+    }
+    }
+</style>
+<section class="minting_soon">
+    <div class="container">
+        <div class="imgs"> 
+            <div class="background"></div>
+            <img src="img/logo.png" class="logo" alt=""> 
+        </div>
+    </div>
+</section>
+<!-- Minting END -->
+ <!-- Workshops Zone Start-->
+ <style>
+    .workshop_main { padding:0px 0px 50px 0px;}
+    .workshop_main .inner{ padding:70px 70px 70px 100px; display: flex; justify-content:space-between; align-items: center; background: linear-gradient(90deg, rgba(255, 67, 32, 0.5) 0.01%, rgba(109, 70, 255, 0.5) 100.02%); box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); backdrop-filter: blur(10px); border-radius: 20px; position: relative;}
+    .workshop_main .object{ width: auto; height: auto; position: absolute; left: 0; top: 50%; transform: translateY(-50%);}
+    .workshop_main .object img{ width: auto;}
+    .workshop_main .inner .action .btn.btn-blue{ border-radius: 8px; font-style: normal; font-weight: 600; font-size: 20px; line-height: 24px; text-align: center;}
+    .workshop_main .inner .title p{margin:0; padding:0; font-style: normal; font-weight: 400; font-size: 24px; line-height:28px; color: #FFFFFF;}
+    .workshop_main .workshops { margin-bottom:50px;}
+    .workshop_main .workshops img{ width: auto;}
+    .workshop_main .workshops p{font-style: normal; font-weight: 400; font-size: 18px; line-height: 21px; text-align: center; color: #FFFFFF;}
+    .workshop_main .workshops ul{ margin:0; padding:0;}
+    .workshop_main .workshops ul li{ margin:0; padding:0; list-style:disc; font-style: normal; font-weight: 400; font-size: 24px; line-height: 46px; text-transform: uppercase; color: #FFFFFF; list-style-position:inside;}
+    .workshop_main .joystick{
+        position: absolute;
+        right: 55%;
+    }
+    @media(max-width:991px){
+        .workshop_main .inner{ padding:50px; display: flex;
+    justify-content: center;}
+        .workshop_main .inner .title p{font-size: 20px; line-height: 22px; text-align: center;}
+    }
+    @media(max-width:767px){
+        .workshop_main .inner{flex-wrap: wrap; padding: 50px 20px;}
+        .workshop_main .inner .title{ width: 100%; margin-bottom: 20px; padding: 30px;}
+        .workshop_main .inner .title p{font-size:18px; line-height: 20px;}
+        .workshop_main .workshops{ margin-bottom: 50px;}
+        .workshop_main .workshops ul li{font-size: 20px;}
+        /* .workshop_main .object{display: none;} */
+        .workshops .camera{
+            margin-left: 40px;
+        }
+        .workshops .joystick{
+            right: 50%;
+        }
+        .workshop_main .object{
+            top:30%;
+            z-index: -1;
+        }
+        .inner .h_5{
+            text-align: center; 
+            margin-bottom: 20px;
+        }
+    }
+</style>
+<!-- <section class="workshop_main">
+    <div class="container">
+        <div class="workshops text-center">
+            <h3 class="alt-font text-capitalize alt-font text-white margin-50px-bottom font-weight-500">Workshops</h3>
+            <div class="row">
+                <div class="col-md-6 text-center">
+                    <div style="position: relative;">
+                        <img src="img/joystick.png" class="joystick" alt="">
+                        <img src="img/camera.png" class="camera"/>
+                    </div>
+                    <h5 class="text-capitalize alt-font text-white margin-20px-top margin-20px-bottom font-weight-500 sm-width-100 xs-width-100">Art & Photograhy Workshops</h5>
+                    <p class="alt-font padding-50px-right padding-50px-left">Have you always been curious, about how all these talented artists create such magnificent works? </p>
+                </div>
+                <div class="col-md-6 text-center">
+                    <img src="img/web_developer_img.png"/>
+                    <h5 class="text-capitalize alt-font text-white margin-20px-top margin-20px-bottom font-weight-500 sm-width-100 xs-width-100">Web Developer Workshops</h5>
+                    <p class="alt-font padding-50px-right padding-50px-left">Seeing words like “Web 3”, “dApp” and “BlockChain” around the market, but don’t know what they mean?</p>
+                </div>
+            </div>
+        </div>
+        <div class="inner">
+            <div class="object"><img src="img/gear.png"/></div>
+            <div class="title">
+                <h5 class="text-capitalize alt-font text-white margin-5px-bottom font-weight-500 sm-width-100 xs-width-100 h_5" >Register for Workshops</h5>
+                <p>An opportunity you dont want to miss.<br/>learn and interact with talented minds.</p>
+            </div>
+            <div class="action"><a href="#" target="_blank" class="btn btn-blue btn-large">CONNECT</a></div>
+        </div>
+    </div>
+</section> -->
+<!-- Workshops Zone  End -->
     <!-- Sponsership -->
     <section class="bg-charcoal-gray text-white xboot-section text-center btn-version padding-5px-bottom padding-30px-top partner margin-25px-top">
         <div class="container">
@@ -618,7 +740,7 @@
     </section>
     <!-- Sponsership END -->
 
-    <<!-- Faq -->
+    <!-- Faq -->
     <section id="FAQs" class="">
         <div class="container">
             <div class="row">
