@@ -280,7 +280,7 @@
                     <h5 class="text-capitalize alt-font text-white font-weight-500 sm-width-100 xs-width-100">Collect
                         Experience Zone Passes</h5>
                 </div>
-                <div class="thumb"><img loading="lazy" src="img/tickets_passes_collect1.png" class="" /></div>
+                <div class="thumb " style="display: block; margin-left: auto;margin-right: auto;"><img loading="lazy" src="img/tickets_passes_collect1.png" class="width-auto" /></div>
                 <!-- <div class="action"><a href="tickets_and_passes.html" target="_blank"
                     class="btn btn-blue btn-large">COLLECT</a></div> -->
                 <div class="action"><a style="    background-color: grey !important;
@@ -366,9 +366,9 @@
     <!-- pfp start-->
     <!-- /PFPs & Banners -->
 
-    <section class="section_header text-white" id="pfp" ">
+    <section class="section text-white" id="pfp">
         <div class=" container_center text-center width-auto">
-        <h2 style="background: linear-gradient(135deg, rgba(255, 67, 32, 1) 0%, rgba(109, 70, 255, 1) 30%, rgba(0, 238, 108, 1) 100%);
+            <h2 style="background: linear-gradient(135deg, rgba(255, 67, 32, 1) 0%, rgba(109, 70, 255, 1) 30%, rgba(0, 238, 108, 1) 100%);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 font-size: 3rem;
@@ -377,56 +377,68 @@
                
                 text-align: center;
                 padding: 1rem 0;">
-            PFP's & Banners</h2>
+                PFP's & Banners</h2>
 
 
-        <h6>Show your love. This is your event.</h6>
-        <h6>
-            Show you’re attending #NamasteyNFT by helping get out the WORD on social media!
-        </h6>
+            <h6>Show your love. This is your event.</h6>
+            <h6>
+                Show you’re attending #NamasteyNFT by helping get out the WORD on social media!
+            </h6>
+
+
         </div>
 
 
-        <div class="row flex-center width-auto">
 
-            <div class=" col " style="width:auto; padding: 2rem" ;>
+        <div class=" col " style="width:auto; padding: 2rem" ;>
 
 
-                <div id=" upload-text" style="cursor: grab; color: aquamarine ;">
+            <div class=" col  style=" margin: 2rem; padding: 2rem" ;>
+                <div id="upload-text">Drop files here or click to upload.
+
 
                     Drop you images here or click to upload.
-<div id="upload" class=" width-auto "> </div>
+                    <div id="upload" class=" width-auto "> </div>
+                </div>
+                <div style="max-width: 300px; max-height: 300px; ">
+                    <canvas id="c" style="max-width: 250px; max-height: 250px;  "></canvas>
                 </div>
 
                 <canvas id="c" style="width: auto; ;height :auto; max-width: 250px; max-height: 250px; "></canvas>
 
-                
+
 
             </div>
+
             <div class=" col " style="width: auto; padding: 2rem;">
 
-                <div class="controls w-full ">
-                    <div class="pt-6">
-                        <label for="angle-control" class="">Rotation:</label>
-                        <input type="range" id="angle-control" value="0" min="0" max="360" class="w-full" disabled>
-                    </div>
-                    <div class="pt-6">
-                        <label for="scale-control" class="5">Scale:</label>
-                        <input type="range" id="scale-control" value="250" min="0" max="500" class="w-full" disabled>
+                <div>
+                    <div class="controls w-full">
+
+                        <div class="pt-6">
+                            <label for="angle-control" class="">Rotation:</label>
+                            <input type="range" id="angle-control" value="0" min="0" max="360" class="w-full" disabled>
+                        </div>
+                        <div class="pt-6">
+                            <label for="scale-control" class="">Scale:</label>
+                            <input type="range" id="scale-control" value="325" min="250" max="500" class="w-full" disabled>
+                        </div>
+                        <button class="btn-large" style="margin: 2rem;" id="download" disabled>
+                            Download profile picture
+                        </button>
+
+
                     </div>
 
-                    <button class="btn btn-large " id="download" disabled>
-                        Download profile picture
-                    </button>
 
                 </div>
 
+
+
+
+
             </div>
-
-
-
         </div>
-
     </section>
 
     <!-- pfp end -->
