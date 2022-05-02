@@ -390,30 +390,30 @@
 
 
 
-        <div class=" col " style="width:auto; padding: 2rem" ;>
+        <div class=" row " style="width:auto; margin-left: auto;margin-right: auto; display: grid;" ;>
 
 
-            <div class=" col  " style=" margin: 2rem; padding: 2rem" ;>
+            <div class=" col  " style=" margin-left: auto; margin-right: auto; padding: 2rem" ;>
                 <div id="upload-text">Drop files here or click to upload.
 
 
-                    Drop you images here or click to upload.
-                    <div id="upload" class=" width-auto "> </div>
+
+
                 </div>
                 <div style="max-width: 300px; max-height: 300px; ">
                     <canvas id="c" style="max-width: 250px; max-height: 250px;  "></canvas>
                 </div>
-
-                <canvas id="c" style="width: auto; ;height :auto; max-width: 250px; max-height: 250px; "></canvas>
+                <div id="upload" class=" width-auto "> </div>
+                <!-- <canvas id="c" style="width: auto; ;height :auto; max-width: 250px; max-height: 250px; "></canvas> -->
 
 
 
             </div>
 
-            <div class=" col " style="width: auto; padding: 2rem;">
+            <div class=" col ">
 
                 <div>
-                    <div class="controls w-full">
+                    <div class="controls " style="margin: auto;">
 
                         <div class="pt-6">
                             <label for="angle-control" class="">Rotation:</label>
@@ -423,7 +423,7 @@
                             <label for="scale-control" class="">Scale:</label>
                             <input type="range" id="scale-control" value="325" min="250" max="500" class="w-full" disabled>
                         </div>
-                        <button class="btn-large" style="margin: 2rem;" id="download" disabled>
+                        <button class="btn-large" style=" width:auto; color:rgb(42, 42, 43); border-radius: 2rem;" id="download" disabled>
                             Download profile picture
                         </button>
 
