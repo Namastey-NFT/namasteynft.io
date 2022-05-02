@@ -34227,9 +34227,9 @@
             // one per frame
             // add your frames here
 
-            document.getElementById("frame-1").addEventListener("click", function() {
-                changeFrame(canvas, 'img/frames/frame-1.png');
-            });
+            // document.getElementById("frame-1").addEventListener("click", function() {
+            //     changeFrame(canvas, 'img/frames/frame-1.png');
+            // });
             // document.getElementById("frame-2").addEventListener("click", function() {
             //     changeFrame(canvas, 'img/frames/frame-2.png');
             // });
