@@ -260,7 +260,12 @@ button{
 
     color: #FFFFFF;
 }
-
+/* .book-slot{
+    display: none;
+} */
+.start-reg{
+        width: 30%;
+    }
 
 @media(max-width: 1000px){
     .nav-toggler{
@@ -268,6 +273,7 @@ button{
     }
     .WorkshopsWithDropDown{
         display: none;
+
     }
     .Art-Workshop-top-left img{
         display: none;
@@ -276,8 +282,10 @@ button{
         margin: 20px 0px;
     }
     .dropbtn {
-        display: block;
+        /* display: block; */
+        display: none;
     }
+    
     .Art-WorkShop-creaters-container{
         justify-content: center;
     }
@@ -286,5 +294,8 @@ button{
     }
     .creator-4{
         height: 525px;
+    }
+    .start-reg{
+        width: 100%;
     }
 }
