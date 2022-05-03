@@ -298,4 +298,10 @@ button{
     .start-reg{
         width: 100%;
     }
+    .smallTextButton{
+        font-size: 15px;
+    }
+    .book-slot > button{
+        padding: 10px;
+    }
 }
