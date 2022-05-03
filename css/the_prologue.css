@@ -1,0 +1,69 @@
+#the_prologue_main{ background:url(../img/the_prologue_bg.jpg) no-repeat center top; background-size:cover; padding:250px 0px;}
+
+.prologue_logo { width:70%; position:relative;}
+.prologue_logo .minting_title{ position:absolute; right:0; top:10px;}
+.prologue_logo img{ max-width:100%; display:block;}
+.buttons_div{ width:30%; text-align:right;}
+.buttons_div .btn-small{ background:none !important; border: 1px solid #6D46FF !important; box-sizing: border-box; border-radius: 8px; font-family: 'Montserrat', sans-serif; font-style: normal; font-weight: 600; font-size: 12px; line-height: 20px; text-align: center; color: #6D46FF !important; padding:7px 0px; min-width:180px; text-align:center;}
+.buttons_div .btn-small:hover{background: #6D46FF !important; border: 1px solid #6D46FF !important; color: #ffffff !important;}
+
+.centre_text {display: flex; align-items:flex-end; flex-wrap: wrap; justify-content: space-between;}
+.centre_text h6{font-family: 'Montserrat', sans-serif; font-style: normal; font-weight: 600; font-size: 18px; line-height: 22px; color: #FFFFFF;}
+.centre_text h6 span{ display:inline-block; vertical-align:middle; border: 3px solid #00EE6C; box-sizing: border-box; border-radius: 6px; font-size:16px; width: 58px; text-align: center;}
+.centre_text .prologue_title{ width:100%; display:block;}
+.centre_text .supply{width:100%; display: flex; align-items: center; flex-wrap: wrap;}
+.centre_text .supply h6{ width:50%; font-family: 'Rubik', sans-serif;}
+.centre_text p{font-family: 'Rubik', sans-serif; font-style: normal; font-weight: 400; font-size: 14px; line-height: 25px; color: #FFFFFF;}
+
+.wallet_box{ background: rgba(109, 70, 255, 0.2); border: 1px solid rgba(255, 255, 255, 0.15); box-sizing: border-box; backdrop-filter: blur(10px); border-radius: 12px; text-align:center;}
+.wallet_box h5{font-family: 'Rubik', sans-serif; color: #ffffff;}
+.wallet_box h1{font-family: 'Rubik', sans-serif; color: #ffffff;}
+.wallet_box .btn-large{ background: #6D46FF !important; border: 1px solid rgba(255, 255, 255, 0.15) !important; box-sizing: border-box; border-radius: 8px;     padding: 11px 0px; min-width:100%;}
+.wallet_box .btn-large:hover{background: #6D46FF !important; border: 1px solid rgba(255, 255, 255, 0.15) !important;}
+.wallet_box p{font-family: 'Rubik', sans-serif; color: #ffffff; font-size:12px; line-height: 14px; margin:20px 0px; font-weight: 400;}
+.wallet_box p a{ text-transform: uppercase; color: #6D46FF; font-weight: 500;}
+
+.wallet_box_connected{ background: rgba(109, 70, 255, 0.2); border: 1px solid rgba(255, 255, 255, 0.15); box-sizing: border-box; backdrop-filter: blur(10px); border-radius: 12px; text-align:center; padding:20px;}
+.wallet_box_connected .btn-code{ background:none !important; border: 1px solid #FFFFFF !important; box-sizing: border-box; border-radius: 8px; padding: 11px 50px; font-weight: 600; font-family: 'Montserrat', sans-serif; font-size: 20px; line-height: 24px; text-align: center; color: #FFFFFF !important; margin-bottom:25px;}
+.wallet_box_connected h5{font-family: 'Rubik', sans-serif; color: #ffffff; font-size: 18px; line-height: 21px; text-align: center; width:100%; margin-bottom:10px;}
+.wallet_box_connected h4{font-family: 'Rubik', sans-serif; color: #ffffff; font-size: 24px; line-height: 28px; text-align: center; width:100%; margin-bottom:10px;}
+.wallet_box_connected select{ width:100%; background: #FFFFFF url(../img/select_arrow.png) no-repeat 95% center; border-radius: 12px; padding:16px; font-style: normal; font-weight: 500; font-size: 18px; line-height: 21px; color: #000000; font-family: 'Rubik', sans-serif; border:none; outline:none; appearance: none; -moz-appearance: none; -webkit-appearance: none; position:relative;}
+.wallet_box_connected p{font-family: 'Rubik', sans-serif; color: #ffffff; font-size:12px; line-height: 14px; margin:20px 0px 0px 0px; font-weight: 400;}
+.wallet_box_connected p a{color: #ffffff; text-decoration:underline;}
+.wallet_box_connected p a:hover{text-decoration:none;}
+.slider_mint{-webkit-appearance: none; width: 95%; margin-left:2.5%; height:4px; border-radius: 5px; background: #ffffff; outline: none; opacity:1; -webkit-transition: .2s; transition: opacity .2s; padding:0;}
+.slider_mint::-webkit-slider-thumb {-webkit-appearance: none; appearance: none; width:20px; height:40px; background:url(../img/rectangle_shape.png) no-repeat center center; cursor: pointer;}
+.slider_mint::-moz-range-thumb {width: 25px; height: 25px; border-radius: 50%; background: #04AA6D; cursor: pointer;}
+.theMint { background: #6D46FF; border-radius: 8px;	 padding:12px 0px; font-family: 'Montserrat', sans-serif; font-style: normal; font-weight: 600; font-size: 20px; line-height: 24px; text-align: center; color: #FFFFFF; min-width:200px; display:inline-block;}
+#TheMint p{font-family: 'Rubik', sans-serif; font-style: normal; font-weight: 400; font-size: 18px; line-height: 21px; text-align: center; color: #FFFFFF; margin-top:7px;}
+#bottom { position:relative; width: 100%; padding:15px 0px 10px 0px;}
+#top {position: relative; width: 100%;}
+
+@media(max-width:1140px){
+
+}
+
+@media(max-width:991px){
+
+#the_prologue_main{padding:150px 0px;}
+}
+
+@media(max-width:767px){
+.prologue_logo{ width:63%;}
+.buttons_div{ width:33%;}
+
+}
+
+@media(max-width:599px){
+.prologue_logo{ width:100%;}
+.buttons_div{ width:100%;}
+.buttons_div{ text-align:left;}
+.buttons_div .btn-small{ margin:20px 10px 10px 0px;}
+
+}
+
+@media(max-width:479px){
+#the_prologue_main{padding:150px 0px; 100px 0px;}
+.prologue_logo .minting_title{ top:0;}
+.buttons_div .btn-small{ margin:20px 10px 0px 0px;}
+}
