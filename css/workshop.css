@@ -206,7 +206,7 @@ a {
 }
 .designation{
     font-family: 'Rubik';
-    font-size: 24px;
+    font-size: 22.5px;
     line-height: 28px;
     text-align: center;
     justify-content: center;
@@ -303,5 +303,8 @@ button{
     }
     .book-slot > button{
         padding: 10px;
+    }
+    .make_small_remainder{
+        font-size: 25px;
     }
 }
