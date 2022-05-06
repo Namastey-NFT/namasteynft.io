@@ -309,6 +309,9 @@ margin: 0%;
 .choose_date > button{
   font-size: 48px;
 }
+#chooseAZone{
+  width: 200px;
+}
 
 
 @media(max-width: 1000px){
@@ -374,6 +377,13 @@ margin: 0%;
     justify-content: space-between;
     font-size: 12px;
   }
-  
+  .dropbtn{
+    font-size: 12px;
+    /* width: 10px; */
 
+  }
+  #chooseAZone{
+    width: 100%;
+    padding: 0% 10px;
+  }
 }
