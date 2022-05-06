@@ -512,6 +512,9 @@ canvas {
     background: url('../img/Frame45.png');
     background-size: cover;
 }
+.event-part-back{
+    background: url('/img/event_highlight_back.jpeg');
+}
 
 /* .moveContainer:hover{
     box-shadow: 20px 20px 20px 20px #0ff;
