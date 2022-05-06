@@ -1,0 +1,379 @@
+* {
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Rubik', BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+background-color: #000000;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.events_container{
+    position: relative;
+    z-index: 1;
+}
+ .page {
+    min-height: 100vh;
+    padding: 0px 5%;
+    position: relative;
+}
+.events_container .home {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    padding-top: 15rem;
+}
+.events_container .backgroud {
+    position: relative;
+    animation: gradient 15s ease infinite;
+    min-width:100%;
+    min-height: 100%;
+    background-image: url('../img/Schedule.jpg');
+    background-size:cover;
+}
+.events_container .backgroud .event_background {
+    width: 100%;
+    min-height: 100vh;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    mix-blend-mode: overlay;
+    height: inherit;
+    object-fit: cover;
+}
+.containers2{
+    padding: 0px 5%;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    line-height: 54px;
+}
+.Event_Zones_txt{
+  font-family: 'Rubik', BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 54px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #F8F8F8;
+}
+.zone_tags{
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+  /* justify-content:space-between; */
+}
+.tags_boxes{
+  margin-right: 80px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.tags_box{
+  width: 41px;
+  height: 14px;
+  border-radius: 12px;
+  margin: 0;
+}
+.tags_box_1{
+  background: #FF4320;
+}
+.tags_box_2{
+  background: #FFA620;
+}
+.tags_box_3{
+  background: #6D46FF;
+}
+.tags_box_4{
+  background: #FF46F8;
+}
+/* .tags_box_5{
+  background: #00EE6C;
+} */
+.tags_box_6{
+  background: #20D7FF;
+}
+.tags_boxes > p{
+  color: #FFFFFF;
+  font: initial;
+  font-family: 'Rubik', BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  padding: 0% 10px;
+  font-size: 20px;
+  font-weight: 400;
+}
+.Event_Schedule_txt{
+  color: #F8F8F8;
+  font-family: 'Rubik', BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 54px;
+  letter-spacing: 0em;
+  text-align: left;
+  padding: 20px 0px;
+}
+.choose_date{
+  display: flex;
+  flex-wrap: wrap;  
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 54px;
+  color: #F8F8F8;
+}
+
+.filter_row{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+}
+.filter_row_left {
+  display: flex;
+  flex-wrap: wrap;
+}
+.filter_row_left > div{
+  margin: 0px 20px;
+}
+.filter_row_right {
+  display: flex;
+  flex-wrap: wrap;
+}
+.filter_row_right > div{
+  margin: 0px 20px;
+}
+
+.dropbtn {
+  background-color: transparent;
+  color: white;
+  font-family: rubik;
+  border: 1px solid white;
+  cursor: pointer;
+  border-radius: 20px;
+  font-family: Rubik;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  padding: 5px 5px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 0px 5px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: transparent;
+}
+.filter_row_result{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.filter_option{
+  display: flex;
+  width: 100%;
+}
+.filter_row_result_left{
+  padding: 10px 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:flex-start;
+  width: 15%;
+
+}
+.filter_row_result_left > h3{
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 43px;
+  color: white;
+  margin: 0%;
+}
+
+.filter_row_result_left > p{
+font-family: 'Rubik';
+font-style: normal;
+font-weight: 400;
+line-height: 20px;
+color: #FFFFFF;
+margin: 0%;
+
+}
+
+.filter_row_result_right{
+  border: 2px solid #FF4320;
+  border-radius: 20px;
+  margin: 10px 20px ;
+  padding: 00px 0px 0px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:flex-start;
+  width: 85%;
+
+}
+.filter_row_result_right > h5{
+  margin: 0%;
+  padding: 0%;
+  color: white;
+}
+.filter_row_result_right > p{
+  font: initial;
+  margin: 0%;
+  padding: 0%;
+  color: white;
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: #FFFFFF;
+}
+.make_border_blue{
+  border: 2px solid #20D7FF;
+}
+.make_border_blue > p{
+  color: #20D7FF;
+}
+
+.make_border_red{
+  border: 2px solid #FF4320;
+}
+.make_border_red > p{
+  color: #FF4320;
+}
+
+.make_border_white{
+  border: 2px solid #ffffff;
+}
+.make_border_white > p{
+  color: #ffffff;
+}
+
+.make_border_yellow{
+  border: 2px solid #FFA620;
+}
+.make_border_yellow > p{
+  color: #FFA620;
+}
+
+.make_border_purple{
+  border: 2px solid #6D46FF;
+}
+.make_border_purple > p{
+  color: #6D46FF;
+}
+.make_border_pink{
+  border: 2px solid #FF46F8;
+}
+.make_border_pink > p{
+  color: #FF46F8;
+}
+
+
+#day2{
+  display: none;
+}
+.choose_date > button{
+  font-size: 48px;
+}
+
+
+@media(max-width: 1000px){
+
+  .page{
+    padding: 0%;
+  }
+  /* .Event_Zones_txt{
+    display: none;
+  }
+  .tags_boxes{
+    display: none;
+  } */
+  .Event_Schedule_txt{
+    padding: 0%;
+  }
+  .days_seperator{
+    display: none;
+  }
+  .choose_date > button{
+    font-size: 20px;
+  }
+  .choose_date{
+    justify-content: space-between;
+  }
+  .filter_row_result_left{
+    width: 25%;
+  }
+  .filter_row_result_right{
+    width: 75%;
+  }
+
+
+
+  .filter_option > .filter_row_result_left > h3{
+    font-size: 22px;
+    font-family: Rubik;
+  }
+  .filter_option > .filter_row_result_left > p{
+    font-size: 12px;
+  }
+  .filter_row_result_right > h5{
+    font-size: 22px;
+  }
+  .filter_row_result_right > p{
+    font-size: 12px;
+  }
+
+
+  #zoneChanger{
+    padding: 0%;
+    margin:0%;
+  }
+  
+  .filter_row_left{
+    width: 100%;
+    justify-content: space-between;
+    font-size: 15px;
+  }
+  .filter_row_right{
+    /* flex-direction: column; */
+    width: 100%;
+    justify-content: space-between;
+    font-size: 12px;
+  }
+  
+
+}
