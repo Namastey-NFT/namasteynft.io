@@ -480,3 +480,30 @@ canvas {
     font-weight: 500;
     text-decoration: underline;
 }
+.Event_Schedule_side{
+    position: absolute;
+    position: fixed;
+    
+    top: 50%;
+    right: -110px;
+    transform: rotate(-90deg) translateX(-50%);
+    transform-origin: left top;
+    background-color: #ff2600;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    border-radius: 15px 15px 0px 0px;
+    min-width: 100px;
+    max-width: 540px;
+    height: 48px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    z-index: 99 !important;
+}
+/* 
+@media(max-width: 990px){
+    .Event_Schedule_side{
+        display: none;
+    }
+} */
