@@ -160,6 +160,13 @@ const abi = [
     type: "event",
   },
   {
+    inputs: [],
+    name: "_collectionUri",
+    outputs: [{ internalType: "string", name: "", type: "string" }],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
     inputs: [{ internalType: "uint256", name: "", type: "uint256" }],
     name: "_tokenURIs",
     outputs: [{ internalType: "string", name: "", type: "string" }],
@@ -188,6 +195,15 @@ const abi = [
     name: "balanceOf",
     outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
     stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
+      { internalType: "uint256[]", name: "_tokenIds", type: "uint256[]" },
+    ],
+    name: "burnTokens",
+    outputs: [],
+    stateMutability: "nonpayable",
     type: "function",
   },
   {
@@ -224,6 +240,13 @@ const abi = [
     ],
     name: "categoryToTokenIds",
     outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "contractURI",
+    outputs: [{ internalType: "string", name: "", type: "string" }],
     stateMutability: "view",
     type: "function",
   },
@@ -362,6 +385,27 @@ const abi = [
     type: "function",
   },
   {
+    inputs: [],
+    name: "returnAllCategories",
+    outputs: [{ internalType: "string[]", name: "", type: "string[]" }],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [{ internalType: "string", name: "_category", type: "string" }],
+    name: "returnAvailableTokenIdsForCategory",
+    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [{ internalType: "uint256", name: "_id", type: "uint256" }],
+    name: "returnOwnerForToken",
+    outputs: [{ internalType: "address", name: "", type: "address" }],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
     inputs: [{ internalType: "string", name: "_category", type: "string" }],
     name: "returnTokenIdsForCategory",
     outputs: [{ internalType: "uint256[]", name: "", type: "uint256[]" }],
@@ -437,6 +481,13 @@ const abi = [
   },
   {
     inputs: [{ internalType: "string", name: "_uri", type: "string" }],
+    name: "setCollectionUri",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [{ internalType: "string", name: "_uri", type: "string" }],
     name: "setNotRevealedUri",
     outputs: [],
     stateMutability: "nonpayable",
@@ -487,6 +538,13 @@ const abi = [
   {
     inputs: [],
     name: "symbol",
+    outputs: [{ internalType: "string", name: "", type: "string" }],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+    name: "tokenIdToCategory",
     outputs: [{ internalType: "string", name: "", type: "string" }],
     stateMutability: "view",
     type: "function",

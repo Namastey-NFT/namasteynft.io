@@ -31,15 +31,29 @@
     <!-- title -->
     <title>Namastey NFT presents</title>
     <!-- favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
-    <link rel="manifest" href="/img/site.webmanifest">
-    <link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="/img/favicon.ico">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="msapplication-config" content="/img/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/img/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/img/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/img/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/img/site.webmanifest" />
+    <link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#5bbad5" />
+    <link rel="shortcut icon" href="/img/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="msapplication-config" content="/img/browserconfig.xml" />
+    <meta name="theme-color" content="#ffffff" />
     <!-- animation -->
     <link rel="stylesheet" href="css/animate.css" />
     <!-- bootstrap -->
@@ -211,7 +225,7 @@
           </ul>
         </nav>
       </header>
-      
+
       <!-- end header -->
 
       <!-- Hero Banner -->
@@ -310,7 +324,7 @@
                         Collect and Gain 1 time access to 1 experience zone.
                       </p>
                       <p>5% Discount for Future Events</p>
-                      <div class="price">15</div>
+                      <div class="price">5</div>
                     </div>
                     <div class="action">
                       <div class="quantity">
@@ -349,7 +363,7 @@
                         Collect and Gain 2 time(s) access to 2 experience zones.
                       </p>
                       <p>10% Discount for Future Events</p>
-                      <div class="price">25</div>
+                      <div class="price">12</div>
                     </div>
                     <div class="action">
                       <div class="quantity">
@@ -389,7 +403,7 @@
                         experience zones.
                       </p>
                       <p>20% Discount for Future Events</p>
-                      <div class="price">50</div>
+                      <div class="price">22</div>
                     </div>
                     <div class="action">
                       <div class="quantity">
@@ -579,47 +593,51 @@
       console.log(contract);
 
       async function connect() {
-        await web3.eth.requestAccounts().then(async (res) => {
-          await window.ethereum.enable();
-          console.log(res[0]);
-          let add1 = `${res[0].substr(0, 3)} ....${res[0].substr(
-            res[0].length - 3,
-            res[0].length
-          )}`;
-          document.getElementById("wallet-connect").innerText = add1;
+        try {
+          await web3.eth.requestAccounts().then(async (res) => {
+            await window.ethereum.enable();
+            console.log(res[0]);
+            let add1 = `${res[0].substr(0, 3)} ....${res[0].substr(
+              res[0].length - 3,
+              res[0].length
+            )}`;
+            document.getElementById("wallet-connect").innerText = add1;
 
-          let userObj = {
-            address: res[0],
-          };
+            let userObj = {
+              address: res[0],
+            };
 
-          window.user = userObj;
+            window.user = userObj;
 
-          try {
-            await window.ethereum.request({
-              method: "wallet_switchEthereumChain",
-              params: [{ chainId: "0x89" }],
-            });
-          } catch (switchError) {
-            // This error code indicates that the chain has not been added to MetaMask.
-            if (switchError.code === 4902) {
-              try {
-                await window.ethereum.request({
-                  method: "wallet_addEthereumChain",
-                  params: [
-                    {
-                      chainId: "0x89",
-                      chainName: "Matic Mainnet",
-                      rpcUrls: ["https://polygon-rpc.com/"] /* ... */,
-                    },
-                  ],
-                });
-              } catch (addError) {
-                alert("Please switch to polygon network.");
+            try {
+              await window.ethereum.request({
+                method: "wallet_switchEthereumChain",
+                params: [{ chainId: "0x89" }],
+              });
+            } catch (switchError) {
+              // This error code indicates that the chain has not been added to MetaMask.
+              if (switchError.code === 4902) {
+                try {
+                  await window.ethereum.request({
+                    method: "wallet_addEthereumChain",
+                    params: [
+                      {
+                        chainId: "0x89",
+                        chainName: "Matic Mainnet",
+                        rpcUrls: ["https://polygon-rpc.com/"] /* ... */,
+                      },
+                    ],
+                  });
+                } catch (addError) {
+                  alert("Please switch to polygon network.");
+                }
               }
+              // handle other "switch" errors
             }
-            // handle other "switch" errors
-          }
-        });
+          });
+        } catch (err) {
+          alert("Please make sure you have metamask installed.");
+        }
       }
 
       async function getAllCategories() {

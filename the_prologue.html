@@ -281,7 +281,7 @@
                   id="amount"
                   class="alt-font text-capitalize alt-font text-white margin-5px-bottom font-weight-300 sm-width-100 xs-width-100"
                 >
-                  173/300
+                  0/300
                 </h1>
                 <a
                   id="wallet-connect"
@@ -310,15 +310,15 @@
                 >
                   Choose the category to mint:
                 </h5>
-                <select>
+                <select id="category">
                   <option>Photography</option>
-                  <option>Photography</option>
-                  <option>Photography</option>
+                  <option>Music</option>
                 </select>
                 <h4
+                  id="available"
                   class="alt-font text-capitalize alt-font text-white margin-15px-bottom font-weight-500"
                 >
-                  Minted: 173/300
+                  Minted: 0/300
                 </h4>
                 <h5
                   class="alt-font text-capitalize alt-font text-white margin-5px-bottom font-weight-500"
@@ -329,23 +329,18 @@
                   <div id="bottom">
                     <input
                       type="range"
-                      id="inputqty"
                       min="0"
-                      max="100"
+                      max="6"
                       v-model="theMint"
                       class="slider_mint"
-                    />
-                    <!-- <input
-                      type="text"
                       id="inputqty"
-                      style="color: black"
                       onchange="handlechange()"
-                    /> -->
+                    />
                   </div>
                   <div id="top">
-                    <div class="theMint" id="qty">MINT NFTs</div>
+                    <div id="mint-amount" class="theMint">MINT 3 NFTs</div>
                   </div>
-                  <p>@ 0.5 ETH + gas</p>
+                  <p id="price">@ 0.75 ETH + gas</p>
                 </div>
                 <p>
                   After minting, head to
@@ -525,10 +520,12 @@
     <script src="js/main.js"></script>
     <script src="js/mintingabi.js"></script>
     <script>
+      let value = document.getElementById("inputqty").value;
+      console.log(value);
       let web3 = new Web3(
         Web3.givenProvider || "https://rinkeby.infura.io/v3/"
       );
-      let address = "0x70701f658652bEE4e8c174c44C976538B7E5C4d3";
+      let address = "0xaf2ef580551c294E8BA05AE910dD513Bf369962a";
 
       let contract = new web3.eth.Contract(abi, address);
       console.log(contract);
@@ -581,49 +578,68 @@
         });
       }
 
-      async function buyTokens(category, amount) {
+      async function buyTokens() {
         if (!window.user) {
           await connect();
-        } else {
-          let available = await contract.methods
-            .categoryToAvailableTokenIds(category)
-            .call();
+        }
 
-          if (Number(available) < Number(amount)) {
-            alert("Number exceeds the available amount.");
-          } else {
-            let userAddress = window.user.address;
+        let category = document.getElementById("category").value;
+        let amount = document.getElementById("inputqty").value;
+        let available = await contract.methods
+          .returnAvailableTokenIdsForCategory(category)
+          .call();
+
+        if (Number(available) < Number(amount)) {
+          alert("Number exceeds the available amount.");
+        } else {
+          let userAddress = window.user.address;
+          try {
             let price = await contract.methods.price().call();
-            try {
-              await contract.methods.buyTokens(category, amount).send({
-                from: userAddress,
-                value: web3.utils.toWei(Number(price) * Number(amount)),
-              });
-              window.user.nfts += amount;
-              alert("Nfts minted");
-            } catch (err) {
-              console.log(err);
-            }
+            let value = web3.utils.fromWei(String(price), "ether");
+            // console.log(typeof value);
+            // console.log(typeof amount);
+            await contract.methods.buyTokens(category, Number(amount)).send({
+              from: userAddress,
+              value: web3.utils.toWei(
+                String(Number(value) * Number(amount)),
+                "ether"
+              ),
+            });
+            window.user.nfts += amount;
+            alert("Nfts minted");
+            let available = await getAvailableTokens();
+            console.log(available);
+            let total = await getTotalTokens();
+            document.getElementById("amount").innerText = `${
+              Number(total) - Number(available)
+            }/${total}`;
+            document.getElementById("available").innerText = `${
+              Number(total) - Number(available)
+            }/${total}`;
+          } catch (err) {
+            console.log(err);
           }
         }
       }
 
-      async function getAllCategories() {
-        let categories = [];
-        for (let i = 0; i < 6; ++i) {
-          let category = await contract.methods.categories(i).call();
-          categories.push(category);
-        }
-
-        return categories;
-      }
-
       async function getAvailableTokens() {
-        let categories = await getAllCategories();
+        let categories = await contract.methods.returnAllCategories().call();
         let available = 0;
         for (let i = 0; i < categories.length; ++i) {
           let tokens = await contract.methods
-            .categoryToAvailableTokenIds(categories[i])
+            .returnAvailableTokenIdsForCategory(categories[i])
+            .call();
+          available += Number(tokens);
+        }
+        return available;
+      }
+
+      async function getTotalTokens() {
+        let categories = await contract.methods.returnAllCategories().call();
+        let available = 0;
+        for (let i = 0; i < categories.length; ++i) {
+          let tokens = await contract.methods
+            .returnTokenIdsForCategory(categories[i])
             .call();
           available += tokens.length;
         }
@@ -631,6 +647,7 @@
       }
 
       document.getElementById("wallet-connect").onclick = connect;
+      document.getElementById("address").onclick = connect;
       console.log(window.show);
       if (window.show) {
         document.getElementById("connect").style.display = "none";
@@ -640,11 +657,24 @@
         document.getElementById("connected").style.display = "none";
       }
 
+      (async function () {
+        let available = await getAvailableTokens();
+        console.log(available);
+        let total = await getTotalTokens();
+        document.getElementById("amount").innerText = `${
+          Number(total) - Number(available)
+        }/${total}`;
+        document.getElementById("available").innerText = `${
+          Number(total) - Number(available)
+        }/${total}`;
+      })();
       function handlechange() {
         let value = document.getElementById("inputqty").value;
-
-        document.getElementById("qty").innerText = `MINT ${value} NFTs`;
+        let price = Number(value) * Number(0.25);
+        document.getElementById("price").innerText = `@ ${price} ETH + gas`;
+        document.getElementById("mint-amount").innerText = `MINT ${value} NFTs`;
       }
+      document.getElementById("mint-amount").onclick = buyTokens;
     </script>
   </body>
 </html>
