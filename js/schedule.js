@@ -22,8 +22,6 @@ function showOnlyExhibition(){
     for (let i = 0; i < Purple_tags.length; i++) { Purple_tags[i].style.display = "none"; }
     const Pink_tags = document.querySelectorAll(".zone_Pink");
     for (let i = 0; i < Pink_tags.length; i++) { Pink_tags[i].style.display = "none"; }
-    const Green_tags = document.querySelectorAll(".zone_Green");
-    for (let i = 0; i < Green_tags.length; i++) { Green_tags[i].style.display = "none"; }
     const Blue_tags = document.querySelectorAll(".zone_Blue");
     for (let i = 0; i < Blue_tags.length; i++) { Blue_tags[i].style.display = "none"; }
     const White_tags = document.querySelectorAll(".zone_White");
@@ -41,8 +39,6 @@ function showOnlyConference(){
     for (let i = 0; i < Purple_tags.length; i++) { Purple_tags[i].style.display = "none"; }
     const Pink_tags = document.querySelectorAll(".zone_Pink");
     for (let i = 0; i < Pink_tags.length; i++) { Pink_tags[i].style.display = "none"; }
-    const Green_tags = document.querySelectorAll(".zone_Green");
-    for (let i = 0; i < Green_tags.length; i++) { Green_tags[i].style.display = "none"; }
     const Blue_tags = document.querySelectorAll(".zone_Blue");
     for (let i = 0; i < Blue_tags.length; i++) { Blue_tags[i].style.display = "none"; }
     const White_tags = document.querySelectorAll(".zone_White");
@@ -59,8 +55,6 @@ function showOnlyWorkshop1(){
     for (let i = 0; i < Purple_tags.length; i++) { Purple_tags[i].style.display = "flex"; }    
     const Pink_tags = document.querySelectorAll(".zone_Pink");
     for (let i = 0; i < Pink_tags.length; i++) { Pink_tags[i].style.display = "none"; }    
-    const Green_tags = document.querySelectorAll(".zone_Green");
-    for (let i = 0; i < Green_tags.length; i++) { Green_tags[i].style.display = "none"; }    
     const Blue_tags = document.querySelectorAll(".zone_Blue");
     for (let i = 0; i < Blue_tags.length; i++) { Blue_tags[i].style.display = "none"; }    
     const White_tags = document.querySelectorAll(".zone_White");
@@ -77,8 +71,6 @@ function showOnlyWorkshop2(){
     for (let i = 0; i < Purple_tags.length; i++) { Purple_tags[i].style.display = "none"; }
     const Pink_tags = document.querySelectorAll(".zone_Pink");
     for (let i = 0; i < Pink_tags.length; i++) { Pink_tags[i].style.display = "flex"; }
-    const Green_tags = document.querySelectorAll(".zone_Green");
-    for (let i = 0; i < Green_tags.length; i++) { Green_tags[i].style.display = "none"; }
     const Blue_tags = document.querySelectorAll(".zone_Blue");
     for (let i = 0; i < Blue_tags.length; i++) { Blue_tags[i].style.display = "none"; }
     const White_tags = document.querySelectorAll(".zone_White");
@@ -86,24 +78,7 @@ function showOnlyWorkshop2(){
     document.getElementById('zoneChanger').innerHTML = "Workshop Zone 2";
     // document.getElementById('chooseAZone').innerHTML = "Workshop Zone 2";
 }
-function showOnlyExperience(){
-    const Red_tags = document.querySelectorAll(".zone_Red");
-    for (let i = 0; i < Red_tags.length; i++) { Red_tags[i].style.display = "none"; }
-    const Yellow_tags = document.querySelectorAll(".zone_Yellow");
-    for (let i = 0; i < Yellow_tags.length; i++) { Yellow_tags[i].style.display = "none"; }
-    const Purple_tags = document.querySelectorAll(".zone_Purple");
-    for (let i = 0; i < Purple_tags.length; i++) { Purple_tags[i].style.display = "none"; }
-    const Pink_tags = document.querySelectorAll(".zone_Pink");
-    for (let i = 0; i < Pink_tags.length; i++) { Pink_tags[i].style.display = "none"; }
-    const Green_tags = document.querySelectorAll(".zone_Green");
-    for (let i = 0; i < Green_tags.length; i++) { Green_tags[i].style.display = "flex"; }
-    const Blue_tags = document.querySelectorAll(".zone_Blue");
-    for (let i = 0; i < Blue_tags.length; i++) { Blue_tags[i].style.display = "none"; }
-    const White_tags = document.querySelectorAll(".zone_White");
-    for (let i = 0; i < White_tags.length; i++) { White_tags[i].style.display = "none"; }
-    document.getElementById('zoneChanger').innerHTML = "Experience Zones";
-    // document.getElementById('chooseAZone').innerHTML = "Experience Zones";
-}
+
 function showOnlyOutdoors(){
     const Red_tags = document.querySelectorAll(".zone_Red");
     for (let i = 0; i < Red_tags.length; i++) { Red_tags[i].style.display = "none"; }
@@ -113,8 +88,6 @@ function showOnlyOutdoors(){
     for (let i = 0; i < Purple_tags.length; i++) { Purple_tags[i].style.display = "none"; }
     const Pink_tags = document.querySelectorAll(".zone_Pink");
     for (let i = 0; i < Pink_tags.length; i++) { Pink_tags[i].style.display = "none"; }
-    const Green_tags = document.querySelectorAll(".zone_Green");
-    for (let i = 0; i < Green_tags.length; i++) { Green_tags[i].style.display = "none"; }
     const Blue_tags = document.querySelectorAll(".zone_Blue");
     for (let i = 0; i < Blue_tags.length; i++) { Blue_tags[i].style.display = "flex"; }
     const White_tags = document.querySelectorAll(".zone_White");
@@ -131,8 +104,6 @@ function showOnlyAllZone(){
     for (let i = 0; i < Purple_tags.length; i++) { Purple_tags[i].style.display = "flex"; }
     const Pink_tags = document.querySelectorAll(".zone_Pink");
     for (let i = 0; i < Pink_tags.length; i++) { Pink_tags[i].style.display = "flex"; }
-    const Green_tags = document.querySelectorAll(".zone_Green");
-    for (let i = 0; i < Green_tags.length; i++) { Green_tags[i].style.display = "flex"; }
     const Blue_tags = document.querySelectorAll(".zone_Blue");
     for (let i = 0; i < Blue_tags.length; i++) { Blue_tags[i].style.display = "flex"; }
     const White_tags = document.querySelectorAll(".zone_White");

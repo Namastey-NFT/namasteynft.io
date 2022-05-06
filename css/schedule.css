@@ -93,9 +93,9 @@ a {
 .tags_box_4{
   background: #FF46F8;
 }
-.tags_box_5{
+/* .tags_box_5{
   background: #00EE6C;
-}
+} */
 .tags_box_6{
   background: #20D7FF;
 }
@@ -216,7 +216,7 @@ a {
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 500;
-  font-size: 36px;
+  font-size: 30px;
   line-height: 43px;
   color: white;
   margin: 0%;
@@ -226,7 +226,7 @@ a {
 font-family: 'Rubik';
 font-style: normal;
 font-weight: 400;
-line-height: 24px;
+line-height: 20px;
 color: #FFFFFF;
 margin: 0%;
 
@@ -255,12 +255,11 @@ margin: 0%;
   padding: 0%;
   color: white;
   font-family: 'Rubik';
-font-style: normal;
-font-weight: 400;
-font-size: 24px;
-line-height: 28px;
-
-color: #FFFFFF;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: #FFFFFF;
 }
 .make_border_blue{
   border: 2px solid #20D7FF;
@@ -311,7 +310,21 @@ color: #FFFFFF;
   font-size: 48px;
 }
 
+
 @media(max-width: 1000px){
+
+  .page{
+    padding: 0%;
+  }
+  /* .Event_Zones_txt{
+    display: none;
+  }
+  .tags_boxes{
+    display: none;
+  } */
+  .Event_Schedule_txt{
+    padding: 0%;
+  }
   .days_seperator{
     display: none;
   }
@@ -321,5 +334,46 @@ color: #FFFFFF;
   .choose_date{
     justify-content: space-between;
   }
+  .filter_row_result_left{
+    width: 25%;
+  }
+  .filter_row_result_right{
+    width: 75%;
+  }
+
+
+
+  .filter_option > .filter_row_result_left > h3{
+    font-size: 22px;
+    font-family: Rubik;
+  }
+  .filter_option > .filter_row_result_left > p{
+    font-size: 12px;
+  }
+  .filter_row_result_right > h5{
+    font-size: 22px;
+  }
+  .filter_row_result_right > p{
+    font-size: 12px;
+  }
+
+
+  #zoneChanger{
+    padding: 0%;
+    margin:0%;
+  }
+  
+  .filter_row_left{
+    width: 100%;
+    justify-content: space-between;
+    font-size: 15px;
+  }
+  .filter_row_right{
+    /* flex-direction: column; */
+    width: 100%;
+    justify-content: space-between;
+    font-size: 12px;
+  }
+  
 
 }
