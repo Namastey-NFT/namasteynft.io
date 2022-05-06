@@ -21,7 +21,7 @@
 .zone_passes .list-main ul{ width:100%; margin:0; padding:0px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items:start;}
 .zone_passes .list-main ul li{ width:33.33%; border-right:1px solid #6D46FF; padding:30px; list-style:none;}
 .zone_passes .list-main ul li:nth-child(3n){ border:none;}
-.zone_passes .list-main ul li .thumb{ width:100%; padding:40px 85px; text-align:center;}
+/* .zone_passes .list-main ul li .thumb{ width:100%; padding:40px 85px; text-align:center;} */
 .zone_passes .list-main ul li .thumb img{ max-width:100%; display:inline-block;}
 .zone_passes .list-main ul li.moon_pass .thumb{background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), linear-gradient(108.73deg, #6D46FF 12.67%, #111111 135.47%);}
 .zone_passes .list-main ul li.sun_pass .thumb{background: linear-gradient(113.22deg, #FF4320 15.02%, #000000 120.66%);}
@@ -53,7 +53,7 @@
 .entry_ticket .inner .detail{ padding:0px 20px;}
 .entry_ticket .inner .action{width: 26%;}
 .zone_passes .list-main ul li{ padding:20px;}
-.zone_passes .list-main ul li .thumb{ padding:40px 45px;}
+/* .zone_passes .list-main ul li .thumb{ padding:40px 45px;} */
 .zone_passes .list-main ul li .action .quantity{max-width: 100%; margin-right: 0px; margin-bottom: 10px;}
 .zone_passes .list-main ul li .action .mint{max-width: 100%;}
 .zone_passes .list-main ul li .action .quantity input.qtyplus, .zone_passes .list-main ul li .action .quantity input.qtyminus{ width:20%;}
@@ -70,7 +70,7 @@
 .entry_ticket .inner .action{width: 29%;}
 
 .zone_passes .list-main ul li{ padding:15px;}
-.zone_passes .list-main ul li .thumb{ padding:20px;}
+/* .zone_passes .list-main ul li .thumb{ padding:20px;} */
 .zone_passes .list-main ul li .details h3{ font-size:16px;}
 }
 
@@ -81,7 +81,7 @@
 .entry_ticket .inner .action{width:100%;}
 
 .zone_passes .list-main ul li{width:100%; padding:30px; border-right:none; border-bottom: 1px solid #6D46FF;}
-.zone_passes .list-main ul li .thumb{ padding:40px 85px;}
+/* .zone_passes .list-main ul li .thumb{ padding:40px 85px;} */
 }
 
 @media(max-width:479px){
