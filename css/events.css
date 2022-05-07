@@ -435,6 +435,9 @@ canvas {
 
 .submit-art  {
     width: 23%;
+    border-color: linear-gradient(169.44deg, rgba(58, 129, 191, 0.08) 1.85%, rgba(65, 48, 90, 0.08) 98.72%);;
+    border-style: solid;
+    border-radius: 25px;
 }
 
 .art_is{
@@ -514,6 +517,7 @@ canvas {
 }
 .event-part-back{
     background: url('/img/event_highlight_back.jpeg');
+    background-size: cover;
 }
 
 /* .moveContainer:hover{
