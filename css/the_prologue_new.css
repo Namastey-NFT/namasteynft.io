@@ -8,8 +8,13 @@
 #the_prologue_new .prologue_head img{ width:auto;}
 #the_prologue_new .prologue_head a{font-style: normal; font-weight: 600; font-size: 20px; line-height: 24px; text-align: center; color: #FFFFFF; font-family: 'Montserrat', sans-serif; padding:11px 0px; margin:0px 10px; min-width:260px;}
 #the_prologue_new .prologue_head .view_collection{ background:none !important; border: 1px solid #FFFFFF !important; border-radius: 12px;}
-#the_prologue_new .prologue_head .goto_mint{background:none !important; border: 1px solid #FFFFFF !important; border-radius: 12px; color: #00EE6C !important;}
-
+/* #the_prologue_new .prologue_head .goto_mint{background:none !important; border: 1px solid #FFFFFF !important; border-radius: 12px; color: #00EE6C !important;} */
+#the_prologue_new .prologue_head .goto_mint{background: #b8b8b8 !important;
+    border: 1px solid #b8b8b8 !important;
+    border-radius: 12px;
+    color: #050505 !important;
+    cursor: not-allowed !important;
+}
 #the_prologue_new .collection_detail h3{font-family: 'Rubik', sans-serif; color: #748EC7; line-height: 57px;}
 #the_prologue_new .collection_detail h1{font-family: 'Rubik', sans-serif; font-style: normal; font-weight: 300; font-size: 84.9963px; line-height:70px; text-align: center; background: linear-gradient(171.32deg, #6A9AD0 52.76%, #FFFFFF 87.83%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-fill-color: transparent; margin:0;}
 #the_prologue_new .collection_detail p{font-style: normal; font-weight: 500; font-size: 18px; line-height: 22px; text-align: center; color: #89ADD5; font-family: 'Montserrat', sans-serif;}
