@@ -514,6 +514,7 @@ canvas {
 }
 .event-part-back{
     background: url('/img/event_highlight_back.jpeg');
+    background-size: cover;
 }
 
 /* .moveContainer:hover{
