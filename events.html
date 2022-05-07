@@ -704,13 +704,14 @@
         height: 265px;
         width: 100%;
         border-radius: 8px;
+        cursor: pointer;
     }
 
     @media(max-width:767px){
         .minting_soon { padding:50px 0;}
         .minting_soon .background{
         background: url('img/frame_mint_mobile.png');
-        height: 227px;
+        height: 340px;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
@@ -721,14 +722,20 @@
     }
     </style>
     <section class="minting_soon">
-        <div class="container moveContainer">
+        <div class="container moveContainer" id="minting_soon">
+            <div class="background"></div>
             <div class="imgs"> 
-                <div class="background"></div>
-                <img src="img/logo.png" class="logo" alt=""> 
+                <!-- <img src="img/logo.png" class="logo" alt="">  -->
             </div>
         </div>
     </section>
+    <script>
+        var background = document.getElementById('minting_soon')
+        background.addEventListener("click",function() {
+            location.href="the_prologue.html"
+        });
 
+    </script>
 <!-- Minting END -->
  <!-- Workshops Zone Start-->
  <style>
