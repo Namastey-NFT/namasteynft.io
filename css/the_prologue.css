@@ -176,7 +176,7 @@
 }
 
 .round label:after {
-  border: 2px solid #fff;
+  border: 2px solid #6D46FF;
   border-top: none;
   border-right: none;
   content: "";
@@ -194,11 +194,22 @@
 }
 
 .round input[type="checkbox"]:checked + label {
-  background-color: #66bb6a;
-  /* border-color: #66bb6a; */
+  background-color: #fff;
 }
 
 .round input[type="checkbox"]:checked + label:after {
+  opacity: 1;
+}
+
+.round input[type="checkbox1"] {
+  visibility: hidden;
+}
+
+.round input[type="checkbox1"]:checked + label {
+  background-color: #fff;
+}
+
+.round input[type="checkbox1"]:checked + label:after {
   opacity: 1;
 }
 

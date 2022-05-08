@@ -292,12 +292,12 @@
                   >
                 </div>
                 <!-- Option 1 -->
-                <div id="selectChoose" >
-                  <div id="premium_bundle" style="border-radius: 8px; background-color:#6D46FF ; padding: 10px 0px; margin: 30px 0px; margin-bottom: 0px;">
+                <div id="selectChoose">
+                  <div id="premium_bundle" onclick="clickPremium()" style="border-radius: 8px; background-color:#6D46FF ; padding: 10px 0px; margin: 30px 0px; margin-bottom: 0px;">
                     <div style="position: relative; top: 35%; left: 35%;">
                       <div class="round">
-                        <input type="checkbox" checked id="checkbox1" />
-                        <label for="checkbox1"></label>
+                        <img src="/img/tick_image.png" id="primiumTick" style=" display: flex; justify-content: center; align-items: center; height: 30px; width:30px; border-radius: 50%;" alt="">
+                        <img src="/img/untick.png" id="primiumUnTick" style=" display: none; justify-content: center; align-items: center; height: 30px; width:30px; border-radius: 50%;" alt="">
                       </div>
                     </div>
                     <div style="display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start;">
@@ -305,16 +305,15 @@
                       <p style="font-size: 14px;">A selection of 8 artworks from different categories</p>
                     </div>
                     <div style="display:flex; justify-content:flex-end; flex-direction: column; align-items: flex-end; padding-right: 20px;">
-                      <p style="font-size: 20px;">3 Available</p>
-                      <p style="font-size: 14px; line-height: 17px;">Total 5</p>
+                      <p style="font-size: 24px;">Total 5</p>
                     </div>
                   </div>
                   <br>
-                  <div id="Special_bundle" style="border-radius: 8px; background-color:#000000 ; padding: 10px 0px; margin: 30px 0px; margin-top: 0px;">
+                  <div id="Special_bundle" onclick="clickSpecial()" style="border-radius: 8px; background-color:#000000 ; padding: 10px 0px; margin: 30px 0px; margin-top: 0px;">
                     <div style="position: relative; top: 35%; left: 35%;">
-                      <div class="round">
-                        <input type="checkbox" checked id="checkbox2" />
-                        <label for="checkbox2"></label>
+                      <div class="round" >
+                        <img src="/img/tick_image.png" id="specialTick" style=" display: none; justify-content: center; align-items: center; height: 30px; width:30px; border-radius: 50%;" alt="">
+                        <img src="/img/untick.png" id="specialUnTick" style=" display: flex; justify-content: center; align-items: center; height: 30px; width:30px; border-radius: 50%;" alt="">
                       </div>
                     </div>
                     <div style="display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start;">
@@ -322,18 +321,17 @@
                       <p style="font-size: 14px;">A selection of 4 artworks from different categories</p>
                     </div>
                     <div style="display:flex; justify-content:flex-end; flex-direction: column; align-items: flex-end; padding-right: 20px">
-                      <p style="font-size: 20px;">4 Available</p>
-                      <p style="font-size: 14px; line-height: 17px;">Total 5</p>
+                      <p style="font-size: 24px;">Total 5</p>
                     </div>
                   </div>
                   <div class="final_result_calculate">
-                    <p>@2 ETH </p>
-                    <p>@ 1.7 ETH + gas</p>
+                    <p id="eth_Price">@2 ETH </p>
+                    <p id="eth_PriceGas">@ 1.7 ETH + gas</p>
                     <button>MINT</button>
                   </div>
                 </div>
                 <!-- Option 2 -->
-                <div id="selectCustomise" style="display: none;">
+                <div id="selectCustomise" style="display: none;"  >
                   <div class="dark-theme">
                     <div class="dark-theme-top">
                         <p style="font-family: 'Rubik'; font-style: normal; font-weight: 600; font-size: 18px; color: #FF4320;">
