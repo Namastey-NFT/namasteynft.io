@@ -186,9 +186,9 @@ a {
     padding-bottom: 50px;
 }
 .creator-list{
-    height: 450px;
+    height: 500px;
     width: 370px;
-    padding: 10px 60px;
+    padding: 10px 35px;
     background-color: #6D46FF33;
     display: grid;
     border-radius: 20px;
@@ -202,11 +202,15 @@ a {
     color: #FFFFFF;
 }
 .designation{
+    flex-direction: column;
     font-family: 'Rubik';
-    font-size: 22.5px;
+    font-size: 20px;
     line-height: 28px;
     text-align: center;
     justify-content: center;
+}
+.designation .date{
+    font-size: 16px;       
 }
 .name{
     color: #00EE6C;
@@ -220,7 +224,7 @@ a {
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
-    line-height: 17px;
+    line-height: 20px;
     text-align: center;
     color: #FFFFFF;
 }
@@ -287,7 +291,7 @@ button{
         justify-content: center;
     }
     .creator-list{
-      height: 500px;
+      height: 550px;
     }
     .start-reg{
         width: 100%;
