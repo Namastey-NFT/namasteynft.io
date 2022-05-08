@@ -251,7 +251,7 @@
                                         <!-- <button type="button" style="background-color: grey !important; cursor: not-allowed;"><a class="smallTextButton" style=" text-decoration: none; color: white; cursor: not-allowed;" href="#">Registration Opening Soon</a> -->
                                         </button>
                                     </div>
-                                    <p class="available">
+                                    <p class="available" id="dev_workshop">
                                         Available 300/300
                                     </p>
                                 </div>
@@ -284,7 +284,7 @@
                                         <!-- <button type="button" style="background-color: grey !important; cursor: not-allowed;"><a class="smallTextButton" style=" text-decoration: none; color: white; cursor: not-allowed;" href="#">Registration Opening Soon</a> -->
                                         </button>
                                     </div>
-                                    <p class="available">
+                                    <p class="available" id="bounty">
                                         Available 300/300
                                     </p>
                                 </div>
@@ -317,7 +317,7 @@
                                 <a class="smallTextButton" style=" text-decoration: none; color: white; cursor: not-allowed;" href="#">Registration Opening Soon</a> -->
                                         </button>
                                     </div>
-                                    <p class="available">
+                                    <p class="available" id="try_crypto">
                                         Available 300/300
                                     </p>
                                 </div>
@@ -877,6 +877,38 @@
                 }
             }
         }
+    </script>
+    <script>
+        const dataArr=[
+           {    for:"Building for Web3",
+                sheetId:"19_1rKqqoRkwbGY1aLaVAYyRawteDLbro-WZS5rbLG_E",
+                div_id:"#dev_workshop",
+                totalSlots:300
+            },
+            {    for:"Bounties",
+                sheetId:"1A2sbHMJCV2VpwDpVwOFme0DIqLHEb-ob4-owJ55ke8M",
+                div_id:"#bounty",
+                totalSlots:300
+            },{
+                for:"try crypto",
+                sheetId:"1S4Z6BUzDAT-qFc7mUrXQPwxz8GvPOdtVxW884ABBAJQ/",
+                div_id:"#try_crypto",
+                totalSlots:300
+            }
+        ]
+        dataArr.forEach((item)=>{
+            var sheetId = item.sheetId
+            var url = "https://sheets.googleapis.com/v4/spreadsheets/"+ sheetId + "/?key=AIzaSyBbJvryo-jZGBGGvOjyJ3nMMuhF2x8uguA";
+           
+            $.getJSON(url, function(result){
+                var filled=result.sheets[0].basicFilter?.range?.endRowIndex
+                if(filled<item.totalSlots)
+                    $(item.div_id).html(`Available ${300 - filled}/300`)
+                else if (filled>=item.totalSlots)
+                    $(item.div_id).html(`All spots are filled, but you can still register to be on the waiting list. And, if a spot frees up, we’ll let you know.`)
+            });
+        })
+
     </script>
 </body>
 
