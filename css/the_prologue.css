@@ -253,7 +253,6 @@
     flex-direction: row;
 }
 
-
 form {
   width: 300px;
   margin: 0 auto;
@@ -283,31 +282,42 @@ form {
   cursor: pointer;
 }
 
-form #decrease {
-  margin-right: -4px;
-  border-radius: 8px 0 0 8px;
-}
+form #decrease1 { margin-right: -4px; border-radius: 8px 0 0 8px; }
 
-form #increase {
-  margin-left: -4px;
-  border-radius: 0 8px 8px 0;
-}
+form #increase1 { margin-left: -4px; border-radius: 0 8px 8px 0; }
 
-form #input-wrap {
-  margin: 0px;
-  padding: 0px;
-}
+form #input-wrap { margin: 0px; padding: 0px; }
+input#number1 { text-align: center; border: none; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; margin: 0px; width: 40px; height: 40px; background: black; }
 
-input#number {
-  text-align: center;
-  border: none;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  margin: 0px;
-  width: 40px;
-  height: 40px;
-  background: black;
-}
+/*    NUMBER   2    */
+form #decrease2 { margin-right: -4px; border-radius: 8px 0 0 8px; }
+form #increase2 { margin-left: -4px; border-radius: 0 8px 8px 0; }
+form #input-wrap { margin: 0px; padding: 0px; }
+input#number2 { text-align: center; border: none; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; margin: 0px; width: 40px; height: 40px; background: black; }
+
+/*    NUMBER   3    */
+form #decrease3 { margin-right: -4px; border-radius: 8px 0 0 8px; }
+form #increase3 { margin-left: -4px; border-radius: 0 8px 8px 0; }
+form #input-wrap { margin: 0px; padding: 0px; }
+input#number3 { text-align: center; border: none; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; margin: 0px; width: 40px; height: 40px; background: black; }
+
+/*    NUMBER   4    */
+form #decrease4 { margin-right: -4px; border-radius: 8px 0 0 8px; }
+form #increase4 { margin-left: -4px; border-radius: 0 8px 8px 0; }
+form #input-wrap { margin: 0px; padding: 0px; }
+input#number4 { text-align: center; border: none; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; margin: 0px; width: 40px; height: 40px; background: black; }
+
+/*    NUMBER   5    */
+form #decrease5 { margin-right: -4px; border-radius: 8px 0 0 8px; }
+form #increase5 { margin-left: -4px; border-radius: 0 8px 8px 0; }
+form #input-wrap { margin: 0px; padding: 0px; }
+input#number5 { text-align: center; border: none; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; margin: 0px; width: 40px; height: 40px; background: black; }
+
+/*    NUMBER   6    */
+form #decrease6 { margin-right: -4px; border-radius: 8px 0 0 8px; }
+form #increase6 { margin-left: -4px; border-radius: 0 8px 8px 0; }
+form #input-wrap { margin: 0px; padding: 0px; }
+input#number6 { text-align: center; border: none; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; margin: 0px; width: 40px; height: 40px; background: black; }
 
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
