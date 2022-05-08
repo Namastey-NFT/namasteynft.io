@@ -956,11 +956,17 @@ a:focus {
     padding: 30px 10px;
     max-width: 380px;
     margin: 0 auto;
+    flex: 50%;
     cursor: pointer;
     transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
     -webkit-transition: all 0.5s ease-in-out;
+}
+
+.flex-wrap2{
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .round-version .iq-team2 .team-blog {
@@ -1008,6 +1014,7 @@ a:focus {
 
 .iq-team2 .team-blog img {
     width: 100%;
+    transform: scale(1.2);
 }
 
 .iq-team2 .iq-media-blog {
