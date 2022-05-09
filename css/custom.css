@@ -346,6 +346,10 @@ canvas {
 	.exhibition{
 		margin-right: 0px
 	}
+	.mintlive{
+		left: 30%;
+		width: 100%;
+	}
  }
 
  .visible_div{
@@ -411,3 +415,11 @@ canvas {
 }
 
 
+.mintlive{
+	position: absolute;
+	top: 10px;
+	right: 45%;
+	color: rgb(44, 44, 44);
+	font-weight: 700;
+	letter-spacing: 8px;
+}
