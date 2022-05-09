@@ -186,63 +186,67 @@
         height: 30px;
         width: 150px;
     }
-    }
-    .filter-result{
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        margin-top: 50px;
-        justify-content: center;
-        gap: 5rem;
-        
-    }
-    .result_box_main{
-        display: grid;
-        height: 400px;
-        width: 320px;
-        grid-template-rows: 80% 10% 10%;
-        border-color: #FFFFFF;
-        border-width: 1px;
-        border-radius: 12px;
-        border-style: solid;
-    }
-    .artwork-image{
-        width: 318px;
-        height: 320px;
-        left: 129px;
-        top: 589px;
-        border-radius: 12px 12px 0px 0px;
-        background-size:contain;
-    }
-    .artwork-image img{
-        max-width: 320px;
-        max-height: 320px;
-        border-radius: 12px 12px 0px 0px;
-    }
-    .artwork-title{
-        font-family: 'Rubik';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        text-align: center;
-        color: #FFFFFF;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .artist-name{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-family: 'Rubik';
-        font-style: normal;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 17px;
-        text-align: center;
-        color: #00EE6C;
-    }
-    @media(max-width: 1000px){
+}
+.filter-result{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 50px;
+    justify-content: center;
+    gap: 5rem;
+    
+    
+}
+.result_box_main{
+    display: grid;
+    height: 400px;
+    width: 320px;
+    grid-template-rows: 80% 10% 10%;
+    border-color: #FFFFFF;
+    border-width: 1px;
+    border-radius: 12px;
+    border-style: solid;
+}
+.artwork-image{
+    width: 318px;
+    height: 320px;
+    left: 129px;
+    top: 589px;
+    border-radius: 12px 12px 0px 0px;
+    background-size:contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.artwork-image img{
+    max-width: 320px;
+    max-height: 320px;
+    border-radius: 12px 12px;
+}
+.artwork-title{
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.artist-name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #00EE6C;
+}
+@media(max-width: 1000px){
     .result_box_main{
         height: 200px;
         width: 140px;

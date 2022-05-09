@@ -271,22 +271,9 @@
                   </h6>
                 </div>
                 <p class="margin-10px-top">
-                  "The Prologue" is an aptly named project as it is a prologue
-                  to the success that NamasteyNFT will be. With the goal to
-                  empower more artists to get into Web 3, this collection marks
-                  it's first step. This collection made of all all genres of art
-                  from 2D to animations to poetry. The message is art cannot be
-                  put in a box and defined. Art is an embodiment of inclusivity.
-                  Art is a creative expression made material, art tells a story.
-                  Each piece in this collection be it Photography, 2D art, 3D
-                  art, traditional art, Music, Poetry, Illustration, Photo
-                  manipulation, AI, or Video artistry. It has the artists
-                  community, culture and their very soul made bare. We at
-                  NamasteyNFT wanted to celebrate this unique inclusivity in art
-                  and support the community. And to that end, the art pieces
-                  will be use blind minting contracts with 80% of the first sale
-                  going to the artist and the 10% royalty completely going into
-                  their pockets.
+                  “The Prologue” is the first ever collection by NamasteyNFT.
+The Prologue is a collection of the works of 300 artists from across the globe, featuring various artforms such as 3D Animations, Paintings, Renders, Photography, 2D Art, Films, Movies, Traditional Art, Generative Art, Music, Poetry etc.
+Each of these 300 pieces were hand-picked by a team of curators out of more than 1500+ entries received.
                 </p>
               </div>
             </div>
@@ -349,6 +336,7 @@
                           border-radius: 4px;
                         "
                         onclick="CustomiseBundle()"
+                        class="btn_choose"
                       >
                         Customise
                       </button>
@@ -359,6 +347,7 @@
                           border-style: none;
                           background-color: transparent;
                         "
+                        class="btn_choose"
                         onclick="ChooseBundle()"
                       >
                         Choose a Bundle
@@ -371,6 +360,7 @@
                   <div
                     id="premium_bundle"
                     onclick="clickPremium()"
+                    class="btn_choose"
                     style="
                       border-radius: 8px;
                       background-color: #6d46ff;
@@ -381,124 +371,39 @@
                   >
                     <div style="position: relative; top: 35%; left: 35%">
                       <div class="round">
-                        <img
-                          src="/img/tick_image.png"
-                          id="primiumTick"
-                          style="
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            height: 30px;
-                            width: 30px;
-                            border-radius: 50%;
-                          "
-                          alt=""
-                        />
-                        <img
-                          src="/img/untick.png"
-                          id="primiumUnTick"
-                          style="
-                            display: none;
-                            justify-content: center;
-                            align-items: center;
-                            height: 30px;
-                            width: 30px;
-                            border-radius: 50%;
-                          "
+                        <img src="/img/tick_image.png" id="primiumTick" style=" display: flex; justify-content: center; align-items: center; height: 30px; width: 30px; border-radius: 50%; " alt="" />
+                        <img src="/img/untick.png" id="primiumUnTick" style=" display: none; justify-content: center; align-items: center; height: 30px; width: 30px; border-radius: 50%; "
                           alt=""
                         />
                       </div>
                     </div>
-                    <div
-                      style="
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: flex-start;
-                        align-items: flex-start;
-                      "
-                    >
-                      <p style="font-size: 20px">Premium bundle - 15% Off</p>
-                      <p style="font-size: 14px">
+                    <div style=" display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; " >
+                      <p class="changePremiumSpecial" style="font-size: 20px">Premium bundle - 15% Off</p>
+                      <p class="changePremiumSpecial2">
                         A selection of 8 artworks from random categories
                       </p>
                     </div>
                     <div
-                      style="
-                        display: flex;
-                        justify-content: flex-end;
-                        flex-direction: column;
-                        align-items: flex-end;
-                        padding-right: 20px;
-                      "
-                    >
-                      <p style="font-size: 24px">Total 5</p>
+                      style=" display: flex; justify-content: flex-end; flex-direction: column; align-items: flex-end; padding-right: 20px; " >
+                      <p >Total 5</p>
                     </div>
                   </div>
                   <br />
-                  <div
-                    id="Special_bundle"
-                    onclick="clickSpecial()"
-                    style="
-                      border-radius: 8px;
-                      background-color: #000000;
-                      padding: 10px 0px;
-                      margin: 30px 0px;
-                      margin-top: 0px;
-                    "
-                  >
+                  <div id="Special_bundle" onclick="clickSpecial()" style=" border-radius: 8px; background-color: #000000; padding: 10px 0px; margin: 30px 0px; margin-top: 0px; " >
                     <div style="position: relative; top: 35%; left: 35%">
                       <div class="round">
-                        <img
-                          src="/img/tick_image.png"
-                          id="specialTick"
-                          style="
-                            display: none;
-                            justify-content: center;
-                            align-items: center;
-                            height: 30px;
-                            width: 30px;
-                            border-radius: 50%;
-                          "
-                          alt=""
-                        />
-                        <img
-                          src="/img/untick.png"
-                          id="specialUnTick"
-                          style="
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            height: 30px;
-                            width: 30px;
-                            border-radius: 50%;
-                          "
-                          alt=""
-                        />
+                        <img src="/img/tick_image.png" id="specialTick" style=" display: none; justify-content: center; align-items: center; height: 30px; width: 30px; border-radius: 50%; " alt="" />
+                        <img src="/img/untick.png" id="specialUnTick" style=" display: flex; justify-content: center; align-items: center; height: 30px; width: 30px; border-radius: 50%; " alt="" />
                       </div>
                     </div>
-                    <div
-                      style="
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: flex-start;
-                        align-items: flex-start;
-                      "
-                    >
-                      <p style="font-size: 20px">Special bundle - 10% Off</p>
-                      <p style="font-size: 14px">
+                    <div style=" display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; " >
+                      <p class="changePremiumSpecial" style="font-size: 20px">Special bundle - 10% Off</p>
+                      <p class="changePremiumSpecial2">
                         A selection of 4 artworks from random categories
                       </p>
                     </div>
-                    <div
-                      style="
-                        display: flex;
-                        justify-content: flex-end;
-                        flex-direction: column;
-                        align-items: flex-end;
-                        padding-right: 20px;
-                      "
-                    >
-                      <p style="font-size: 24px">Total 5</p>
+                    <div style=" display: flex; justify-content: flex-end; flex-direction: column; align-items: flex-end; padding-right: 20px; " >
+                      <p>Total 5</p>
                     </div>
                   </div>
                   <input type="hidden" id="qty" value="8" />

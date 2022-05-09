@@ -344,6 +344,31 @@ form {
 .value-button:hover {
   cursor: pointer;
 }
+.changePremiumSpecial{
+        font: 16px;
+    }
+    .changePremiumSpecial2{
+        font-size: 11px;
+    }
+@media(max-width: 600px){
+    .category_tags_2{
+        flex-direction: column;
+    }
+    .Photography_category, .Traditional_Art, .Digital_Media_category, .Music_category, .Poetry_category, .Film_category, .count-how-many, .count-how-many-left {
+        width: 100%;
+    }
+    #choose_bundle{
+        padding: 
+        0%;
+    }
+    .btn_choose{
+        font-size: 15px;
+    }
+    .final_result_calculate > p{
+        padding: 0%;
+        font-size: 12px;
+    }
+}
 
 form #decrease1 { margin-right: -4px; border-radius: 8px 0 0 8px; }
 form #increase1 { margin-left: -4px; border-radius: 0 8px 8px 0; }
