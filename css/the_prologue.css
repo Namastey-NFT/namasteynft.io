@@ -60,6 +60,8 @@
     align-items: center;
     padding: 5px 15px;
     border-radius: 4px  ;
+    background-color: white;
+        color: #6D46FF;
 }
 #choose_bundle{
     display: flex;
@@ -67,8 +69,6 @@
     align-items: center;
     padding: 5px 15px;
 
-    background-color: white;
-    color: #6D46FF;
     border-radius: 4px;
 }
 
@@ -231,6 +231,7 @@
     line-height: 21px;
     text-align: center;
     color: #FFFFFF;
+    margin: 10px;
 }
 .final_result_calculate >button{
     width: 177px;

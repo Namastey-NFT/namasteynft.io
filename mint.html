@@ -31,12 +31,26 @@
     <!-- title -->
     <title>Namastey NFT presents</title>
     <!-- favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
-    <link rel="manifest" href="/img/site.webmanifest">
-    <link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/img/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/img/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/img/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/img/site.webmanifest" />
+    <link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#5bbad5" />
+    <link rel="shortcut icon" href="/img/favicon.ico" />
     <!-- animation -->
     <link rel="stylesheet" href="css/animate.css" />
     <!-- bootstrap -->
@@ -214,11 +228,11 @@
       <section
         class="text-white xboot-section btn-version"
         id="the_prologue_main"
-        style="background-image: url('/img/event_highlight_back.jpeg');"
+        style="background-image: url('/img/event_highlight_back.jpeg')"
       >
         <div class="container">
           <div class="row">
-            <div class="col-md-8" id="changeWWid" >
+            <div class="col-md-8" id="changeWWid">
               <div class="centre_text">
                 <div class="prologue_logo">
                   <h6
@@ -232,15 +246,16 @@
                   <a id="hide_1" href="#" class="btn btn-blue btn-small"
                     >VERIFIED CONTRACT</a
                   >
-                  <a id="hide_2" href="#" class="btn btn-blue btn-small margin-10px-top"
+                  <a
+                    id="hide_2"
+                    href="#"
+                    class="btn btn-blue btn-small margin-10px-top"
                     >OPENSEA COLLECTION</a
                   >
                 </div>
                 <h5
                   class="alt-font text-capitalize alt-font text-white margin-10px-bottom margin-10px-top font-weight-400 sm-width-100 xs-width-100 prologue_title"
-
-                  >
-                
+                >
                   300 ART Collective
                 </h5>
                 <div class="supply">
@@ -306,7 +321,7 @@
               </div>
             </div>
 
-            <div class="col-md-7" id="connected" style="display: none;">
+            <div class="col-md-7" id="connected" style="display: none">
               <div class="wallet_box_connected">
                 <a
                   href="#"
@@ -315,180 +330,423 @@
                 ></a>
                 <h5
                   class="alt-font text-capitalize alt-font text-white margin-5px-bottom font-weight-500"
-                >
-                  
-                </h5>
-                
+                ></h5>
+
                 <div id="TheMint">
                   <div id="bottom">
                     <input id="inputqty" />
                   </div>
-                  
                 </div>
-                
+
                 <!-- THIS IS FOR WHOLE ROW -->
                 <div class="bundleAndWallet">
                   <div class="preference_choose">
                     <div id="customise_bundle">
-                      <button style="border-style:none; background-color:transparent; border-radius: 4px;" onclick="CustomiseBundle()">
+                      <button
+                        style="
+                          border-style: none;
+                          background-color: transparent;
+                          border-radius: 4px;
+                        "
+                        onclick="CustomiseBundle()"
+                      >
                         Customise
                       </button>
                     </div>
                     <div id="choose_bundle">
-                      <button style="border-style:none; background-color:transparent;" onclick="ChooseBundle()">
+                      <button
+                        style="
+                          border-style: none;
+                          background-color: transparent;
+                        "
+                        onclick="ChooseBundle()"
+                      >
                         Choose a Bundle
                       </button>
                     </div>
-                    
                   </div>
-                  
                 </div>
                 <!-- Option 1 -->
-                <div id="selectChoose" style="display: none;" >
-                  <div id="premium_bundle" onclick="clickPremium()" style="border-radius: 8px; background-color:#6D46FF ; padding: 10px 0px; margin: 30px 0px; margin-bottom: 0px;">
-                    <div style="position: relative; top: 35%; left: 35%;">
+                <div id="selectChoose" style="display: none">
+                  <div
+                    id="premium_bundle"
+                    onclick="clickPremium()"
+                    style="
+                      border-radius: 8px;
+                      background-color: #6d46ff;
+                      padding: 10px 0px;
+                      margin: 30px 0px;
+                      margin-bottom: 0px;
+                    "
+                  >
+                    <div style="position: relative; top: 35%; left: 35%">
                       <div class="round">
-                        <img src="/img/tick_image.png" id="primiumTick" style=" display: flex; justify-content: center; align-items: center; height: 30px; width:30px; border-radius: 50%;" alt="">
-                        <img src="/img/untick.png" id="primiumUnTick" style=" display: none; justify-content: center; align-items: center; height: 30px; width:30px; border-radius: 50%;" alt="">
+                        <img
+                          src="/img/tick_image.png"
+                          id="primiumTick"
+                          style="
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            height: 30px;
+                            width: 30px;
+                            border-radius: 50%;
+                          "
+                          alt=""
+                        />
+                        <img
+                          src="/img/untick.png"
+                          id="primiumUnTick"
+                          style="
+                            display: none;
+                            justify-content: center;
+                            align-items: center;
+                            height: 30px;
+                            width: 30px;
+                            border-radius: 50%;
+                          "
+                          alt=""
+                        />
                       </div>
                     </div>
-                    <div style="display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start;">
-                      <p style=" font-size: 20px;">Premium bundle - 15% Off</p>
-                      <p style="font-size: 14px;">A selection of 8 artworks from random categories</p>
+                    <div
+                      style="
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                      "
+                    >
+                      <p style="font-size: 20px">Premium bundle - 15% Off</p>
+                      <p style="font-size: 14px">
+                        A selection of 8 artworks from random categories
+                      </p>
                     </div>
-                    <div style="display:flex; justify-content:flex-end; flex-direction: column; align-items: flex-end; padding-right: 20px;">
-                      <p style="font-size: 24px;">Total 5</p>
+                    <div
+                      style="
+                        display: flex;
+                        justify-content: flex-end;
+                        flex-direction: column;
+                        align-items: flex-end;
+                        padding-right: 20px;
+                      "
+                    >
+                      <p style="font-size: 24px">Total 5</p>
                     </div>
                   </div>
-                  <br>
-                  <div id="Special_bundle" onclick="clickSpecial()" style="border-radius: 8px; background-color:#000000 ; padding: 10px 0px; margin: 30px 0px; margin-top: 0px;">
-                    <div style="position: relative; top: 35%; left: 35%;">
-                      <div class="round" >
-                        <img src="/img/tick_image.png" id="specialTick" style=" display: none; justify-content: center; align-items: center; height: 30px; width:30px; border-radius: 50%;" alt="">
-                        <img src="/img/untick.png" id="specialUnTick" style=" display: flex; justify-content: center; align-items: center; height: 30px; width:30px; border-radius: 50%;" alt="">
+                  <br />
+                  <div
+                    id="Special_bundle"
+                    onclick="clickSpecial()"
+                    style="
+                      border-radius: 8px;
+                      background-color: #000000;
+                      padding: 10px 0px;
+                      margin: 30px 0px;
+                      margin-top: 0px;
+                    "
+                  >
+                    <div style="position: relative; top: 35%; left: 35%">
+                      <div class="round">
+                        <img
+                          src="/img/tick_image.png"
+                          id="specialTick"
+                          style="
+                            display: none;
+                            justify-content: center;
+                            align-items: center;
+                            height: 30px;
+                            width: 30px;
+                            border-radius: 50%;
+                          "
+                          alt=""
+                        />
+                        <img
+                          src="/img/untick.png"
+                          id="specialUnTick"
+                          style="
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            height: 30px;
+                            width: 30px;
+                            border-radius: 50%;
+                          "
+                          alt=""
+                        />
                       </div>
                     </div>
-                    <div style="display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start;">
-                      <p style=" font-size: 20px;">Special bundle - 10% Off</p>
-                      <p style="font-size: 14px;">A selection of 4 artworks from random categories</p>
+                    <div
+                      style="
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                      "
+                    >
+                      <p style="font-size: 20px">Special bundle - 10% Off</p>
+                      <p style="font-size: 14px">
+                        A selection of 4 artworks from random categories
+                      </p>
                     </div>
-                    <div style="display:flex; justify-content:flex-end; flex-direction: column; align-items: flex-end; padding-right: 20px">
-                      <p style="font-size: 24px;">Total 5</p>
+                    <div
+                      style="
+                        display: flex;
+                        justify-content: flex-end;
+                        flex-direction: column;
+                        align-items: flex-end;
+                        padding-right: 20px;
+                      "
+                    >
+                      <p style="font-size: 24px">Total 5</p>
                     </div>
                   </div>
+                  <input type="hidden" id="qty" value="8" />
                   <div class="final_result_calculate">
-                    <p id="eth_Price">@2 ETH </p>
+                    <p id="eth_Price">@2 ETH</p>
                     <p id="eth_PriceGas">@ 1.7 ETH + gas</p>
-                    <button>MINT</button>
+                    <button id="mint-bundle">MINT</button>
                   </div>
                 </div>
                 <!-- Option 2 -->
-                <div id="selectCustomise" >
+                <div id="selectCustomise">
                   <div class="dark-theme">
                     <div class="dark-theme-top">
-                        <p style="font-family: 'Rubik'; font-style: normal; font-weight: 600; font-size: 18px; color: #FF4320;">
-                          133/300 Minted
-                        </p>
-                        <p style="font-family: 'Rubik'; font-style: normal; font-weight: 600; font-size: 18px;">
-                          Get 5 @ 10% Off
-                        </p>
+                      <p
+                        id="total-minted"
+                        style="
+                          font-family: 'Rubik';
+                          font-style: normal;
+                          font-weight: 600;
+                          font-size: 18px;
+                          color: #ff4320;
+                        "
+                      >
+                        133/300 Minted
+                      </p>
+                      <p
+                        style="
+                          font-family: 'Rubik';
+                          font-style: normal;
+                          font-weight: 600;
+                          font-size: 18px;
+                        "
+                      >
+                        Get 5 @ 10% Off
+                      </p>
                     </div>
                     <div class="category_tags_2">
-                        <div class="Photography_category">
-
-                          <div class="count-how-many-left">
-                            <p style="margin:0% ;">Photography</p>
-                            <p style="margin:0% ; color: 967AFF;">Available - <span id="Photography-available">28</span></p>
-                          </div>
-                          <div class="count-how-many">
-                            <form>
-                              <div class="value-button" id="decrease1" onclick="decreaseValue1()" value="Decrease Value">-</div>
-                              <input type="number" id="number1" value="0"/>
-                              <div class="value-button" id="increase1" onclick="increaseValue1()" value="Increase Value">+</div>
-                            </form>
-                          </div>
+                      <div class="Photography_category">
+                        <div class="count-how-many-left">
+                          <p style="margin: 0%">Photography</p>
+                          <p style="margin: 0%; color: 967AFF">
+                            Available -
+                            <span id="Photography-available">28</span>
+                          </p>
                         </div>
-                        <div class="Traditional_Art">
-                          <div class="count-how-many-left">
-                            <p style="margin:0% ;">Traditional Art</p>
-                            <p style="margin:0% ; color: 967AFF;">Available - <span id="Traditional-art-available">45</span></p>
-                          </div>
-                          <div class="count-how-many">
-                            <form>
-                              <div class="value-button" id="decrease2" onclick="decreaseValue2()" value="Decrease Value">-</div>
-                              <input type="number" id="number2" value="0" />
-                              <div class="value-button" id="increase2" onclick="increaseValue2()" value="Increase Value">+</div>
-                            </form>
-                          </div>
+                        <div class="count-how-many">
+                          <form>
+                            <div
+                              class="value-button"
+                              id="decrease1"
+                              onclick="decreaseValue1()"
+                              value="Decrease Value"
+                            >
+                              -
+                            </div>
+                            <input
+                              min="0"
+                              max="8"
+                              type="number"
+                              id="number1"
+                              value="0"
+                            />
+                            <div
+                              class="value-button"
+                              id="increase1"
+                              onclick="increaseValue1()"
+                              value="Increase Value"
+                            >
+                              +
+                            </div>
+                          </form>
                         </div>
-                        <div class="Digital_Media_category">
-                          <div class="count-how-many-left">
-                            <p style="margin:0% ;">Digital Art</p>
-                            <p style="margin:0% ; color: 967AFF;">Available - <span id="digital-art-available">63</span></p>
-                          </div>
-                          <div class="count-how-many">
-                            <form>
-                              <div class="value-button" id="decrease3" onclick="decreaseValue3()" value="Decrease Value">-</div>
-                              <input type="number" id="number3" value="0" />
-                              <div class="value-button" id="increase3" onclick="increaseValue3()" value="Increase Value">+</div>
-                            </form>
-                          </div>
+                      </div>
+                      <div class="Traditional_Art">
+                        <div class="count-how-many-left">
+                          <p style="margin: 0%">Traditional Art</p>
+                          <p style="margin: 0%; color: 967AFF">
+                            Available -
+                            <span id="Traditional-art-available">45</span>
+                          </p>
                         </div>
-                        <div class="Music_category">
-                          <div class="count-how-many-left">
-                            <p style="margin:0% ;">Music</p>
-                            <p style="margin:0% ; color: 967AFF;">Available - <span id="music-available">3</span></p>
-                          </div>
-                          <div class="count-how-many">
-                            <form>
-                              <div class="value-button" id="decrease4" onclick="decreaseValue4()" value="Decrease Value">-</div>
-                              <input type="number" id="number4" value="0" />
-                              <div class="value-button" id="increase4" onclick="increaseValue4()" value="Increase Value">+</div>
-                            </form>
-                          </div>
+                        <div class="count-how-many">
+                          <form>
+                            <div
+                              class="value-button"
+                              id="decrease2"
+                              onclick="decreaseValue2()"
+                              value="Decrease Value"
+                            >
+                              -
+                            </div>
+                            <input type="number" id="number2" value="0" />
+                            <div
+                              class="value-button"
+                              id="increase2"
+                              onclick="increaseValue2()"
+                              value="Increase Value"
+                            >
+                              +
+                            </div>
+                          </form>
                         </div>
-                        <div class="Poetry_category">
-                          <div class="count-how-many-left">
-                            <p style="margin:0% ;">Poetry</p>
-                            <p style="margin:0% ; color: 967AFF;">Available - <span id="poetry-available">2</span></p>
-                          </div>
-                          <div class="count-how-many">
-                            <form>
-                              <div class="value-button" id="decrease5" onclick="decreaseValue5()" value="Decrease Value">-</div>
-                              <input type="number" id="number5" value="0" />
-                              <div class="value-button" id="increase5" onclick="increaseValue5()" value="Increase Value">+</div>
-                            </form>
-                          </div>
+                      </div>
+                      <div class="Digital_Media_category">
+                        <div class="count-how-many-left">
+                          <p style="margin: 0%">Digital Art</p>
+                          <p style="margin: 0%; color: 967AFF">
+                            Available -
+                            <span id="digital-art-available">63</span>
+                          </p>
                         </div>
-                        <div class="Film_category">
-                          <div class="count-how-many-left">
-                            <p style="margin:0% ;">Film</p>
-                            <p style="margin:0% ; color: 967AFF;">Available - <span id="film-available">2</span></p>
-                          </div>
-                          <div class="count-how-many">
-                            <form>
-                              <div class="value-button" id="decrease6" onclick="decreaseValue6()" value="Decrease Value">-</div>
-                              <input type="number" id="number6" value="0" />
-                              <div class="value-button" id="increase6" onclick="increaseValue6()" value="Increase Value">+</div>
-                            </form>
-                          </div>
+                        <div class="count-how-many">
+                          <form>
+                            <div
+                              class="value-button"
+                              id="decrease3"
+                              onclick="decreaseValue3()"
+                              value="Decrease Value"
+                            >
+                              -
+                            </div>
+                            <input type="number" id="number3" value="0" />
+                            <div
+                              class="value-button"
+                              id="increase3"
+                              onclick="increaseValue3()"
+                              value="Increase Value"
+                            >
+                              +
+                            </div>
+                          </form>
                         </div>
-                        
+                      </div>
+                      <div class="Music_category">
+                        <div class="count-how-many-left">
+                          <p style="margin: 0%">Music</p>
+                          <p style="margin: 0%; color: 967AFF">
+                            Available - <span id="music-available">3</span>
+                          </p>
+                        </div>
+                        <div class="count-how-many">
+                          <form>
+                            <div
+                              class="value-button"
+                              id="decrease4"
+                              onclick="decreaseValue4()"
+                              value="Decrease Value"
+                            >
+                              -
+                            </div>
+                            <input type="number" id="number4" value="0" />
+                            <div
+                              class="value-button"
+                              id="increase4"
+                              onclick="increaseValue4()"
+                              value="Increase Value"
+                            >
+                              +
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                      <div class="Poetry_category">
+                        <div class="count-how-many-left">
+                          <p style="margin: 0%">Poetry</p>
+                          <p style="margin: 0%; color: 967AFF">
+                            Available - <span id="poetry-available">2</span>
+                          </p>
+                        </div>
+                        <div class="count-how-many">
+                          <form>
+                            <div
+                              class="value-button"
+                              id="decrease5"
+                              onclick="decreaseValue5()"
+                              value="Decrease Value"
+                            >
+                              -
+                            </div>
+                            <input type="number" id="number5" value="0" />
+                            <div
+                              class="value-button"
+                              id="increase5"
+                              onclick="increaseValue5()"
+                              value="Increase Value"
+                            >
+                              +
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                      <div class="Film_category">
+                        <div class="count-how-many-left">
+                          <p style="margin: 0%">Film</p>
+                          <p style="margin: 0%; color: 967AFF">
+                            Available - <span id="film-available">2</span>
+                          </p>
+                        </div>
+                        <div class="count-how-many">
+                          <form>
+                            <div
+                              class="value-button"
+                              id="decrease6"
+                              onclick="decreaseValue6()"
+                              value="Decrease Value"
+                            >
+                              -
+                            </div>
+                            <input type="number" id="number6" value="0" />
+                            <div
+                              class="value-button"
+                              id="increase6"
+                              onclick="increaseValue6()"
+                              value="Increase Value"
+                            >
+                              +
+                            </div>
+                          </form>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <div class="final_result_calculate">
-                    <p> <span id="total_artworks">0</span>  Artworks </p>
-                    <p> @<span id="find_res_ETH">0</span> ETH + gas</p>
-                    <button>MINT</button>
+                    <p><span id="total_artworks">0</span> Artworks</p>
+                    <p>@<span id="find_res_ETH">0</span> ETH + gas</p>
+                    <button id="mint-custom">MINT</button>
                   </div>
-                
                 </div>
-                
-              <div style="display: flex; flex-direction:row; justify-content:baseline">
-              <p style="width: 301px;"> <a style=" color: #748EC7;" href="#">Verified Contract</a></p> 
-              <p style="width: 301px;"> <a style=" color: #748EC7;" href="#">Opensea Collection</a></p> 
-              <p style="width: 301px; color: #748EC7;"> After minting, head to <a style=" color: #748EC7;" href="#">your wallet</a> on OpenSea to view. </p>   
-              </div>
+
+                <div
+                  style="
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: baseline;
+                  "
+                >
+                  <p style="width: 301px">
+                    <a style="color: #748ec7" href="#">Verified Contract</a>
+                  </p>
+                  <p style="width: 301px">
+                    <a style="color: #748ec7" href="#">Opensea Collection</a>
+                  </p>
+                  <p style="width: 301px; color: #748ec7">
+                    After minting, head to
+                    <a style="color: #748ec7" href="#">your wallet</a> on
+                    OpenSea to view.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -497,7 +755,7 @@
       <!-- Hero Banner end -->
 
       <!--footer Start-->
-      <footer class="bg-extra-dark-gray padding-30px-tb" >
+      <footer class="bg-extra-dark-gray padding-30px-tb">
         <div class="footer-widget-area">
           <div class="container">
             <div class="footer_top">
@@ -639,38 +897,34 @@
     <script src="revolution/js/extensions/revolution.extension.video.min.js"></script>
     <!-- setting -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script>
-      /*jQuery(document).ready(($) => {
-        $(".quantity").on("click", ".plus", function (e) {
-          let $input = $(this).prev("input.qty");
-          let val = parseInt($input.val());
-          $input.val(val + 1).change();
-        });
-        $(".quantity").on("click", ".minus", function (e) {
-          let $input = $(this).next("input.qty");
-          var val = parseInt($input.val());
-          if (val > 0) {
-            $input.val(val - 1).change();
-          }
-        });
-      });*/
-    </script>
+
     <script src="js/main.js"></script>
-    <script src="/js/prologueConnected.js"></script>
+
     <script src="js/mintingabi.js"></script>
     <script>
+      const categories = [
+        "Film",
+        "Music",
+        "Poetry",
+        "Traditional Art",
+        "Digital Art",
+        "Photography",
+      ];
       let value = document.getElementById("inputqty").value;
       console.log(value);
       let web3 = new Web3(
-        Web3.givenProvider || "https://rinkeby.infura.io/v3/"
+        Web3.givenProvider ||
+          "https://speedy-nodes-nyc.moralis.io/4ed632e1419adca7fea61365/eth/rinkeby"
       );
-      let address = "0xaf2ef580551c294E8BA05AE910dD513Bf369962a";
+      if (web3.currentProvider.isMetaMask !== true) {
+        document.getElementById("wallet-connect").style.display = "none";
+      }
+      let address = "0xd75CeF84D9F5AAf094088016c86f3dD5215F1556";
 
       let contract = new web3.eth.Contract(abi, address);
       console.log(contract);
 
       async function connect() {
-        
         await web3.eth.requestAccounts().then(async (res) => {
           await window.ethereum.enable();
           console.log(res[0]);
@@ -679,11 +933,9 @@
             res[0].length
           )}`;
           document.getElementById("address").innerText = add1;
-          let nfts = await contract.methods.getNFTHeldByUser(res[0]).call();
 
           let userObj = {
             address: res[0],
-            nfts: nfts.length,
           };
 
           window.user = userObj;
@@ -694,7 +946,7 @@
 
           document.getElementById("hide_1").style.display = "none";
           document.getElementById("hide_2").style.display = "none";
-          
+
           var changeWid = document.getElementById("changeWWid");
           changeWid.classList.add("col-md-5");
 
@@ -726,73 +978,170 @@
         });
       }
 
-      async function buyTokens() {
-        if (!window.user) {
-          await connect();
-        }
-
-        let category = document.getElementById("category").value;
-        let amount = document.getElementById("inputqty").value;
-        let available = await contract.methods
-          .returnAvailableTokenIdsForCategory(category)
-          .call();
-
-        if (Number(available) < Number(amount)) {
-          alert("Number exceeds the available amount.");
+      async function mintBundle() {
+        let qty = document.getElementById("qty").value;
+        qty = Number(qty);
+        let bundleCount;
+        console.log(typeof qty, qty);
+        if (qty === 8) {
+          bundleCount = await contract.methods.premiumBundleCount().call();
         } else {
-          let userAddress = window.user.address;
-          try {
-            let price = await contract.methods.price().call();
-            let value = web3.utils.fromWei(String(price), "ether");
-            // console.log(typeof value);
-            // console.log(typeof amount);
-            await contract.methods.buyTokens(category, Number(amount)).send({
-              from: userAddress,
-              value: web3.utils.toWei(
-                String(Number(value) * Number(amount)),
-                "ether"
-              ),
-            });
-            window.user.nfts += amount;
-            alert("Nfts minted");
-            let available = await getAvailableTokens();
-            console.log(available);
-            let total = await getTotalTokens();
-            document.getElementById("amount").innerText = `${
-              Number(total) - Number(available)
-            }/${total}`;
-            document.getElementById("available").innerText = `${
-              Number(total) - Number(available)
-            }/${total}`;
-          } catch (err) {
-            console.log(err);
+          bundleCount = await contract.methods.specialBundleCount().call();
+        }
+        if (Number(bundleCount) === 0) {
+          alert("Sold out");
+        } else {
+          let minted = await contract.methods.getMinted().call();
+          if (300 - Number(minted) < qty) {
+            alert("Sold out!");
+          } else {
+            let availableCats = [];
+            let availableQty = [];
+            let qtys = [];
+
+            for (let i = 0; i < categories.length; ++i) {
+              let available = await contract.methods
+                .getAvailable(categories[i])
+                .call();
+              if (Number(available) == 0) {
+                continue;
+              }
+              availableCats.push(categories[i]);
+              availableQty.push(Number(available));
+            }
+            if (availableCats.length < 3) {
+              alert("Sold out!");
+            } else {
+              if (availableCats.length >= qty) {
+                types = [...availableCats.slice(0, qty)];
+                qtys = Array(qty).fill(1);
+              } else {
+                types = [...availableCats];
+                qtys = Array(availableCats.length).fill(1);
+
+                let needed = qty - availableCats.length;
+                for (let i = availableCats.length - 1; i >= 0; --i) {
+                  if (needed === 0) {
+                    break;
+                  }
+
+                  if (availableQty[i] - 1 >= needed) {
+                    qtys[i] += needed;
+                    needed = 0;
+                  } else {
+                    qtys[i] += availableQty[i] - 1;
+                    needed -= availableQty[i] - 1;
+                  }
+                }
+              }
+
+              try {
+                var value;
+                if (qty === 8) {
+                  value = 1.7;
+                  await contract.methods.mintPremium(types, qtys).send({
+                    from: window.user.address,
+                    value: value * 10 ** 18,
+                  });
+                } else {
+                  value = 0.9;
+                  await contract.methods.mintSpecial(types, qtys).send({
+                    from: window.user.address,
+                    value: value * 10 ** 18,
+                  });
+                }
+
+                alert("Minted");
+              } catch (err) {
+                console.log(err);
+              }
+            }
           }
         }
+        setAvailable();
+        setMinted();
+        reset();
       }
 
-      async function getAvailableTokens() {
-        let categories = await contract.methods.returnAllCategories().call();
-        let available = 0;
-        for (let i = 0; i < categories.length; ++i) {
-          let tokens = await contract.methods
-            .returnAvailableTokenIdsForCategory(categories[i])
-            .call();
-          available += Number(tokens);
+      async function mintCustom() {
+        let types = [];
+        let qtys = [];
+        let all = [
+          "Photography",
+          "Traditional Art",
+          "Digital Art",
+          "Music",
+          "Poetry",
+          "Film",
+        ];
+
+        let elementIds = [
+          "number1",
+          "number2",
+          "number3",
+          "number4",
+          "number5",
+          "number6",
+        ];
+
+        let allqty = [];
+        for (let i = 0; i < elementIds.length; ++i) {
+          allqty[i] = document.getElementById(elementIds[i]).value;
+          allqty[i] = Number(allqty[i]);
         }
-        return available;
+        for (let i = 0; i < all.length; ++i) {
+          if (allqty[i] > 0) {
+            types.push(all[i]);
+            qtys.push(allqty[i]);
+          }
+        }
+        var sum = qtys.reduce(function (a, b) {
+          return a + b;
+        }, 0);
+
+        var value = 0.25 * sum;
+        if (sum >= 5) {
+          value -= value / 10;
+        }
+        try {
+          await contract.methods
+            .mintCustom(types, qtys)
+            .send({ from: window.user.address, value: value * 10 ** 18 });
+          alert("Minted");
+        } catch (err) {
+          console.log(err);
+        }
+        setAvailable();
+        setMinted();
+        reset();
       }
 
-      async function getTotalTokens() {
-        let categories = await contract.methods.returnAllCategories().call();
-        let available = 0;
-        for (let i = 0; i < categories.length; ++i) {
-          let tokens = await contract.methods
-            .returnTokenIdsForCategory(categories[i])
-            .call();
-          available += tokens.length;
+      async function setAvailable(category) {
+        var cats = [
+          "Photography",
+          "Traditional Art",
+          "Digital Art",
+          "Music",
+          "Poetry",
+          "Film",
+        ];
+        var elementIds = [
+          "Photography-available",
+          "Traditional-art-available",
+          "digital-art-available",
+          "music-available",
+          "poetry-available",
+          "film-available",
+        ];
+
+        for (let i = 0; i < cats.length; ++i) {
+          let available = await contract.methods.getAvailable(cats[i]).call();
+          document.getElementById(elementIds[i]).innerHTML = available;
         }
-        return available;
       }
+
+      document.getElementById("mint-bundle").onclick = mintBundle;
+      document.getElementById("mint-custom").onclick = mintCustom;
 
       document.getElementById("wallet-connect").onclick = connect;
       document.getElementById("address").onclick = connect;
@@ -805,24 +1154,19 @@
         document.getElementById("connected").style.display = "none";
       }
 
-      (async function () {
-        let available = await getAvailableTokens();
-        console.log(available);
-        let total = await getTotalTokens();
-        document.getElementById("amount").innerText = `${
-          Number(total) - Number(available)
-        }/${total}`;
-        document.getElementById("available").innerText = `${
-          Number(total) - Number(available)
-        }/${total}`;
-      })();
-      function handlechange() {
-        let value = document.getElementById("inputqty").value;
-        let price = Number(value) * Number(0.25);
-        document.getElementById("price").innerText = `@ ${price} ETH + gas`;
-        document.getElementById("mint-amount").innerText = `MINT ${value} NFTs`;
+      async function setMinted() {
+        let minted = await contract.methods.getMinted().call();
+        console.log(minted);
+
+        document.getElementById("amount").innerText = `${minted}/300`;
+        document.getElementById("total-minted").innerText = `${minted}/300`;
       }
-      document.getElementById("mint-amount").onclick = buyTokens;
+
+      (async function () {
+        setMinted();
+        setAvailable();
+      })();
     </script>
+    <script src="/js/prologueConnected.js"></script>
   </body>
 </html>
