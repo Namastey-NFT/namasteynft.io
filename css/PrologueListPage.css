@@ -245,15 +245,15 @@
     @media(max-width: 1000px){
     .result_box_main{
         height: 200px;
-        width: 160px;
+        width: 140px;
     }
     .artwork-image{
-        width: 159px;
         height: 160px;
+        width: 149px;
     }
     .artwork-image img{
-        max-width: 158px;
         max-height: 160px;
+        max-width: 148px;
     }
     .artwork-title{
         font-size: 10px;
