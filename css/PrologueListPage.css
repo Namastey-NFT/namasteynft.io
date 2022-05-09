@@ -32,7 +32,7 @@
         width: 100%;
     }
     .events_container .backgroud {
-        /* padding-top: 16rem; */
+        padding-top: 12rem;
     }
 }
 /* Filter Row */
@@ -253,7 +253,7 @@
     }
     .artwork-image img{
         max-height: 160px;
-        max-width: 139px;
+        max-width: 138px;
     }
     .artwork-title{
         font-size: 10px;
