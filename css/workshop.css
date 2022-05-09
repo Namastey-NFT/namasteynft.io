@@ -118,6 +118,7 @@ a {
     display: flex;
     flex-direction: row;
     margin-top: 50px;
+    justify-content: center;
 }
 .WorkshopsWithDropDown h6{
     font-family: Rubik;
@@ -283,8 +284,8 @@ button{
         margin: 20px 0px;
     }
     .dropbtn {
-        /* display: block; */
-        display: none;
+        display: block;
+        /* display: none; */
     }
     
     .Art-WorkShop-creaters-container{
