@@ -434,7 +434,8 @@
               <div style="display: flex; flex-direction:row; justify-content:baseline">
               <p style="width: 301px;"> <a style=" color: #748EC7;" href="#">Verified Contract</a></p> 
               <p style="width: 301px;"> <a style=" color: #748EC7;" href="#">Opensea Collection</a></p> 
-              <p style="width: 301px; color: #748EC7;"> After minting, head to <a style=" color: #748EC7;" href="#">your wallet</a> on OpenSea to view. </p>   
+              <p style="width: 301px; color: #748EC7;"> After minting, head to <a style=" color: #748EC7;" href="https://testnets.opensea.io/login?referrer=%2Faccount"
+                    target="blank">your wallet</a> on OpenSea to view. </p>   
               </div>
             </div>
           </div>
@@ -604,6 +605,7 @@
     </script>
     <script src="js/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
+    <script src="js/mintingabi.js"></script>
     <script>
       var app = new Vue({
         el: "#TheMint",
@@ -613,623 +615,10 @@
       });
     </script>
     <script>
+      let categories = ["Film", "Music", "Poetry", "Traditional Art", "Digital Art", "Photography"]
       let web3 = new Web3(Web3.givenProvider || "https://polygon-rpc.com/");
       let address = "0x55452eE058491527632d2DB135C201dB51612101";
-      let abi = [
-        {
-          inputs: [
-            { internalType: "address", name: "_treasury", type: "address" },
-          ],
-          stateMutability: "nonpayable",
-          type: "constructor",
-        },
-        {
-          anonymous: false,
-          inputs: [
-            {
-              indexed: true,
-              internalType: "address",
-              name: "account",
-              type: "address",
-            },
-            {
-              indexed: true,
-              internalType: "address",
-              name: "operator",
-              type: "address",
-            },
-            {
-              indexed: false,
-              internalType: "bool",
-              name: "approved",
-              type: "bool",
-            },
-          ],
-          name: "ApprovalForAll",
-          type: "event",
-        },
-        {
-          anonymous: false,
-          inputs: [
-            {
-              indexed: false,
-              internalType: "string",
-              name: "_category",
-              type: "string",
-            },
-            {
-              indexed: false,
-              internalType: "uint256",
-              name: "_maxSupply",
-              type: "uint256",
-            },
-            {
-              indexed: false,
-              internalType: "uint256",
-              name: "_price",
-              type: "uint256",
-            },
-          ],
-          name: "EventAdded",
-          type: "event",
-        },
-        {
-          anonymous: false,
-          inputs: [
-            {
-              indexed: false,
-              internalType: "string",
-              name: "_category",
-              type: "string",
-            },
-            {
-              indexed: false,
-              internalType: "address",
-              name: "_attendee",
-              type: "address",
-            },
-            {
-              indexed: false,
-              internalType: "uint256",
-              name: "_amount",
-              type: "uint256",
-            },
-          ],
-          name: "EventAttended",
-          type: "event",
-        },
-        {
-          anonymous: false,
-          inputs: [
-            {
-              indexed: true,
-              internalType: "address",
-              name: "previousOwner",
-              type: "address",
-            },
-            {
-              indexed: true,
-              internalType: "address",
-              name: "newOwner",
-              type: "address",
-            },
-          ],
-          name: "OwnershipTransferred",
-          type: "event",
-        },
-        {
-          anonymous: false,
-          inputs: [
-            {
-              indexed: false,
-              internalType: "string",
-              name: "_category",
-              type: "string",
-            },
-            {
-              indexed: false,
-              internalType: "address",
-              name: "_user",
-              type: "address",
-            },
-            {
-              indexed: false,
-              internalType: "uint256",
-              name: "_amount",
-              type: "uint256",
-            },
-          ],
-          name: "PassesMinted",
-          type: "event",
-        },
-        {
-          anonymous: false,
-          inputs: [
-            {
-              indexed: false,
-              internalType: "address",
-              name: "account",
-              type: "address",
-            },
-          ],
-          name: "Paused",
-          type: "event",
-        },
-        {
-          anonymous: false,
-          inputs: [
-            {
-              indexed: true,
-              internalType: "address",
-              name: "operator",
-              type: "address",
-            },
-            {
-              indexed: true,
-              internalType: "address",
-              name: "from",
-              type: "address",
-            },
-            {
-              indexed: true,
-              internalType: "address",
-              name: "to",
-              type: "address",
-            },
-            {
-              indexed: false,
-              internalType: "uint256[]",
-              name: "ids",
-              type: "uint256[]",
-            },
-            {
-              indexed: false,
-              internalType: "uint256[]",
-              name: "values",
-              type: "uint256[]",
-            },
-          ],
-          name: "TransferBatch",
-          type: "event",
-        },
-        {
-          anonymous: false,
-          inputs: [
-            {
-              indexed: true,
-              internalType: "address",
-              name: "operator",
-              type: "address",
-            },
-            {
-              indexed: true,
-              internalType: "address",
-              name: "from",
-              type: "address",
-            },
-            {
-              indexed: true,
-              internalType: "address",
-              name: "to",
-              type: "address",
-            },
-            {
-              indexed: false,
-              internalType: "uint256",
-              name: "id",
-              type: "uint256",
-            },
-            {
-              indexed: false,
-              internalType: "uint256",
-              name: "value",
-              type: "uint256",
-            },
-          ],
-          name: "TransferSingle",
-          type: "event",
-        },
-        {
-          anonymous: false,
-          inputs: [
-            {
-              indexed: false,
-              internalType: "string",
-              name: "value",
-              type: "string",
-            },
-            {
-              indexed: true,
-              internalType: "uint256",
-              name: "id",
-              type: "uint256",
-            },
-          ],
-          name: "URI",
-          type: "event",
-        },
-        {
-          anonymous: false,
-          inputs: [
-            {
-              indexed: false,
-              internalType: "address",
-              name: "account",
-              type: "address",
-            },
-          ],
-          name: "Unpaused",
-          type: "event",
-        },
-        {
-          inputs: [],
-          name: "_collectionUri",
-          outputs: [{ internalType: "string", name: "", type: "string" }],
-          stateMutability: "view",
-          type: "function",
-        },
-        {
-          inputs: [
-            { internalType: "string", name: "_category", type: "string" },
-            { internalType: "string", name: "_uri", type: "string" },
-            { internalType: "uint256", name: "_supply", type: "uint256" },
-            { internalType: "uint256", name: "_price", type: "uint256" },
-          ],
-          name: "addEvent",
-          outputs: [],
-          stateMutability: "nonpayable",
-          type: "function",
-        },
-        {
-          inputs: [
-            { internalType: "address", name: "account", type: "address" },
-            { internalType: "uint256", name: "id", type: "uint256" },
-          ],
-          name: "balanceOf",
-          outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
-          stateMutability: "view",
-          type: "function",
-        },
-        {
-          inputs: [
-            { internalType: "address[]", name: "accounts", type: "address[]" },
-            { internalType: "uint256[]", name: "ids", type: "uint256[]" },
-          ],
-          name: "balanceOfBatch",
-          outputs: [{ internalType: "uint256[]", name: "", type: "uint256[]" }],
-          stateMutability: "view",
-          type: "function",
-        },
-        {
-          inputs: [{ internalType: "uint256", name: "", type: "uint256" }],
-          name: "categories",
-          outputs: [{ internalType: "string", name: "", type: "string" }],
-          stateMutability: "view",
-          type: "function",
-        },
-        {
-          inputs: [
-            { internalType: "address", name: "_user", type: "address" },
-            { internalType: "string", name: "_category", type: "string" },
-          ],
-          name: "checkInvite",
-          outputs: [{ internalType: "bool", name: "", type: "bool" }],
-          stateMutability: "view",
-          type: "function",
-        },
-        {
-          inputs: [],
-          name: "contractURI",
-          outputs: [{ internalType: "string", name: "", type: "string" }],
-          stateMutability: "view",
-          type: "function",
-        },
-        {
-          inputs: [{ internalType: "string", name: "", type: "string" }],
-          name: "events",
-          outputs: [
-            { internalType: "uint256", name: "tokenId", type: "uint256" },
-            { internalType: "uint256", name: "maxSupply", type: "uint256" },
-            { internalType: "uint256", name: "available", type: "uint256" },
-            { internalType: "uint256", name: "price", type: "uint256" },
-            { internalType: "string", name: "category", type: "string" },
-            { internalType: "string", name: "uri", type: "string" },
-          ],
-          stateMutability: "view",
-          type: "function",
-        },
-        {
-          inputs: [
-            { internalType: "string", name: "_category", type: "string" },
-          ],
-          name: "getEventDetails",
-          outputs: [
-            {
-              components: [
-                { internalType: "uint256", name: "tokenId", type: "uint256" },
-                { internalType: "uint256", name: "maxSupply", type: "uint256" },
-                { internalType: "uint256", name: "available", type: "uint256" },
-                { internalType: "uint256", name: "price", type: "uint256" },
-                { internalType: "string", name: "category", type: "string" },
-                { internalType: "string", name: "uri", type: "string" },
-              ],
-              internalType: "struct EventPasses.Event",
-              name: "",
-              type: "tuple",
-            },
-          ],
-          stateMutability: "view",
-          type: "function",
-        },
-        {
-          inputs: [
-            { internalType: "address", name: "account", type: "address" },
-            { internalType: "address", name: "operator", type: "address" },
-          ],
-          name: "isApprovedForAll",
-          outputs: [{ internalType: "bool", name: "", type: "bool" }],
-          stateMutability: "view",
-          type: "function",
-        },
-        {
-          inputs: [
-            { internalType: "string", name: "_category", type: "string" },
-            { internalType: "uint256", name: "_amount", type: "uint256" },
-          ],
-          name: "mintPasses",
-          outputs: [],
-          stateMutability: "payable",
-          type: "function",
-        },
-        {
-          inputs: [],
-          name: "owner",
-          outputs: [{ internalType: "address", name: "", type: "address" }],
-          stateMutability: "view",
-          type: "function",
-        },
-        {
-          inputs: [],
-          name: "pause",
-          outputs: [],
-          stateMutability: "nonpayable",
-          type: "function",
-        },
-        {
-          inputs: [],
-          name: "paused",
-          outputs: [{ internalType: "bool", name: "", type: "bool" }],
-          stateMutability: "view",
-          type: "function",
-        },
-        {
-          inputs: [],
-          name: "renounceOwnership",
-          outputs: [],
-          stateMutability: "nonpayable",
-          type: "function",
-        },
-        {
-          inputs: [],
-          name: "returnAllCategories",
-          outputs: [{ internalType: "string[]", name: "", type: "string[]" }],
-          stateMutability: "view",
-          type: "function",
-        },
-        {
-          inputs: [
-            { internalType: "string", name: "_category", type: "string" },
-          ],
-          name: "returnAvailablePassesForEvent",
-          outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
-          stateMutability: "view",
-          type: "function",
-        },
-        {
-          inputs: [
-            { internalType: "string", name: "_category", type: "string" },
-          ],
-          name: "returnPassPriceForEvent",
-          outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
-          stateMutability: "view",
-          type: "function",
-        },
-        {
-          inputs: [
-            { internalType: "string", name: "_category", type: "string" },
-          ],
-          name: "returnTokenIdForEvent",
-          outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
-          stateMutability: "view",
-          type: "function",
-        },
-        {
-          inputs: [
-            { internalType: "string", name: "_category", type: "string" },
-          ],
-          name: "returnTotalPassesForEvent",
-          outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
-          stateMutability: "view",
-          type: "function",
-        },
-        {
-          inputs: [
-            { internalType: "address", name: "_user", type: "address" },
-            { internalType: "string", name: "_category", type: "string" },
-          ],
-          name: "returnUserPassesForEvent",
-          outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
-          stateMutability: "view",
-          type: "function",
-        },
-        {
-          inputs: [
-            { internalType: "uint256", name: "tokenId", type: "uint256" },
-            { internalType: "uint256", name: "salePrice", type: "uint256" },
-          ],
-          name: "royaltyInfo",
-          outputs: [
-            { internalType: "address", name: "receiver", type: "address" },
-            { internalType: "uint256", name: "royaltyAmount", type: "uint256" },
-          ],
-          stateMutability: "view",
-          type: "function",
-        },
-        {
-          inputs: [],
-          name: "royaltyPercentage",
-          outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
-          stateMutability: "view",
-          type: "function",
-        },
-        {
-          inputs: [
-            { internalType: "address", name: "from", type: "address" },
-            { internalType: "address", name: "to", type: "address" },
-            { internalType: "uint256[]", name: "ids", type: "uint256[]" },
-            { internalType: "uint256[]", name: "amounts", type: "uint256[]" },
-            { internalType: "bytes", name: "data", type: "bytes" },
-          ],
-          name: "safeBatchTransferFrom",
-          outputs: [],
-          stateMutability: "nonpayable",
-          type: "function",
-        },
-        {
-          inputs: [
-            { internalType: "address", name: "from", type: "address" },
-            { internalType: "address", name: "to", type: "address" },
-            { internalType: "uint256", name: "id", type: "uint256" },
-            { internalType: "uint256", name: "amount", type: "uint256" },
-            { internalType: "bytes", name: "data", type: "bytes" },
-          ],
-          name: "safeTransferFrom",
-          outputs: [],
-          stateMutability: "nonpayable",
-          type: "function",
-        },
-        {
-          inputs: [
-            { internalType: "address", name: "operator", type: "address" },
-            { internalType: "bool", name: "approved", type: "bool" },
-          ],
-          name: "setApprovalForAll",
-          outputs: [],
-          stateMutability: "nonpayable",
-          type: "function",
-        },
-        {
-          inputs: [{ internalType: "string", name: "_uri", type: "string" }],
-          name: "setCollectionUri",
-          outputs: [],
-          stateMutability: "nonpayable",
-          type: "function",
-        },
-        {
-          inputs: [
-            { internalType: "uint256", name: "_royalty", type: "uint256" },
-          ],
-          name: "setRoyaltyPercentage",
-          outputs: [],
-          stateMutability: "nonpayable",
-          type: "function",
-        },
-        {
-          inputs: [
-            { internalType: "address", name: "_treasury", type: "address" },
-          ],
-          name: "setTreasury",
-          outputs: [],
-          stateMutability: "nonpayable",
-          type: "function",
-        },
-        {
-          inputs: [
-            { internalType: "uint256", name: "_limit", type: "uint256" },
-          ],
-          name: "setWalletLimitForEachEvent",
-          outputs: [],
-          stateMutability: "nonpayable",
-          type: "function",
-        },
-        {
-          inputs: [
-            { internalType: "bytes4", name: "interfaceId", type: "bytes4" },
-          ],
-          name: "supportsInterface",
-          outputs: [{ internalType: "bool", name: "", type: "bool" }],
-          stateMutability: "view",
-          type: "function",
-        },
-        {
-          inputs: [
-            { internalType: "address", name: "newOwner", type: "address" },
-          ],
-          name: "transferOwnership",
-          outputs: [],
-          stateMutability: "nonpayable",
-          type: "function",
-        },
-        {
-          inputs: [],
-          name: "unPause",
-          outputs: [],
-          stateMutability: "nonpayable",
-          type: "function",
-        },
-        {
-          inputs: [
-            { internalType: "string", name: "_category", type: "string" },
-            { internalType: "uint256", name: "_supply", type: "uint256" },
-          ],
-          name: "updateEventMaxSupply",
-          outputs: [],
-          stateMutability: "nonpayable",
-          type: "function",
-        },
-        {
-          inputs: [
-            { internalType: "string", name: "_category", type: "string" },
-            { internalType: "uint256", name: "_price", type: "uint256" },
-          ],
-          name: "updateEventPrice",
-          outputs: [],
-          stateMutability: "nonpayable",
-          type: "function",
-        },
-        {
-          inputs: [
-            { internalType: "string", name: "_category", type: "string" },
-            { internalType: "string", name: "_uri", type: "string" },
-          ],
-          name: "updateEventUri",
-          outputs: [],
-          stateMutability: "nonpayable",
-          type: "function",
-        },
-        {
-          inputs: [{ internalType: "uint256", name: "_id", type: "uint256" }],
-          name: "uri",
-          outputs: [{ internalType: "string", name: "", type: "string" }],
-          stateMutability: "view",
-          type: "function",
-        },
-        {
-          inputs: [],
-          name: "walletLimitForEachEvent",
-          outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
-          stateMutability: "view",
-          type: "function",
-        },
-        {
-          inputs: [],
-          name: "withdrawFunds",
-          outputs: [],
-          stateMutability: "nonpayable",
-          type: "function",
-        },
-      ];
-
+     
       let contract = new web3.eth.Contract(abi, address);
       console.log(contract);
 
@@ -1273,7 +662,7 @@
                   ],
                 });
               } catch (addError) {
-                alert("Please switch to polygon network.");
+                alert("Please switch to ethereum network.");
               }
             }
             // handle other "switch" errors
@@ -1281,201 +670,118 @@
         });
       }
 
-      async function hasTicket() {
-        let userAddress = window.user.address;
-        console.log(window.user);
-
-        let tickets = window.user.tickets;
-        if (tickets > 0) {
-          console.log(tickets);
-          return true;
+      async function mintBundle(qty){
+        let bundleCount;
+        if(qty === 8){
+          bundleCount = await contract.methods.premiumBundleCount().call();
         }
-        return false;
-      }
-
-      async function mintTicket() {
-        if (!window.user) {
-          await connect();
-        } else {
-          let userHasTicket = await hasTicket();
-          if (userHasTicket) {
-            alert("You already have the ticket");
-          } else {
-            let userAddress = window.user.address;
-            console.log(userAddress);
-            try {
-              await contract.methods
-                .mintPasses("ticket", 1)
-                .send({ from: userAddress });
-              window.user.tickets = 1;
-              alert("Ticket minted");
-            } catch (err) {
-              console.log(err);
+        else{
+          bundleCount = await contract.methods.specialBundleCount().call();
+        }
+        if(Number(bundleCount) === 0){
+          alert("Sold out");
+        }else{
+          let minted = await contract.methods.getMinted().call();
+        if(37 - Number(minted) < qty){
+          alert("Sold out!");
+        }else{
+        let availableCats = [];
+        let availableQty = []
+        let qtys = [];
+    
+        for(let i = 0; i < categories.length; ++i){
+          let available = await contract.methods.getAvailable(categories[i]).call();
+          if(Number(available) == 0){
+            continue;
+          }
+          availableCats.push(categories[i]);
+          availableQty.push(Number(available))
+          
+        }
+        if(availableCats.length < 3){
+          alert("Sold out!");
+        }else{
+          if(availableCats.length >= qty){
+            types = [...availableCats.slice(0, qty)];
+            qtys = Array(qty).fill(1);
+          }else{
+            types = [...availableCats];
+          qtys =Array(availableCats.length).fill(1);
+          
+          let needed = qty- availableCats.length;
+          for(let i = availableCats.length-1; i >= 0; --i){
+            if(needed === 0){
+              break;
             }
+            
+              if(availableQty[i]-1 >= needed){
+                qtys[i] += needed;
+                needed = 0;
+              
+              }else{
+                qtys[i] += availableQty[i]-1;
+                needed -= (availableQty[i]-1);
+              }
+            
+            
+           
+            
+          }
+          }
+          
+
+          try{
+            var value;
+            if(qty === 8){
+              value = 1.7
+              await contract.methods.mintPremium(types, qtys).send({from: window.user.address, value: value*(10**18)})
+            }else{
+              value = 0.9
+              await contract.methods.mintSpecial(types, qtys).send({from: window.user.address, value: value*(10**18)})
+              
+            }
+            
+              alert("Minted");
+          }catch(err){
+            console.log(err)
           }
         }
+        
+
       }
-
-      async function getAllCategories() {
-        let categories = await contract.methods.returnAllCategories().call();
-
-        let eventData = [];
-        for (let i = 0; i < categories.length; ++i) {
-          if (categories[i] != "ticket") {
-            let tokenId = await contract.methods
-              .returnTokenIdForEvent(categories[i])
-              .call();
-            let uri = await contract.methods.uri(tokenId).call();
-
-            fetch(uri)
-              .then((response) => {
-                /*
-                      {
-      "name": "Deera_0004",
-      "image": "https://gateway.pinata.cloud/ipfs/QmNb7Vk2R7SW391196iiCLf9M5VGWchyoW32wnCux5okxP",
-      "description": "This Deera was created by sj",
-      "properties": {
-      "gen": 0,
-      "background": "Pattern",
-      "body": "Pattern",
-      "eyes": "white",
-      "hat": "Pattern",
-      "mask": "No",
-      "shirt": "No",
-      "stripe": 1
-      }
-      }*/
-                return response.json();
-              })
-              .then((data) => {
-                eventData.push(data);
-              });
-          }
         }
-        console.log(eventData);
-        return eventData;
-      }
+        
 
-      getAllCategories();
+    }
 
-      // display details for free tickets
-      async function getTicketDetails() {
-        let tokenId = await contract.methods
-          .returnTokenIdForEvent("ticket")
-          .call();
 
-        let uri = await contract.methods.uri(tokenId).call();
-
-        fetch(uri)
-          .then((response) => {
-            return response.json();
-          })
-          .then((data) => {
-            document.getElementById("ticket-name").innerText = data.name;
-            document.getElementById("ticket-des").innerText = data.description;
-          });
-      }
-
-      getTicketDetails();
-
-      async function mintCategoryPass(category, amount) {
-        if (!window.user) {
-          await connect();
-        } else {
-          try {
-            let userAddress = window.user.address;
-            let price = await contract.methods
-              .returnPassPriceForEvent(category)
-              .call();
-
-            await contract.methods.mintPasses(category, amount).send({
-              from: userAddress,
-              value: Number(price) * amount,
-            });
-
-            alert("passes minted");
-          } catch (err) {
-            console.log(err);
-          }
+    async function mintCustom(){
+      let types = [];
+      let qtys = [];
+      let all = [];
+      let allqty = [];
+      for(let i = 0; i < all.length; ++i){
+        if(allqty > 0 ){
+          types.push(all[i]);
+          qtys.push(allqty[i]);
         }
       }
-
-      let elements = document.getElementsByClassName("qty");
-      document.getElementById("mint-moon").onclick = () =>
-        mintCategoryPass("moon", parseInt(elements[0].value));
-
-      document.getElementById("mint-sun").onclick = () =>
-        mintCategoryPass("moon", parseInt(elements[1].value));
-      document.getElementById("mint-stars").onclick = () =>
-        mintCategoryPass("moon", parseInt(elements[2].value));
-
-      document.getElementById("wallet-connect").onclick = connect;
-      document.getElementById("wallet-connect2").onclick = mintTicket;
-
-      (function () {
-        document
-          .getElementsByClassName("minus")[0]
-          .addEventListener("click", function () {
-            let val = document.getElementsByClassName("qty")[0].value;
-            console.log(val);
-            val = parseInt(val);
-            if (val > 1) {
-              document.getElementsByClassName("qty")[0].value = String(val - 1);
-            }
-          });
-        document
-          .getElementsByClassName("plus")[0]
-          .addEventListener("click", function () {
-            let val = document.getElementsByClassName("qty")[0].value;
-            console.log(val);
-            val = parseInt(val);
-            if (val < 5) {
-              document.getElementsByClassName("qty")[0].value = String(val + 1);
-            }
-          });
-
-        document
-          .getElementsByClassName("minus")[1]
-          .addEventListener("click", function () {
-            let val = document.getElementsByClassName("qty")[1].value;
-            console.log(val);
-            val = parseInt(val);
-            if (val > 1) {
-              document.getElementsByClassName("qty")[1].value = String(val - 1);
-            }
-          });
-        document
-          .getElementsByClassName("plus")[1]
-          .addEventListener("click", function () {
-            let val = document.getElementsByClassName("qty")[1].value;
-            console.log(val);
-            val = parseInt(val);
-            if (val < 5) {
-              document.getElementsByClassName("qty")[1].value = String(val + 1);
-            }
-          });
-
-        document
-          .getElementsByClassName("minus")[2]
-          .addEventListener("click", function () {
-            let val = document.getElementsByClassName("qty")[2].value;
-            console.log(val);
-            val = parseInt(val);
-            if (val > 1) {
-              document.getElementsByClassName("qty")[2].value = String(val - 1);
-            }
-          });
-        document
-          .getElementsByClassName("plus")[2]
-          .addEventListener("click", function () {
-            let val = document.getElementsByClassName("qty")[2].value;
-            console.log(val);
-            val = parseInt(val);
-            if (val < 5) {
-              document.getElementsByClassName("qty")[2].value = String(val + 1);
-            }
-          });
-      })();
+      var sum = qtys.reduce(function(a, b){
+          return a + b;
+      }, 0);
+      
+      var value = 0.25*sum;
+      if(sum >= 5) {
+        value -= value/10
+      }
+      try{
+        await contract.methods.mintCustom(types, qtys).send({from: window.user.address, value: value*(10**18)})
+        alert("Minted");
+      }catch(err){
+        console.log(err)
+      }
+      
+    }
     </script>
   </body>
 </html>

@@ -31,12 +31,26 @@
     <!-- title -->
     <title>Namastey NFT presents</title>
     <!-- favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
-    <link rel="manifest" href="/img/site.webmanifest">
-    <link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/img/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/img/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/img/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/img/site.webmanifest" />
+    <link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#5bbad5" />
+    <link rel="shortcut icon" href="/img/favicon.ico" />
     <!-- animation -->
     <link rel="stylesheet" href="css/animate.css" />
     <!-- bootstrap -->
@@ -303,61 +317,7 @@
               </div>
             </div>
 
-            <div class="col-md-4" id="connected">
-              <div class="wallet_box_connected">
-                <a
-                  href="#"
-                  id="address"
-                  class="btn btn-blue btn-large btn-code"
-                ></a>
-                <h5
-                  class="alt-font text-capitalize alt-font text-white margin-5px-bottom font-weight-500"
-                >
-                  Choose the category to mint:
-                </h5>
-                <select id="category">
-                  <option>Photography</option>
-                  <option>Music</option>
-                </select>
-                <h4
-                  id="available"
-                  class="alt-font text-capitalize alt-font text-white margin-15px-bottom font-weight-500"
-                >
-                  Minted: 0/300
-                </h4>
-                <h5
-                  class="alt-font text-capitalize alt-font text-white margin-5px-bottom font-weight-500"
-                >
-                  Select quantity:
-                </h5>
-                <div id="TheMint">
-                  <div id="bottom">
-                    <input
-                      type="range"
-                      min="0"
-                      max="6"
-                      v-model="theMint"
-                      class="slider_mint"
-                      id="inputqty"
-                      onchange="handlechange()"
-                    />
-                  </div>
-                  <div id="top">
-                    <div id="mint-amount" class="theMint">MINT 3 NFTs</div>
-                  </div>
-                  <p id="price">@ 0.75 ETH + gas</p>
-                </div>
-                <p>
-                  After minting, head to
-                  <a
-                    href="https://testnets.opensea.io/login?referrer=%2Faccount"
-                    target="blank"
-                    >your wallet</a
-                  >
-                  on OpenSea to view.
-                </p>
-              </div>
-            </div>
+            <div class="col-md-4" id="connected"></div>
           </div>
         </div>
       </section>
@@ -506,22 +466,7 @@
     <script src="revolution/js/extensions/revolution.extension.video.min.js"></script>
     <!-- setting -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script>
-      /*jQuery(document).ready(($) => {
-        $(".quantity").on("click", ".plus", function (e) {
-          let $input = $(this).prev("input.qty");
-          let val = parseInt($input.val());
-          $input.val(val + 1).change();
-        });
-        $(".quantity").on("click", ".minus", function (e) {
-          let $input = $(this).next("input.qty");
-          var val = parseInt($input.val());
-          if (val > 0) {
-            $input.val(val - 1).change();
-          }
-        });
-      });*/
-    </script>
+
     <script src="js/main.js"></script>
     <script src="js/mintingabi.js"></script>
     <script>
@@ -530,7 +475,10 @@
       let web3 = new Web3(
         Web3.givenProvider || "https://rinkeby.infura.io/v3/"
       );
-      let address = "0xaf2ef580551c294E8BA05AE910dD513Bf369962a";
+      if (web3.currentProvider.isMetaMask !== true) {
+        document.getElementById("wallet-connect").style.display = "none";
+      }
+      let address = "0xd75CeF84D9F5AAf094088016c86f3dD5215F1556";
 
       let contract = new web3.eth.Contract(abi, address);
       console.log(contract);
@@ -544,11 +492,9 @@
             res[0].length
           )}`;
           document.getElementById("address").innerText = add1;
-          let nfts = await contract.methods.getNFTHeldByUser(res[0]).call();
 
           let userObj = {
             address: res[0],
-            nfts: nfts.length,
           };
 
           window.user = userObj;
@@ -583,7 +529,7 @@
         });
       }
 
-      async function buyTokens() {
+      /*async function buyTokens() {
         if (!window.user) {
           await connect();
         }
@@ -649,7 +595,7 @@
           available += tokens.length;
         }
         return available;
-      }
+      }*/
 
       document.getElementById("wallet-connect").onclick = connect;
       document.getElementById("address").onclick = connect;
@@ -663,23 +609,12 @@
       }
 
       (async function () {
-        let available = await getAvailableTokens();
-        console.log(available);
-        let total = await getTotalTokens();
-        document.getElementById("amount").innerText = `${
-          Number(total) - Number(available)
-        }/${total}`;
-        document.getElementById("available").innerText = `${
-          Number(total) - Number(available)
-        }/${total}`;
+        let minted = await contract.methods.getMinted().call();
+        console.log(minted);
+
+        document.getElementById("amount").innerText = `${minted}/37`;
+        document.getElementById("available").innerText = `${minted}/37`;
       })();
-      function handlechange() {
-        let value = document.getElementById("inputqty").value;
-        let price = Number(value) * Number(0.25);
-        document.getElementById("price").innerText = `@ ${price} ETH + gas`;
-        document.getElementById("mint-amount").innerText = `MINT ${value} NFTs`;
-      }
-      document.getElementById("mint-amount").onclick = buyTokens;
     </script>
   </body>
 </html>
