@@ -249,11 +249,11 @@
     }
     .artwork-image{
         height: 160px;
-        width: 149px;
+        width: 140px;
     }
     .artwork-image img{
         max-height: 160px;
-        max-width: 148px;
+        max-width: 139px;
     }
     .artwork-title{
         font-size: 10px;
