@@ -172,13 +172,13 @@
                                         <div class="dropdown">
                                             <button id="chooseACategory" class="dropbtn">Choose A Category<i class="fa fa-caret-down"></i> </button>
                                             <div class="dropdown-content">
-                                                <a onclick="showOnlyPhotography()" class="show_all_tag" >Photography</a>
-                                                <a onclick="showOnlyDigitalMedia()" class="red_tag" >Digital Media</a>
-                                                <a onclick="showOnlyTraditionalArt()" class="yel_tag" >Traditional Art</a>
-                                                <a onclick="showOnlyMusic()" class="purple_tag" >Music</a>
-                                                <a onclick="showOnlyPoetry()" class="pink_tag" >Poetry</a>
-                                                <a onclick="showOnlyFilm()" class="light_blue_tag" >Film</a>
-                                                <a onclick="showAllCategories()" class="show_all_tag" >Clear All Category</a>
+                                                <a onclick="showAllCategories(1)" class="show_all_tag" >Photography</a>
+                                                <a onclick="showAllCategories(2)" class="red_tag" >Digital Media</a>
+                                                <a onclick="showAllCategories(3)" class="yel_tag" >Traditional Art</a>
+                                                <a onclick="showAllCategories(4)" class="purple_tag" >Music</a>
+                                                <a onclick="showAllCategories(5)" class="pink_tag" >Poetry</a>
+                                                <a onclick="showAllCategories(6)" class="light_blue_tag" >Film</a>
+                                                <a onclick="showAllCategories(0)" class="show_all_tag" >Clear All Category</a>
                                             </div>
                                         </div>
                                     </div>
@@ -195,12 +195,9 @@
                                     <!-- Tag 1 -->
                                     <div class="item_box">
                                         <div class="item_tag_name">
-                                            Generative Art
+                                            All
                                         </div>
-                                            
-                                        <div class="item_tag_close">
-                                            X
-                                        </div>
+                                           
                                     </div>
                                     
                                 </div>
@@ -208,60 +205,7 @@
                         </div>
                         <div class="row">
                             <div class="filter-result">
-                                <!-- Result 1 -->
-                                <div class="result_box_main">
-                                    <div class="artwork-image">
-                                        <img src="http://drive.google.com/uc?export=view&id=18nIYAO_8AsyukTUsO4V95CKkQ1SMEOwZ" alt="">
-                                        <!-- <img style="padding: 0%; margin:0%" loading="lazy" src="img/unsplash_1.jpg"> -->
-                                    </div>
-                                    <div class="artwork-title">
-                                        Artwork Title
-                                    </div>
-                                    <div class="artist-name">
-                                        Artist Name
-                                    </div>
-                                    
-                                </div>
-                                <!-- Result 2 -->
-                                <div class="result_box_main">
-                                    <div class="artwork-image">
-                                        <img src="http://drive.google.com/uc?export=view&id=18nIYAO_8AsyukTUsO4V95CKkQ1SMEOwZ" alt="">
-                                        <!-- <img style="padding: 0%; margin:0%" loading="lazy" src="img/unsplash_1.jpg"> -->
-                                    </div>
-                                    <div class="artwork-title">
-                                        Artwork Title
-                                    </div>
-                                    <div class="artist-name">
-                                        Artist Name
-                                    </div>
-                                    
-                                </div>
-                                <div class="result_box_main">
-                                    <div class="artwork-image">
-                                        <img src="http://drive.google.com/uc?export=view&id=18nIYAO_8AsyukTUsO4V95CKkQ1SMEOwZ" alt="">
-                                        <!-- <img style="padding: 0%; margin:0%" loading="lazy" src="img/unsplash_1.jpg"> -->
-                                    </div>
-                                    <div class="artwork-title">
-                                        Artwork Title
-                                    </div>
-                                    <div class="artist-name">
-                                        Artist Name
-                                    </div>
-                                    
-                                </div>
-                                <div class="result_box_main">
-                                    <div class="artwork-image">
-                                        <img src="http://drive.google.com/uc?export=view&id=18nIYAO_8AsyukTUsO4V95CKkQ1SMEOwZ" alt="">
-                                        <!-- <img style="padding: 0%; margin:0%" loading="lazy" src="img/unsplash_1.jpg"> -->
-                                    </div>
-                                    <div class="artwork-title">
-                                        Artwork Title
-                                    </div>
-                                    <div class="artist-name">
-                                        Artist Name
-                                    </div>
-                                    
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -375,6 +319,99 @@
             $('header').addClass('sticky header-appear')
 
         })()
+    </script>
+    <script>
+        $.getJSON( "data/PrologueListData/AllEntries.json", function( data ) {
+          $.each( data.Sheet1, function( key, val ) {
+              $(".filter-result").append('<div class="result_box_main"><div class="artwork-image"><img src="'+val.GoogleDriveLink+'" alt=""></div><div class="artwork-title">'+val.Title+'</div><div class="artist-name">'+val.NameOfArtist+'</div></div>');
+          });
+        });
+        
+        function showAllCategories(category) {
+            
+            switch(category) {
+              case 1:
+                $(".filter-result").html("");
+                $.getJSON( "data/PrologueListData/Photography.json", function( data ) {
+                    $count = 0;
+                  $.each( data.Sheet1, function( key, val ) {
+                      $(".filter-result").append('<div class="result_box_main"><div class="artwork-image"><img src="'+val.GoogleDriveLink+'" alt=""></div><div class="artwork-title">'+val.Title+'</div><div class="artist-name">'+val.NameOfArtist+'</div></div>');
+                      $count++;
+                  });
+                  $("#count_Items").html($count + " Items");
+                  $(".item_tag_name").html("Photography");
+                });
+                break;
+              case 2:
+                $(".filter-result").html("");
+                $.getJSON( "data/PrologueListData/Digitalart.json", function( data ) {
+                    $count = 0;
+                  $.each( data.Sheet1, function( key, val ) {
+                      $(".filter-result").append('<div class="result_box_main"><div class="artwork-image"><img src="'+val.GoogleDriveLink+'" alt=""></div><div class="artwork-title">'+val.Title+'</div><div class="artist-name">'+val.NameOfArtist+'</div></div>');$count++;
+                  });
+                  $("#count_Items").html($count + " Items");
+                  $(".item_tag_name").html("Digital Media");
+                });
+                break;
+              case 3:
+                $(".filter-result").html("");
+                $.getJSON( "data/PrologueListData/TraditionalArt.json", function( data ) {
+                    $count = 0;
+                  $.each( data.Sheet1, function( key, val ) {
+                      $(".filter-result").append('<div class="result_box_main"><div class="artwork-image"><img src="'+val.GoogleDriveLink+'" alt=""></div><div class="artwork-title">'+val.Title+'</div><div class="artist-name">'+val.NameOfArtist+'</div></div>');$count++;
+                  });
+                  $("#count_Items").html($count + " Items");
+                  $(".item_tag_name").html("Traditional Art");
+                });
+                break;
+              case 4:
+                $(".filter-result").html("");
+                $.getJSON( "data/PrologueListData/Music.json", function( data ) {
+                    $count = 0;
+                  $.each( data.Sheet1, function( key, val ) {
+                      $(".filter-result").append('<div class="result_box_main"><div class="artwork-image"><img src="'+val.GoogleDriveLink+'" alt=""></div><div class="artwork-title">'+val.Title+'</div><div class="artist-name">'+val.NameOfArtist+'</div></div>');$count++;
+                  });
+                  $("#count_Items").html($count + " Items");
+                  $(".item_tag_name").html("Music");
+                });
+                break;
+               case 5:
+                $(".filter-result").html("");
+                $.getJSON( "data/PrologueListData/Poetry.json", function( data ) {
+                    $count = 0;
+                  $.each( data.Sheet1, function( key, val ) {
+                      $(".filter-result").append('<div class="result_box_main"><div class="artwork-image"><img src="'+val.GoogleDriveLink+'" alt=""></div><div class="artwork-title">'+val.Title+'</div><div class="artist-name">'+val.NameOfArtist+'</div></div>');$count++;
+                  });
+                  $("#count_Items").html($count + " Items");
+                  $(".item_tag_name").html("Poetry");
+                });
+                break;
+              case 6:
+                $(".filter-result").html("");
+                $.getJSON( "data/PrologueListData/Film.json", function( data ) {
+                    $count = 0;
+                  $.each( data.Sheet1, function( key, val ) {
+                      $(".filter-result").append('<div class="result_box_main"><div class="artwork-image"><img src="'+val.GoogleDriveLink+'" alt=""></div><div class="artwork-title">'+val.Title+'</div><div class="artist-name">'+val.NameOfArtist+'</div></div>');$count++;
+                  });
+                  $("#count_Items").html($count + " Items");
+                  $(".item_tag_name").html("Film");
+                });
+                break;
+              default:
+                $(".filter-result").html("");
+                 $.getJSON( "data/PrologueListData/AllEntries.json", function( data ) {
+                    $count = 0;
+                  $.each( data.Sheet1, function( key, val ) {
+                      $(".filter-result").append('<div class="result_box_main"><div class="artwork-image"><img src="'+val.GoogleDriveLink+'" alt=""></div><div class="artwork-title">'+val.Title+'</div><div class="artist-name">'+val.NameOfArtist+'</div></div>');$count++;
+                  });
+                  $("#count_Items").html($count + " Items");
+                  $(".item_tag_name").html("All");
+                });
+            }
+            
+            
+        }
+        
     </script>
 </body>
 
