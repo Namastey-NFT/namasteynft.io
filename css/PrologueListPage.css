@@ -236,11 +236,9 @@
     height: 320px;
     left: 129px;
     top: 589px;
-    /* background: #FF4320; */
-    /* opacity: 0.2; */
     border-radius: 12px 12px 0px 0px;
-    /* background-image: url('/img/unsplash_1.jpg'); */
-    background-size: cover;
+    background-size:contain;
+
 }
 .artwork-title{
     font-family: 'Rubik';
