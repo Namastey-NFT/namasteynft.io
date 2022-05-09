@@ -292,48 +292,46 @@
                   >
                 </div>
                 <!-- Option 1 -->
-                <div id="selectChoose" >
-                  <div id="premium_bundle" style="border-radius: 8px; background-color:#6D46FF ; padding: 10px 0px; margin: 30px 0px; margin-bottom: 0px;">
+                <div id="selectChoose" style="display: none;" >
+                  <div id="premium_bundle" onclick="clickPremium()" style="border-radius: 8px; background-color:#6D46FF ; padding: 10px 0px; margin: 30px 0px; margin-bottom: 0px;">
                     <div style="position: relative; top: 35%; left: 35%;">
                       <div class="round">
-                        <input type="checkbox" checked id="checkbox1" />
-                        <label for="checkbox1"></label>
+                        <img src="/img/tick_image.png" id="primiumTick" style=" display: flex; justify-content: center; align-items: center; height: 30px; width:30px; border-radius: 50%;" alt="">
+                        <img src="/img/untick.png" id="primiumUnTick" style=" display: none; justify-content: center; align-items: center; height: 30px; width:30px; border-radius: 50%;" alt="">
                       </div>
                     </div>
                     <div style="display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start;">
                       <p style=" font-size: 20px;">Premium bundle - 15% Off</p>
-                      <p style="font-size: 14px;">A selection of 8 artworks from different categories</p>
+                      <p style="font-size: 14px;">A selection of 8 artworks from random categories</p>
                     </div>
                     <div style="display:flex; justify-content:flex-end; flex-direction: column; align-items: flex-end; padding-right: 20px;">
-                      <p style="font-size: 20px;">3 Available</p>
-                      <p style="font-size: 14px; line-height: 17px;">Total 5</p>
+                      <p style="font-size: 24px;">Total 5</p>
                     </div>
                   </div>
                   <br>
-                  <div id="Special_bundle" style="border-radius: 8px; background-color:#000000 ; padding: 10px 0px; margin: 30px 0px; margin-top: 0px;">
+                  <div id="Special_bundle" onclick="clickSpecial()" style="border-radius: 8px; background-color:#000000 ; padding: 10px 0px; margin: 30px 0px; margin-top: 0px;">
                     <div style="position: relative; top: 35%; left: 35%;">
-                      <div class="round">
-                        <input type="checkbox" checked id="checkbox2" />
-                        <label for="checkbox2"></label>
+                      <div class="round" >
+                        <img src="/img/tick_image.png" id="specialTick" style=" display: none; justify-content: center; align-items: center; height: 30px; width:30px; border-radius: 50%;" alt="">
+                        <img src="/img/untick.png" id="specialUnTick" style=" display: flex; justify-content: center; align-items: center; height: 30px; width:30px; border-radius: 50%;" alt="">
                       </div>
                     </div>
                     <div style="display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start;">
                       <p style=" font-size: 20px;">Special bundle - 10% Off</p>
-                      <p style="font-size: 14px;">A selection of 4 artworks from different categories</p>
+                      <p style="font-size: 14px;">A selection of 4 artworks from random categories</p>
                     </div>
                     <div style="display:flex; justify-content:flex-end; flex-direction: column; align-items: flex-end; padding-right: 20px">
-                      <p style="font-size: 20px;">4 Available</p>
-                      <p style="font-size: 14px; line-height: 17px;">Total 5</p>
+                      <p style="font-size: 24px;">Total 5</p>
                     </div>
                   </div>
                   <div class="final_result_calculate">
-                    <p>@2 ETH </p>
-                    <p>@ 1.7 ETH + gas</p>
+                    <p id="eth_Price">@2 ETH </p>
+                    <p id="eth_PriceGas">@ 1.7 ETH + gas</p>
                     <button>MINT</button>
                   </div>
                 </div>
                 <!-- Option 2 -->
-                <div id="selectCustomise" style="display: none;">
+                <div id="selectCustomise" >
                   <div class="dark-theme">
                     <div class="dark-theme-top">
                         <p style="font-family: 'Rubik'; font-style: normal; font-weight: 600; font-size: 18px; color: #FF4320;">
@@ -345,24 +343,25 @@
                     </div>
                     <div class="category_tags_2">
                         <div class="Photography_category">
-                          <div>
-                            <p>Photography</p>
-                            <p>Available - 28</p>
+
+                          <div class="count-how-many-left">
+                            <p style="margin:0% ;">Photography</p>
+                            <p style="margin:0% ; color: 967AFF;">Available - <span id="Photography-available">28</span></p>
                           </div>
-                          <div>
+                          <div class="count-how-many">
                             <form>
                               <div class="value-button" id="decrease1" onclick="decreaseValue1()" value="Decrease Value">-</div>
-                              <input type="number" id="number1" value="0" />
+                              <input type="number" id="number1" value="0" min="0" max="3" />
                               <div class="value-button" id="increase1" onclick="increaseValue1()" value="Increase Value">+</div>
                             </form>
                           </div>
                         </div>
                         <div class="Traditional_Art">
-                          <div>
-                            <p>Traditional Art</p>
-                            <p>Available - 45</p>
+                          <div class="count-how-many-left">
+                            <p style="margin:0% ;">Traditional Art</p>
+                            <p style="margin:0% ; color: 967AFF;">Available - <span id="Traditional-art-available">45</span></p>
                           </div>
-                          <div>
+                          <div class="count-how-many">
                             <form>
                               <div class="value-button" id="decrease2" onclick="decreaseValue2()" value="Decrease Value">-</div>
                               <input type="number" id="number2" value="0" />
@@ -371,11 +370,11 @@
                           </div>
                         </div>
                         <div class="Digital_Media_category">
-                          <div>
-                            <p>Digital Media</p>
-                            <p>Available - 63</p>
+                          <div class="count-how-many-left">
+                            <p style="margin:0% ;">Digital Art</p>
+                            <p style="margin:0% ; color: 967AFF;">Available - <span id="digital-art-available">63</span></p>
                           </div>
-                          <div>
+                          <div class="count-how-many">
                             <form>
                               <div class="value-button" id="decrease3" onclick="decreaseValue3()" value="Decrease Value">-</div>
                               <input type="number" id="number3" value="0" />
@@ -384,11 +383,11 @@
                           </div>
                         </div>
                         <div class="Music_category">
-                          <div>
-                            <p>Music</p>
-                            <p>Available - 3</p>
+                          <div class="count-how-many-left">
+                            <p style="margin:0% ;">Music</p>
+                            <p style="margin:0% ; color: 967AFF;">Available - <span id="music-available">3</span></p>
                           </div>
-                          <div>
+                          <div class="count-how-many">
                             <form>
                               <div class="value-button" id="decrease4" onclick="decreaseValue4()" value="Decrease Value">-</div>
                               <input type="number" id="number4" value="0" />
@@ -397,11 +396,11 @@
                           </div>
                         </div>
                         <div class="Poetry_category">
-                          <div>
-                            <p>Poetry</p>
-                            <p>Available - 2</p>
+                          <div class="count-how-many-left">
+                            <p style="margin:0% ;">Poetry</p>
+                            <p style="margin:0% ; color: 967AFF;">Available - <span id="poetry-available">2</span></p>
                           </div>
-                          <div>
+                          <div class="count-how-many">
                             <form>
                               <div class="value-button" id="decrease5" onclick="decreaseValue5()" value="Decrease Value">-</div>
                               <input type="number" id="number5" value="0" />
@@ -410,15 +409,15 @@
                           </div>
                         </div>
                         <div class="Film_category">
-                          <div>
-                            <p>Film</p>
-                            <p>Available - 2</p>
+                          <div class="count-how-many-left">
+                            <p style="margin:0% ;">Film</p>
+                            <p style="margin:0% ; color: 967AFF;">Available - <span id="film-available">2</span></p>
                           </div>
-                          <div>
+                          <div class="count-how-many">
                             <form>
-                              <div class="value-button" id="decrease6" onclick="decreaseValue6()" value="Decrease Value">-</div>
+                              <div class="value-button" id="decrease6" onclick="decreaseValue6()" onclick="changeResult()" value="Decrease Value">-</div>
                               <input type="number" id="number6" value="0" />
-                              <div class="value-button" id="increase6" onclick="increaseValue6()" value="Increase Value">+</div>
+                              <div class="value-button" id="increase6" onclick="increaseValue6()"  value="Increase Value">+</div>
                             </form>
                           </div>
                         </div>
@@ -426,8 +425,8 @@
                     </div>
                   </div>
                   <div class="final_result_calculate">
-                    <p>13 Artworks </p>
-                    <p>@ 3.25 ETH + gas</p>
+                    <p> <span id="total_artworks">0</span> Artworks </p>
+                    <p> @<span id="find_res_ETH">0</span> ETH + gas</p>
                     <button>MINT</button>
                   </div>
                 

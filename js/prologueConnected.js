@@ -1,103 +1,233 @@
-function CustomiseBundle() {
-    document.getElementById("selectCustomise").style.display = "block"; 
+function CustomiseBundle() { 
+    document.getElementById("selectCustomise").style.display = "block";
     document.getElementById("selectChoose").style.display = "none";
     document.getElementById("customise_bundle").style.color = "#6D46FF";
     document.getElementById("customise_bundle").style.backgroundColor = "white";
     document.getElementById("choose_bundle").style.color = "#fff";
     document.getElementById("choose_bundle").style.backgroundColor = "#6D46FF";
 }
-function ChooseBundle() {
-    document.getElementById("selectChoose").style.display = "block"; 
+function ChooseBundle() { 
+    document.getElementById("selectChoose").style.display = "block";
     document.getElementById("selectCustomise").style.display = "none";
     document.getElementById("choose_bundle").style.color = "#6D46FF";
     document.getElementById("choose_bundle").style.backgroundColor = "white";
     document.getElementById("customise_bundle").style.color = "#fff";
     document.getElementById("customise_bundle").style.backgroundColor = "#6D46FF";
 }
+var count_total = 0;
+var photoAvailable = 0,TraditionalArtAvailable = 0,digitalArtAvailable = 0,musicAvailable = 0,poetryAvailable = 0,filmAvailable = 0;
+photoAvailable = document.getElementById('Photography-available').innerHTML;
+TraditionalArtAvailable = document.getElementById('Traditional-art-available').innerHTML;
+digitalArtAvailable = document.getElementById('digital-art-available').innerHTML;
+musicAvailable = document.getElementById('music-available').innerHTML;
+poetryAvailable = document.getElementById('poetry-available').innerHTML;
+filmAvailable = document.getElementById('film-available').innerHTML;
 
-function increaseValue1() {
+var numberA = Number(photoAvailable);
+var numberB = Number(TraditionalArtAvailable);
+var numberC = Number(digitalArtAvailable);
+var numberD = Number(musicAvailable);
+var numberE = Number(poetryAvailable);
+var numberF = Number(filmAvailable);
+
+function increaseValue1() { 
+    var value = parseInt(document.getElementById('number1').value, 10); 
+    value = isNaN(value) ? 0 : value; 
+    if(value<=numberA-1){
+        value++;
+        document.getElementById('number1').value = value; 
+        count_total++;
+    }
+    else{
+        count_total+=0;
+    }
+    console.log(value);
+    changeResult();
+}
+function decreaseValue1() 
+{ 
     var value = parseInt(document.getElementById('number1').value, 10);
     value = isNaN(value) ? 0 : value;
-    value++;
-    document.getElementById('number1').value = value;
-}
-function decreaseValue1() {
-    var value = parseInt(document.getElementById('number1').value, 10);
-    value = isNaN(value) ? 0 : value;
-    value < 1 ? value = 1 : '';
-    value--;
-    document.getElementById('number1').value = value;
+    value < 1 ? value = 0 : '';
+    if(value > 0){
+        value--;
+        count_total--;
+        document.getElementById('number1').value = value;
+    }
+    console.log(value);
+    changeResult();
 }
 
-function increaseValue2() {
+function increaseValue2() { 
+    var value = parseInt(document.getElementById('number2').value, 10); 
+    value = isNaN(value) ? 0 : value; 
+    if(value<=numberB-1){
+        value++;
+        document.getElementById('number2').value = value; 
+        count_total++;
+    }
+    else{
+        count_total+=0;
+    }
+    console.log(value);
+    changeResult();
+}
+function decreaseValue2() { 
     var value = parseInt(document.getElementById('number2').value, 10);
     value = isNaN(value) ? 0 : value;
-    value++;
-    document.getElementById('number2').value = value;
-}
-function decreaseValue2() {
-    var value = parseInt(document.getElementById('number2').value, 10);
-    value = isNaN(value) ? 0 : value;
-    value < 1 ? value = 1 : '';
-    value--;
-    document.getElementById('number2').value = value;
+    value < 1 ? value = 0 : '';
+    if(value > 0){
+        value--;
+        count_total--;
+        document.getElementById('number2').value = value;
+    }
+    console.log(value);
+    changeResult();
 }
 
-function increaseValue3() {
+function increaseValue3() { 
+    var value = parseInt(document.getElementById('number3').value, 10); 
+    value = isNaN(value) ? 0 : value; 
+    if(value<=numberC-1){
+        value++;
+        document.getElementById('number3').value = value; 
+        count_total++;
+    }
+    else{
+        count_total+=0;
+    }
+    console.log(value);
+    changeResult();
+}
+function decreaseValue3() { 
     var value = parseInt(document.getElementById('number3').value, 10);
     value = isNaN(value) ? 0 : value;
-    value++;
-    document.getElementById('number3').value = value;
-}
-function decreaseValue3() {
-    var value = parseInt(document.getElementById('number3').value, 10);
-    value = isNaN(value) ? 0 : value;
-    value < 1 ? value = 1 : '';
-    value--;
-    document.getElementById('number3').value = value;
+    value < 1 ? value = 0 : '';
+    if(value > 0){
+        value--;
+        count_total--;
+        document.getElementById('number3').value = value;
+    }
+    console.log(value);
+    changeResult();
 }
 
-
-function increaseValue4() {
+function increaseValue4() { 
+    var value = parseInt(document.getElementById('number4').value, 10); 
+    value = isNaN(value) ? 0 : value; 
+    if(value<=numberD-1){
+        value++;
+        document.getElementById('number4').value = value; 
+        count_total++;
+    }
+    else{
+        count_total+=0;
+    }
+    console.log(value);
+    changeResult();
+}
+function decreaseValue4() { 
     var value = parseInt(document.getElementById('number4').value, 10);
     value = isNaN(value) ? 0 : value;
-    value++;
-    document.getElementById('number4').value = value;
-}
-function decreaseValue4() {
-    var value = parseInt(document.getElementById('number4').value, 10);
-    value = isNaN(value) ? 0 : value;
-    value < 1 ? value = 1 : '';
-    value--;
-    document.getElementById('number4').value = value;
+    value < 1 ? value = 0 : '';
+    if(value > 0){
+        value--;
+        count_total--;
+        document.getElementById('number4').value = value;
+    }
+    console.log(value);
+    changeResult();
 }
 
-
-function increaseValue5() {
+function increaseValue5() { 
+    var value = parseInt(document.getElementById('number5').value, 10); 
+    value = isNaN(value) ? 0 : value; 
+    if(value<=numberE-1){
+        value++;
+        document.getElementById('number5').value = value; 
+        count_total++;
+    }
+    else{
+        count_total+=0;
+    }
+    console.log(value);
+    changeResult();
+}
+function decreaseValue5() { 
     var value = parseInt(document.getElementById('number5').value, 10);
     value = isNaN(value) ? 0 : value;
-    value++;
-    document.getElementById('number5').value = value;
+    value < 1 ? value = 0 : '';
+    if(value > 0){
+        value--;
+        count_total--;
+        document.getElementById('number5').value = value;
+    }
+    console.log(value);
+    changeResult();
 }
-function decreaseValue5() {
-    var value = parseInt(document.getElementById('number5').value, 10);
+
+function increaseValue6() { 
+    var value = parseInt(document.getElementById('number6').value, 10); 
+    value = isNaN(value) ? 0 : value; 
+    if(value<=numberF-1){
+        value++;
+        document.getElementById('number6').value = value; 
+        count_total++;
+    }
+    else{
+        count_total+=0;
+    }
+    console.log(value);
+    changeResult();
+}
+function decreaseValue6() { 
+    var value = parseInt(document.getElementById('number6').value, 10);
     value = isNaN(value) ? 0 : value;
-    value < 1 ? value = 1 : '';
-    value--;
-    document.getElementById('number5').value = value;
+    value < 1 ? value = 0 : '';
+    if(value > 0){
+        value--;
+        count_total--;
+        document.getElementById('number6').value = value;
+    }
+    console.log(value);
+    changeResult();
+}
+
+function clickPremium(){
+    document.getElementById('eth_Price').innerHTML ="@2 ETH";
+    document.getElementById('eth_PriceGas').innerHTML ="@ 1.7 ETH + gas";
+    document.getElementById('Special_bundle').style.backgroundColor = "black";
+    document.getElementById('premium_bundle').style.backgroundColor = "#6D46FF";
+
+    document.getElementById('primiumTick').style.display = "flex";
+    document.getElementById('primiumUnTick').style.display = "none";
+    document.getElementById('specialTick').style.display = "none";
+    document.getElementById('specialUnTick').style.display = "flex";
+}
+function clickSpecial(){
+    document.getElementById('eth_Price').innerHTML ="@1 ETH";
+    document.getElementById('eth_PriceGas').innerHTML ="@ 0.9 ETH + gas";
+    document.getElementById('Special_bundle').style.backgroundColor = "#6D46FF";
+    document.getElementById('premium_bundle').style.backgroundColor = "black";
+
+    document.getElementById('specialTick').style.display = "flex";
+    document.getElementById('specialUnTick').style.display = "none";
+    document.getElementById('primiumTick').style.display = "none";
+    document.getElementById('primiumUnTick').style.display = "flex";
 }
 
 
-function increaseValue6() {
-    var value = parseInt(document.getElementById('number6').value, 10);
-    value = isNaN(value) ? 0 : value;
-    value++;
-    document.getElementById('number6').value = value;
-}
-function decreaseValue6() {
-    var value = parseInt(document.getElementById('number6').value, 10);
-    value = isNaN(value) ? 0 : value;
-    value < 1 ? value = 1 : '';
-    value--;
-    document.getElementById('number6').value = value;
+function changeResult(){
+    document.getElementById('total_artworks').innerHTML = count_total;
+    if(count_total<=4){
+        let ans = 0;
+        ans  = 0.25 * count_total;
+        document.getElementById('find_res_ETH').innerHTML = ans;
+    }
+    else{
+        let ans = 0;
+        ans  = 0.225 * count_total;
+        ans = ans.toPrecision(4);
+        document.getElementById('find_res_ETH').innerHTML = ans;
+    }
 }
