@@ -72,11 +72,11 @@
   border-radius: 12px;
   padding: 0px 20px;
   font-family: Rubik;
-  font-size: 20px;
   font-weight: 400;
   line-height: 24px;
   letter-spacing: 0em;
   padding: 5px 5px;
+  
 }
 .dropdown {
   position: relative;
@@ -204,24 +204,24 @@
     grid-template-rows: 80% 10% 10%;
     border-color: #FFFFFF;
     border-width: 1px;
-    border-radius: 12px;
+    /* border-radius: 12px; */
     border-style: solid;
 }
 .artwork-image{
-    width: 318px;
+    width: 319px;
     height: 320px;
     left: 129px;
     top: 589px;
-    border-radius: 12px 12px 0px 0px;
+    /* border-radius: 12px 12px 0px 0px; */
     background-size:contain;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .artwork-image img{
-    max-width: 320px;
+    max-width: 318px;
     max-height: 320px;
-    border-radius: 12px 12px;
+    /* border-radius: 12px 12px; */
 }
 .artwork-title{
     font-family: 'Rubik';
@@ -266,5 +266,9 @@
     .artist-name{
         font-size: 10px;
         line-height: 17px;
+    }
+    .dropbtn{
+        font-size: 15px;
+        padding: 5px 10px;
     }
 }

@@ -89,7 +89,7 @@
     width: 100%;
     
 }
-.wallet_box_connected p{
+.wallet_box_connected > p{
     font-family: 'Rubik', sans-serif;
     color: #ffffff;
     font-size:12px;
@@ -345,11 +345,11 @@ form {
   cursor: pointer;
 }
 .changePremiumSpecial{
-        font: 16px;
-    }
-    .changePremiumSpecial2{
-        font-size: 11px;
-    }
+        font: 20px;
+}
+.changePremiumSpecial2{
+    font-size: 20px;
+}
 @media(max-width: 600px){
     .category_tags_2{
         flex-direction: column;
@@ -368,6 +368,9 @@ form {
         padding: 0%;
         font-size: 12px;
     }
+    .changePremiumSpecial2{
+    font-size: 12px;
+}
 }
 
 form #decrease1 { margin-right: -4px; border-radius: 8px 0 0 8px; }
