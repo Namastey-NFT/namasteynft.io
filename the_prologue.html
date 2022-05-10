@@ -255,8 +255,20 @@
               <div class="minting_box">
                 <h4 class="alt-font text-capitalize alt-font font-weight-400 sm-width-100 xs-width-100">The 300 Artwork Collection will be available for Category-wise Blind Minting on a custom Smart Contract by NamasteyNFT for a fixed price of <span>0.25</span> ETH per NFT.</h4>
                 <p class="margin-30px-top">
-                  <a href="#" class="btn btn-blue btn-small minting_live">MINTING ON 10-May-22</a>
+                  <a href="#" class="btn btn-blue btn-small minting_live">Minting In</a>
                 </p>
+                <div class="event-container">
+                <div class="event-inner" style="background-color:transparent;">
+                    <div class="row">
+                        <div class="allTime">
+                            <div class="wp days col-md-3 col-sm-6 col-xs-12 xs-margin-50px-bottom text-center"></div>
+                            <div class="wp hrs col-md-3 col-sm-6 col-xs-12 xs-margin-50px-bottom text-center"></div>
+                            <div class="wp min col-md-3 col-sm-6 col-xs-12 xs-margin-50px-bottom text-center"></div>
+                            <div class="wp sec col-md-3 col-sm-6 col-xs-12 xs-margin-50px-bottom text-center"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
                 <p class="margin-30px-top">The proceeds from the Sale will be divided among the artists & the NamasteyNFT Community Fund in the ratio of 80:20. i.e., 0.2 ETH to the artist & .05 ETH to NamasteyNFT community Fund, which will be used to further support new & emerging artists in the Web3 space. The secondary sales will directly go to the artist.</p>
               </div>
               
@@ -418,7 +430,41 @@
       });*/
     </script>
     <script src="js/main.js"></script>
+    <script>
+        let countDownBox = document.querySelector(".allTime");
+        let daysBox = document.querySelector(".days");
+        let hrsBox = document.querySelector(".hrs");
+        let minBox = document.querySelector(".min");
+        let secBox = document.querySelector(".sec");
+        let countDownDate = new Date("May 10, 2022 22:00:00").getTime();
 
+        // COUNT DOWN FUNCTION
+        let x = setInterval(function () {
+
+            // GET DATE
+            let now = new Date().getTime();
+
+            // TIME BETWEEN NOW AND DATE
+            let distance = countDownDate - now;
+
+            // CALCULATION TIME
+            let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            daysBox.innerHTML = days + "<span>Days</span>";
+            hrsBox.innerHTML = hours + "<span>Hours</span>";
+            minBox.innerHTML = minutes + "<span>Minutes</span>";
+            secBox.innerHTML = seconds + "<span>Seconds</span>";
+
+            // IF FINISH
+            if (distance < 0) {
+                clearInterval(x);
+                countDownBox.innerHTML = "EVENT STARTED";
+            }
+        }, 1000);
+    </script>
     <script>
       let web3 = new Web3(Web3.givenProvider || "https://polygon-rpc.com/");
       let address = "0x55452eE058491527632d2DB135C201dB51612101";

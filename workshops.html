@@ -81,11 +81,25 @@
 
     <div class="conteiner_center">
         <!-- start header -->
+        <div id="gradientMint" class="gradient" style="position: relative;height: 40px;overflow: hidden;">
+            <div class="wave" style=" z-index: 1000;">
+            </div>
+            <p class="mintlive" style=" z-index: 1000;">
+                <a id="hovertoPro">
+                <!-- MINT IS LIVE -->
+                The Prologue Minting starts on 10 May 2022 at 10 PM IST
+                </a>
+            </p>
+            
+            </a>
+        </div>
+
         <header>
             <!-- start navigation -->
             <nav
                 class="navbar navbar-default bootsnav navbar-fixed-top nav-white header-light bg-transparent nav-box-width white-link on no-full">
                 <div class="container nav-header-container">
+                    <canvas height="10" id="canvastohide"></canvas>
                     <div class="row">
                         <!-- start logo -->
                         <div class="col-md-2 col-xs-5">
@@ -133,13 +147,7 @@
             </nav>
         </header>
         <!-- end header -->
-
-
-
-
-
-
-
+       
 
 
 
@@ -152,6 +160,11 @@
             <section class="example no-padding no-transition term" id="">
 
                 <div class='page backgroud home'>
+                    <div class="Event_Schedule_side"> 
+                        <a href="eventSchedule.html">
+                            Event Schedule
+                        </a> 
+                    </div>
                     <div class="containers2">
 
                         <div class="WorkshopsWithDropDown">
@@ -170,7 +183,7 @@
                                 <a href="#Web-WorkShop-Container">Dev Workshops</a>
                             </div>
                         </div>
-                        <div style="display: flex; justify-content: center;">
+                        <!-- <div style="display: flex; justify-content: center;">
                             <button class="start-reg" style=" height: 70px; font-size: 30px;" data-tf-popup="uBfQlBrN"
                                 data-tf-size="70" data-tf-auto-close data-tf-iframe-props="title=Workshop Registration"
                                 data-tf-medium="snippet"
@@ -201,7 +214,7 @@
                                     9 AM (IST) / 8:30 PM (PST)
                                 </span>
                             </p>
-                        </div>
+                        </div> -->
 
                         <!-- ALL  WORKSHOPS -->
 
@@ -228,7 +241,7 @@
                                         <img src="../img/WebDeveloper/1.png" alt="nisahd" width="90" height="100">
                                     </div>
                                     <p class="designation">
-                                        Take your First Step into Building for Web3 <span class="date">13:30, 14 May 2022</span>
+                                        Take your First Step into Building for Web3 <span class="date">1:30PM, 14 May 2022</span>
 
                                     </p>
                                     <p class="name">
@@ -263,7 +276,7 @@
                                     <p class="designation">
                                         Develop for the ⌘Hyperverse.
                                         Land Paid Bounties.
-                                        <span class="date">11:00, 15 May 2022</span>
+                                        <span class="date">11:00AM, 15 May 2022</span>
 
                                     </p>
                                     <p class="name">
@@ -295,7 +308,7 @@
                                     </div>
                                     <p class="designation">
                                         #Web3 101
-                                        <span class="date">16:30, 14 May 2022</span> 
+                                        <span class="date">4:30PM, 15 May 2022</span> 
                                         
                                     </p>
                                     <p class="name">
@@ -348,7 +361,7 @@
                                     </div>
                                     <p class="designation">
                                         Charcoal portraits for beginners
-                                        <span class="date">15:30, 14 May 2022</span> 
+                                        <span class="date">3:30PM, 14 May 2022</span> 
                                     </p>
                                     <p class="name">
                                         by Reghna Catherine Thomas & Joji Viakh
@@ -359,14 +372,17 @@
 
                                     </p>
                                     <div class="book-slot">
-                                        <button type="button"
-                                            style="background-color: grey !important; cursor: not-allowed;">
-                                            <a class="smallTextButton"
-                                                style=" text-decoration: none; color: white; cursor: not-allowed;"
-                                                href="#">Registration Opening Soon</a>
+                                        <button data-tf-popup="qXKJlQcv" data-tf-size="70" data-tf-auto-close
+                                            data-tf-iframe-props="title=Workshop Registration" data-tf-medium="snippet"
+                                            data-tf-hidden="utm_source=xxxxx,utm_medium=xxxxx,utm_campaign=xxxxx,utm_term=xxxxx,utm_content=xxxxx"
+                                            style="all:unset;font-family:Helvetica,Arial,sans-serif;display:inline-block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background-color:#FA3705;color:#FFFFFF;font-size:20px;border-radius:7px;padding:0 26px;font-weight:bold;height:50px;cursor:pointer;line-height:40px;text-align:center;margin:0;text-decoration:none;">
+                                            BOOK YOUR SLOT
+                                        </button>
+                                        <script src="//embed.typeform.com/next/embed.js"></script>
+                                        <!-- <button type="button" style="background-color: grey !important; cursor: not-allowed;"><a class="smallTextButton" style=" text-decoration: none; color: white; cursor: not-allowed;" href="#">Registration Opening Soon</a> -->
                                         </button>
                                     </div>
-                                    <p class="available">
+                                    <p class="available" id="charcoal">
                                         Available 50/50
                                     </p>
                                 </div>
@@ -376,7 +392,7 @@
                                     </div>
                                     <p class="designation">
                                         Watercolour Basic with Nishad
-                                        <span class="date">13:30, 14 May 2022</span> 
+                                        <span class="date">1:30PM, 14 May 2022</span> 
                                     </p>
                                     <p class="name">
                                         by Nishad Madhusoodhanan
@@ -386,122 +402,17 @@
                                         general.
                                     </p>
                                     <div class="book-slot">
-                                        <button type="button"
-                                            style="background-color: grey !important; cursor: not-allowed;">
-                                            <a class="smallTextButton"
-                                                style=" text-decoration: none; color: white; cursor: not-allowed;"
-                                                href="#">Registration Opening Soon</a>
+                                        <button data-tf-popup="SXPodxB3" data-tf-size="70" data-tf-auto-close
+                                            data-tf-iframe-props="title=Workshop Registration" data-tf-medium="snippet"
+                                            data-tf-hidden="utm_source=xxxxx,utm_medium=xxxxx,utm_campaign=xxxxx,utm_term=xxxxx,utm_content=xxxxx"
+                                            style="all:unset;font-family:Helvetica,Arial,sans-serif;display:inline-block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background-color:#FA3705;color:#FFFFFF;font-size:20px;border-radius:7px;padding:0 26px;font-weight:bold;height:50px;cursor:pointer;line-height:40px;text-align:center;margin:0;text-decoration:none;">
+                                            BOOK YOUR SLOT
+                                        </button>
+                                        <script src="//embed.typeform.com/next/embed.js"></script>
+                                        <!-- <button type="button" style="background-color: grey !important; cursor: not-allowed;"><a class="smallTextButton" style=" text-decoration: none; color: white; cursor: not-allowed;" href="#">Registration Opening Soon</a> -->
                                         </button>
                                     </div>
-                                    <p class="available">
-                                        Available 50/50
-                                    </p>
-                                </div>
-                                <div class="creator-list creator-3">
-                                    <div class="creator-image">
-                                        <img src="../img/CreatorImages/3.png" alt="Sooraj" width="115" height="118">
-                                    </div>
-                                    <p class="designation">
-                                        Physical artworks to NFTs
-                                        <span class="date">10:30, 15 May 2022</span> 
-                                    </p>
-                                    <p class="name">
-                                        by Sooraj Babu
-                                    </p>
-                                    <p class="work">
-                                        This workshop will focus on guiding through the journey of Physical artworks to
-                                        the world of NFTs with a live demo of his work.
-                                    </p>
-                                    <div class="book-slot">
-                                        <button type="button"
-                                            style="background-color: grey !important; cursor: not-allowed;">
-                                            <a class="smallTextButton"
-                                                style=" text-decoration: none; color: white; cursor: not-allowed;"
-                                                href="#">Registration Opening Soon</a>
-                                        </button>
-                                    </div>
-                                    <p class="available">
-                                        Available 50/50
-                                    </p>
-                                </div>
-                                <div class="creator-list creator-4">
-                                    <div class="creator-image">
-                                        <img src="../img/CreatorImages/4.png" alt="Diva" width="115" height="118">
-                                    </div>
-                                    <p class="designation">
-                                        A walk through Mandala
-                                        <span class="date">17:00, 14 May 2022</span> 
-                                    </p>
-                                    <p class="name">
-                                        by Tangled Diva
-                                    </p>
-                                    <p class="work">
-                                        The workshop will focus on introduction to mandala, drawing framework of
-                                        mandala, and much more.
-                                    </p>
-                                    <div class="book-slot">
-                                        <button type="button"
-                                            style="background-color: grey !important; cursor: not-allowed;">
-                                            <a class="smallTextButton"
-                                                style=" text-decoration: none; color: white; cursor: not-allowed;"
-                                                href="#">Registration Opening Soon</a>
-                                        </button>
-                                    </div>
-                                    <p class="available">
-                                        Available 50/50
-                                    </p>
-                                </div>
-                                <div class="creator-list creator-5">
-                                    <div class="creator-image">
-                                        <img src="../img/CreatorImages/5.png" alt="Rajith" width="115" height="118">
-                                    </div>
-                                    <p class="designation">
-                                        The Inside of Visual Language
-                                        <span class="date">13:30, 15 May 2022</span> 
-
-                                    </p>
-                                    <p class="name">
-                                        by Rajith Kumar
-                                    </p>
-                                    <p class="work">
-                                        This workshop will be about different experimentation through visual media.
-                                    </p>
-                                    <div class="book-slot">
-                                        <button type="button"
-                                            style="background-color: grey !important; cursor: not-allowed;">
-                                            <a class="smallTextButton"
-                                                style=" text-decoration: none; color: white; cursor: not-allowed;"
-                                                href="#">Registration Opening Soon</a>
-                                        </button>
-                                    </div>
-                                    <p class="available">
-                                        Available 50/50
-                                    </p>
-                                </div>
-                                <div class="creator-list creator-6">
-                                    <div class="creator-image">
-                                        <img src="../img/CreatorImages/6.png" alt="Raj" width="115" height="118">
-                                    </div>
-                                    <p class="designation">
-                                        Art of Storytelling through Frame
-                                        <span class="date">13:00, 15 May 2022</span> 
-
-                                    </p>
-                                    <p class="name">
-                                        by Raj Khatri
-                                    </p>
-                                    <p class="work">
-                                        This workshop will focus on the Art of Storytelling through a Single Frame.
-                                    </p>
-                                    <div class="book-slot">
-                                        <button type="button"
-                                            style="background-color: grey !important; cursor: not-allowed;">
-                                            <a class="smallTextButton"
-                                                style=" text-decoration: none; color: white; cursor: not-allowed;"
-                                                href="#">Registration Opening Soon</a>
-                                        </button>
-                                    </div>
-                                    <p class="available">
+                                    <p class="available" id="watercolor">
                                         Available 50/50
                                     </p>
                                 </div>
@@ -511,7 +422,7 @@
                                     </div>
                                     <p class="designation">
                                         Method to Madness- Editorial Cartooning
-                                        <span class="date"> 15:00,14 May 2022</span> 
+                                        <span class="date"> 3:00PM, 14 May 2022</span> 
 
                                     </p>
                                     <p class="name">
@@ -522,17 +433,141 @@
                                         his iconic editorial cartoons.
                                     </p>
                                     <div class="book-slot">
-                                        <button type="button"
-                                            style="background-color: grey !important; cursor: not-allowed;">
-                                            <a class="smallTextButton"
-                                                style=" text-decoration: none; color: white; cursor: not-allowed;"
-                                                href="#">Registration Opening Soon</a>
+                                        <button data-tf-popup="FfdXeMRf" data-tf-size="70" data-tf-auto-close
+                                            data-tf-iframe-props="title=Workshop Registration" data-tf-medium="snippet"
+                                            data-tf-hidden="utm_source=xxxxx,utm_medium=xxxxx,utm_campaign=xxxxx,utm_term=xxxxx,utm_content=xxxxx"
+                                            style="all:unset;font-family:Helvetica,Arial,sans-serif;display:inline-block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background-color:#FA3705;color:#FFFFFF;font-size:20px;border-radius:7px;padding:0 26px;font-weight:bold;height:50px;cursor:pointer;line-height:40px;text-align:center;margin:0;text-decoration:none;">
+                                            BOOK YOUR SLOT
+                                        </button>
+                                        <script src="//embed.typeform.com/next/embed.js"></script>
+                                        <!-- <button type="button" style="background-color: grey !important; cursor: not-allowed;"><a class="smallTextButton" style=" text-decoration: none; color: white; cursor: not-allowed;" href="#">Registration Opening Soon</a> -->
                                         </button>
                                     </div>
-                                    <p class="available">
+                                    <p class="available" id="cartooning">
                                         Available 50/50
                                     </p>
                                 </div>
+                                <div class="creator-list creator-4">
+                                    <div class="creator-image">
+                                        <img src="../img/CreatorImages/4.png" alt="Diva" width="115" height="118">
+                                    </div>
+                                    <p class="designation">
+                                        A walk through Mandala
+                                        <span class="date">5:00PM, 14 May 2022</span> 
+                                    </p>
+                                    <p class="name">
+                                        by Tangled Diva
+                                    </p>
+                                    <p class="work">
+                                        The workshop will focus on introduction to mandala, drawing framework of
+                                        mandala, and much more.
+                                    </p>
+                                    <div class="book-slot">
+                                        <button data-tf-popup="G5H9asZJ" data-tf-size="70" data-tf-auto-close
+                                            data-tf-iframe-props="title=Workshop Registration" data-tf-medium="snippet"
+                                            data-tf-hidden="utm_source=xxxxx,utm_medium=xxxxx,utm_campaign=xxxxx,utm_term=xxxxx,utm_content=xxxxx"
+                                            style="all:unset;font-family:Helvetica,Arial,sans-serif;display:inline-block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background-color:#FA3705;color:#FFFFFF;font-size:20px;border-radius:7px;padding:0 26px;font-weight:bold;height:50px;cursor:pointer;line-height:40px;text-align:center;margin:0;text-decoration:none;">
+                                            BOOK YOUR SLOT
+                                        </button>
+                                        <script src="//embed.typeform.com/next/embed.js"></script>
+                                        <!-- <button type="button" style="background-color: grey !important; cursor: not-allowed;"><a class="smallTextButton" style=" text-decoration: none; color: white; cursor: not-allowed;" href="#">Registration Opening Soon</a> -->
+                                        </button>
+                                    </div>
+                                    <p class="available" id="mandala">
+                                        Available 50/50
+                                    </p>
+                                </div>
+                                <div class="creator-list creator-3">
+                                    <div class="creator-image">
+                                        <img src="../img/CreatorImages/3.png" alt="Sooraj" width="115" height="118">
+                                    </div>
+                                    <p class="designation">
+                                        Physical artworks to NFTs
+                                        <span class="date">10:30AM, 15 May 2022</span> 
+                                    </p>
+                                    <p class="name">
+                                        by Sooraj Babu
+                                    </p>
+                                    <p class="work">
+                                        This workshop will focus on guiding through the journey of Physical artworks to
+                                        the world of NFTs with a live demo of his work.
+                                    </p>
+                                    <div class="book-slot">
+                                        <button data-tf-popup="xc7fahsu" data-tf-size="70" data-tf-auto-close
+                                            data-tf-iframe-props="title=Workshop Registration" data-tf-medium="snippet"
+                                            data-tf-hidden="utm_source=xxxxx,utm_medium=xxxxx,utm_campaign=xxxxx,utm_term=xxxxx,utm_content=xxxxx"
+                                            style="all:unset;font-family:Helvetica,Arial,sans-serif;display:inline-block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background-color:#FA3705;color:#FFFFFF;font-size:20px;border-radius:7px;padding:0 26px;font-weight:bold;height:50px;cursor:pointer;line-height:40px;text-align:center;margin:0;text-decoration:none;">
+                                            BOOK YOUR SLOT
+                                        </button>
+                                        <script src="//embed.typeform.com/next/embed.js"></script>
+                                        <!-- <button type="button" style="background-color: grey !important; cursor: not-allowed;"><a class="smallTextButton" style=" text-decoration: none; color: white; cursor: not-allowed;" href="#">Registration Opening Soon</a> -->
+                                        </button>
+                                    </div>
+                                    <p class="available" id="physical">
+                                        Available 50/50
+                                    </p>
+                                </div>
+                                <div class="creator-list creator-6">
+                                    <div class="creator-image">
+                                        <img src="../img/CreatorImages/6.png" alt="Raj" width="115" height="118">
+                                    </div>
+                                    <p class="designation">
+                                        Art of Storytelling through Frame
+                                        <span class="date">1:00PM, 15 May 2022</span> 
+
+                                    </p>
+                                    <p class="name">
+                                        by Raj Khatri
+                                    </p>
+                                    <p class="work">
+                                        This workshop will focus on the Art of Storytelling through a Single Frame.
+                                    </p>
+                                    <div class="book-slot">
+                                        <button data-tf-popup="XHKLvVLq" data-tf-size="70" data-tf-auto-close
+                                            data-tf-iframe-props="title=Workshop Registration" data-tf-medium="snippet"
+                                            data-tf-hidden="utm_source=xxxxx,utm_medium=xxxxx,utm_campaign=xxxxx,utm_term=xxxxx,utm_content=xxxxx"
+                                            style="all:unset;font-family:Helvetica,Arial,sans-serif;display:inline-block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background-color:#FA3705;color:#FFFFFF;font-size:20px;border-radius:7px;padding:0 26px;font-weight:bold;height:50px;cursor:pointer;line-height:40px;text-align:center;margin:0;text-decoration:none;">
+                                            BOOK YOUR SLOT
+                                        </button>
+                                        <script src="//embed.typeform.com/next/embed.js"></script>
+                                        <!-- <button type="button" style="background-color: grey !important; cursor: not-allowed;"><a class="smallTextButton" style=" text-decoration: none; color: white; cursor: not-allowed;" href="#">Registration Opening Soon</a> -->
+                                        </button>
+                                    </div>
+                                    <p class="available" id="frames">
+                                        Available 50/50
+                                    </p>
+                                </div>
+                                <div class="creator-list creator-5">
+                                    <div class="creator-image">
+                                        <img src="../img/CreatorImages/5.png" alt="Rajith" width="115" height="118">
+                                    </div>
+                                    <p class="designation">
+                                        The Inside of Visual Language
+                                        <span class="date">1:30PM, 15 May 2022</span> 
+
+                                    </p>
+                                    <p class="name">
+                                        by Rajith Kumar
+                                    </p>
+                                    <p class="work">
+                                        This workshop will be about different experimentation through visual media.
+                                    </p>
+                                    <div class="book-slot">
+                                        <button data-tf-popup="iDSHHtBz" data-tf-size="70" data-tf-auto-close
+                                            data-tf-iframe-props="title=Workshop Registration" data-tf-medium="snippet"
+                                            data-tf-hidden="utm_source=xxxxx,utm_medium=xxxxx,utm_campaign=xxxxx,utm_term=xxxxx,utm_content=xxxxx"
+                                            style="all:unset;font-family:Helvetica,Arial,sans-serif;display:inline-block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background-color:#FA3705;color:#FFFFFF;font-size:20px;border-radius:7px;padding:0 26px;font-weight:bold;height:50px;cursor:pointer;line-height:40px;text-align:center;margin:0;text-decoration:none;">
+                                            BOOK YOUR SLOT
+                                        </button>
+                                        <script src="//embed.typeform.com/next/embed.js"></script>
+                                        <!-- <button type="button" style="background-color: grey !important; cursor: not-allowed;"><a class="smallTextButton" style=" text-decoration: none; color: white; cursor: not-allowed;" href="#">Registration Opening Soon</a> -->
+                                        </button>
+                                    </div>
+                                    <p class="available" id="language">
+                                        Available 50/50
+                                    </p>
+                                </div>
+                                
                             </div>
                         </div>
 
@@ -561,7 +596,7 @@
                                     </div>
                                     <p class="designation">
                                         Street Photography
-                                        <span class="date">17:00, 15 May 2022</span> 
+                                        <span class="date">5:00PM, 15 May 2022</span> 
 
                                     </p>
                                     <p class="name">
@@ -572,14 +607,17 @@
                                         framing a scene on the streets.
                                     </p>
                                     <div class="book-slot">
-                                        <button type="button"
-                                            style="background-color: grey !important; cursor: not-allowed;">
-                                            <a class="smallTextButton"
-                                                style=" text-decoration: none; color: white; cursor: not-allowed;"
-                                                href="#">Registration Opening Soon</a>
+                                        <button data-tf-popup="YveODXZ1" data-tf-size="70" data-tf-auto-close
+                                            data-tf-iframe-props="title=Workshop Registration" data-tf-medium="snippet"
+                                            data-tf-hidden="utm_source=xxxxx,utm_medium=xxxxx,utm_campaign=xxxxx,utm_term=xxxxx,utm_content=xxxxx"
+                                            style="all:unset;font-family:Helvetica,Arial,sans-serif;display:inline-block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background-color:#FA3705;color:#FFFFFF;font-size:20px;border-radius:7px;padding:0 26px;font-weight:bold;height:50px;cursor:pointer;line-height:40px;text-align:center;margin:0;text-decoration:none;">
+                                            BOOK YOUR SLOT
+                                        </button>
+                                        <script src="//embed.typeform.com/next/embed.js"></script>
+                                        <!-- <button type="button" style="background-color: grey !important; cursor: not-allowed;"><a class="smallTextButton" style=" text-decoration: none; color: white; cursor: not-allowed;" href="#">Registration Opening Soon</a> -->
                                         </button>
                                     </div>
-                                    <p class="available">
+                                    <p class="available" id="street">
                                         Available 50/50
                                     </p>
                                 </div>
@@ -590,7 +628,7 @@
                                     </div>
                                     <p class="designation">
                                         Documentary Photography
-                                        <span class="date">15:30, 14 May 2022</span> 
+                                        <span class="date">3:30PM, 14 May 2022</span> 
 
                                     </p>
                                     <p class="name">
@@ -600,14 +638,17 @@
                                         This workshop will focus on the key aspects of Documentary Photography.
                                     </p>
                                     <div class="book-slot">
-                                        <button type="button"
-                                            style="background-color: grey !important; cursor: not-allowed;">
-                                            <a class="smallTextButton"
-                                                style=" text-decoration: none; color: white; cursor: not-allowed;"
-                                                href="#">Registration Opening Soon</a>
+                                        <button data-tf-popup="nUuBezhR" data-tf-size="70" data-tf-auto-close
+                                            data-tf-iframe-props="title=Workshop Registration" data-tf-medium="snippet"
+                                            data-tf-hidden="utm_source=xxxxx,utm_medium=xxxxx,utm_campaign=xxxxx,utm_term=xxxxx,utm_content=xxxxx"
+                                            style="all:unset;font-family:Helvetica,Arial,sans-serif;display:inline-block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background-color:#FA3705;color:#FFFFFF;font-size:20px;border-radius:7px;padding:0 26px;font-weight:bold;height:50px;cursor:pointer;line-height:40px;text-align:center;margin:0;text-decoration:none;">
+                                            BOOK YOUR SLOT
+                                        </button>
+                                        <script src="//embed.typeform.com/next/embed.js"></script>
+                                        <!-- <button type="button" style="background-color: grey !important; cursor: not-allowed;"><a class="smallTextButton" style=" text-decoration: none; color: white; cursor: not-allowed;" href="#">Registration Opening Soon</a> -->
                                         </button>
                                     </div>
-                                    <p class="available">
+                                    <p class="available" id="documentary">
                                         Available 50/50
                                     </p>
                                 </div>
@@ -619,7 +660,7 @@
                                     </div>
                                     <p class="designation">
                                         Aerial Photography
-                                        <span class="date">10:00, 14 May 2022</span> 
+                                        <span class="date">10:00AM, 14 May 2022</span> 
 
                                     </p>
                                     <p class="name">
@@ -630,14 +671,17 @@
                                         the frame.
                                     </p>
                                     <div class="book-slot">
-                                        <button type="button"
-                                            style="background-color: grey !important; cursor: not-allowed;">
-                                            <a class="smallTextButton"
-                                                style=" text-decoration: none; color: white; cursor: not-allowed;"
-                                                href="#">Registration Opening Soon</a>
+                                        <button data-tf-popup="kRUqOIT8" data-tf-size="70" data-tf-auto-close
+                                            data-tf-iframe-props="title=Workshop Registration" data-tf-medium="snippet"
+                                            data-tf-hidden="utm_source=xxxxx,utm_medium=xxxxx,utm_campaign=xxxxx,utm_term=xxxxx,utm_content=xxxxx"
+                                            style="all:unset;font-family:Helvetica,Arial,sans-serif;display:inline-block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background-color:#FA3705;color:#FFFFFF;font-size:20px;border-radius:7px;padding:0 26px;font-weight:bold;height:50px;cursor:pointer;line-height:40px;text-align:center;margin:0;text-decoration:none;">
+                                            BOOK YOUR SLOT
+                                        </button>
+                                        <script src="//embed.typeform.com/next/embed.js"></script>
+                                        <!-- <button type="button" style="background-color: grey !important; cursor: not-allowed;"><a class="smallTextButton" style=" text-decoration: none; color: white; cursor: not-allowed;" href="#">Registration Opening Soon</a> -->
                                         </button>
                                     </div>
-                                    <p class="available">
+                                    <p class="available" id="aerial">
                                         Available 50/50
                                     </p>
                                 </div>
@@ -656,11 +700,14 @@
                                         This workshop will cover the basics of Travel Photography.
                                     </p>
                                     <div class="book-slot">
-                                        <button type="button"
-                                            style="background-color: grey !important; cursor: not-allowed;">
-                                            <a class="smallTextButton"
-                                                style=" text-decoration: none; color: white; cursor: not-allowed;"
-                                                href="#">Registration Opening Soon</a>
+                                        <button data-tf-popup="mJqWepdi" data-tf-size="70" data-tf-auto-close
+                                            data-tf-iframe-props="title=Workshop Registration" data-tf-medium="snippet"
+                                            data-tf-hidden="utm_source=xxxxx,utm_medium=xxxxx,utm_campaign=xxxxx,utm_term=xxxxx,utm_content=xxxxx"
+                                            style="all:unset;font-family:Helvetica,Arial,sans-serif;display:inline-block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background-color:#FA3705;color:#FFFFFF;font-size:20px;border-radius:7px;padding:0 26px;font-weight:bold;height:50px;cursor:pointer;line-height:40px;text-align:center;margin:0;text-decoration:none;">
+                                            BOOK YOUR SLOT
+                                        </button>
+                                        <script src="//embed.typeform.com/next/embed.js"></script>
+                                         <button type="button" style="background-color: grey !important; cursor: not-allowed;"><a class="smallTextButton" style=" text-decoration: none; color: white; cursor: not-allowed;" href="#">Registration Opening Soon</a> 
                                         </button>
                                     </div>
                                     <p class="available">
@@ -674,7 +721,7 @@
                                     </div>
                                     <p class="designation">
                                         Fashion Photography
-                                        <span class="date">14:00, 14 May 2022</span> 
+                                        <span class="date">2:00PM, 14 May 2022</span> 
 
                                     </p>
                                     <p class="name">
@@ -684,14 +731,17 @@
                                         This workshop will cover the details of Fashion Photography.
                                     </p>
                                     <div class="book-slot">
-                                        <button type="button"
-                                            style="background-color: grey !important; cursor: not-allowed;">
-                                            <a class="smallTextButton"
-                                                style=" text-decoration: none; color: white; cursor: not-allowed;"
-                                                href="#">Registration Opening Soon</a>
+                                        <button data-tf-popup="iJfwChtR" data-tf-size="70" data-tf-auto-close
+                                            data-tf-iframe-props="title=Workshop Registration" data-tf-medium="snippet"
+                                            data-tf-hidden="utm_source=xxxxx,utm_medium=xxxxx,utm_campaign=xxxxx,utm_term=xxxxx,utm_content=xxxxx"
+                                            style="all:unset;font-family:Helvetica,Arial,sans-serif;display:inline-block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background-color:#FA3705;color:#FFFFFF;font-size:20px;border-radius:7px;padding:0 26px;font-weight:bold;height:50px;cursor:pointer;line-height:40px;text-align:center;margin:0;text-decoration:none;">
+                                            BOOK YOUR SLOT
+                                        </button>
+                                        <script src="//embed.typeform.com/next/embed.js"></script>
+                                        <!-- <button type="button" style="background-color: grey !important; cursor: not-allowed;"><a class="smallTextButton" style=" text-decoration: none; color: white; cursor: not-allowed;" href="#">Registration Opening Soon</a> -->
                                         </button>
                                     </div>
-                                    <p class="available">
+                                    <p class="available" id="fashion">
                                         Available 50/50
                                     </p>
                                 </div>
@@ -702,7 +752,7 @@
                                     </div>
                                     <p class="designation">
                                         Culture and Festivals Photography
-                                        <span class="date">17:00, 14 May 2022</span> 
+                                        <span class="date">5:00PM, 14 May 2022</span> 
 
                                     </p>
                                     <p class="name">
@@ -713,14 +763,17 @@
                                         Photography.
                                     </p>
                                     <div class="book-slot">
-                                        <button type="button"
-                                            style="background-color: grey !important; cursor: not-allowed;">
-                                            <a class="smallTextButton"
-                                                style=" text-decoration: none; color: white; cursor: not-allowed;"
-                                                href="#">Registration Opening Soon</a>
+                                        <button data-tf-popup="hcV65ogt" data-tf-size="70" data-tf-auto-close
+                                            data-tf-iframe-props="title=Workshop Registration" data-tf-medium="snippet"
+                                            data-tf-hidden="utm_source=xxxxx,utm_medium=xxxxx,utm_campaign=xxxxx,utm_term=xxxxx,utm_content=xxxxx"
+                                            style="all:unset;font-family:Helvetica,Arial,sans-serif;display:inline-block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background-color:#FA3705;color:#FFFFFF;font-size:20px;border-radius:7px;padding:0 26px;font-weight:bold;height:50px;cursor:pointer;line-height:40px;text-align:center;margin:0;text-decoration:none;">
+                                            BOOK YOUR SLOT
+                                        </button>
+                                        <script src="//embed.typeform.com/next/embed.js"></script>
+                                        <!-- <button type="button" style="background-color: grey !important; cursor: not-allowed;"><a class="smallTextButton" style=" text-decoration: none; color: white; cursor: not-allowed;" href="#">Registration Opening Soon</a> -->
                                         </button>
                                     </div>
-                                    <p class="available">
+                                    <p class="available" id="culture">
                                         Available 50/50
                                     </p>
                                 </div>
@@ -730,7 +783,7 @@
                                     </div>
                                     <p class="designation">
                                         Wildlife Photography
-                                        <span class="date">16:30, 15 May 2022</span> 
+                                        <span class="date">4:30PM, 15 May 2022</span> 
 
                                     </p>
                                     <p class="name">
@@ -740,14 +793,17 @@
                                         This workshop will focus on the key aspects of Wildlife Photography.
                                     </p>
                                     <div class="book-slot">
-                                        <button type="button"
-                                            style="background-color: grey !important; cursor: not-allowed;">
-                                            <a class="smallTextButton"
-                                                style=" text-decoration: none; color: white; cursor: not-allowed;"
-                                                href="#">Registration Opening Soon</a>
+                                        <button data-tf-popup="UP4zIcPx" data-tf-size="70" data-tf-auto-close
+                                            data-tf-iframe-props="title=Workshop Registration" data-tf-medium="snippet"
+                                            data-tf-hidden="utm_source=xxxxx,utm_medium=xxxxx,utm_campaign=xxxxx,utm_term=xxxxx,utm_content=xxxxx"
+                                            style="all:unset;font-family:Helvetica,Arial,sans-serif;display:inline-block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background-color:#FA3705;color:#FFFFFF;font-size:20px;border-radius:7px;padding:0 26px;font-weight:bold;height:50px;cursor:pointer;line-height:40px;text-align:center;margin:0;text-decoration:none;">
+                                            BOOK YOUR SLOT
+                                        </button>
+                                        <script src="//embed.typeform.com/next/embed.js"></script>
+                                        <!-- <button type="button" style="background-color: grey !important; cursor: not-allowed;"><a class="smallTextButton" style=" text-decoration: none; color: white; cursor: not-allowed;" href="#">Registration Opening Soon</a> -->
                                         </button>
                                     </div>
-                                    <p class="available">
+                                    <p class="available" id="wildlife">
                                         Available 50/50
                                     </p>
                                 </div>
@@ -756,25 +812,28 @@
                                         <img src="../img/PhotoGraphy/8.png" alt="nisahd" width="115" height="118">
                                     </div>
                                     <p class="designation">
-                                        Landscape Photography
-                                        <span class="date">11:30, 15 May 2022</span> 
+                                        Black And White Photography
+                                        <span class="date">11:30AM, 15 May 2022</span> 
 
                                     </p>
                                     <p class="name">
                                         by Jassi Oberai
                                     </p>
                                     <p class="work">
-                                        The focus of this workshop will be Landscape Photography.
+                                        The focus of this workshop will be Black And White Photography.
                                     </p>
                                     <div class="book-slot">
-                                        <button type="button"
-                                            style="background-color: grey !important; cursor: not-allowed;">
-                                            <a class="smallTextButton"
-                                                style=" text-decoration: none; color: white; cursor: not-allowed;"
-                                                href="#">Registration Opening Soon</a>
+                                        <button data-tf-popup="liti0rK1" data-tf-size="70" data-tf-auto-close
+                                            data-tf-iframe-props="title=Workshop Registration" data-tf-medium="snippet"
+                                            data-tf-hidden="utm_source=xxxxx,utm_medium=xxxxx,utm_campaign=xxxxx,utm_term=xxxxx,utm_content=xxxxx"
+                                            style="all:unset;font-family:Helvetica,Arial,sans-serif;display:inline-block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background-color:#FA3705;color:#FFFFFF;font-size:20px;border-radius:7px;padding:0 26px;font-weight:bold;height:50px;cursor:pointer;line-height:40px;text-align:center;margin:0;text-decoration:none;">
+                                            BOOK YOUR SLOT
+                                        </button>
+                                        <script src="//embed.typeform.com/next/embed.js"></script>
+                                        <!-- <button type="button" style="background-color: grey !important; cursor: not-allowed;"><a class="smallTextButton" style=" text-decoration: none; color: white; cursor: not-allowed;" href="#">Registration Opening Soon</a> -->
                                         </button>
                                     </div>
-                                    <p class="available">
+                                    <p class="available" id="landscape">
                                         Available 50/50
                                     </p>
                                 </div>
@@ -915,9 +974,83 @@
                 totalSlots:300
             },{
                 for:"try crypto",
-                sheetId:"1S4Z6BUzDAT-qFc7mUrXQPwxz8GvPOdtVxW884ABBAJQ/",
+                sheetId:"1S4Z6BUzDAT-qFc7mUrXQPwxz8GvPOdtVxW884ABBAJQ",
                 div_id:"#try_crypto",
                 totalSlots:300
+            },{
+                for:"Landscape Jassi",
+                sheetId:"19sO6KwhxOL2QZlnoBvFHm5giEB1MuoY8OiK3E84Neq4",
+                div_id:"#landscape",
+                totalSlots:50
+            },{
+                sheetId:"1HyoVs9T6NzMMObANb-gpSzlNbex8Ho9UJ8Z5xnFE8L4",
+                for:"wildlife",
+                div_id:"#wildlife",
+                totalSlots:50
+            },
+            {
+                sheetId:"1resB-rIXVVvhnzC2PCwOFKmCLAAzbi8jVSIU-Cy66fI",
+                for:"Culture",
+                div_id:"#culture",
+                totalSlots:50
+            },
+            {
+                sheetId:"1PwvVYD_4VIzSIO9si-12pyBB3ba586I4dmPTiEvWa0M",
+                for:"Fashion",
+                div_id:"#fashion",
+                totalSlots:50
+            },{
+                sheetId:"1ZQrT9bl5VJCWgQnP3OhMW_bjDqG631rBVfY37r-CxAU",
+                for:"Aerial",
+                div_id:"#aerial",
+                totalSlots:50
+            },
+            {
+                sheetId:"1-8wGhv4nuNd9K7QLaOs7y9FapQpYddjzwCQVpaZzyPE",
+                for:"document",
+                div_id:"#documentary",
+                totalSlots:50
+            },{
+                sheetId:"1IT2NnVqSvMM0MT4xBJ8b5ecV9Hfn6DjMs4in2Mhn8M4",
+                for:"street",
+                div_id:"#street",
+                totalSlots:50
+            },
+            {
+                sheetId:"13sA-uhUKSpiTCJqAe21ioHbIlEhyj1ZpVoHG2Abw3ak",
+                for:"cartooning",
+                div_id:"#cartooning",
+                totalSlots:50
+            },
+            {
+                sheetId:"1pqhpsGa0kjfAK_hOs8kA9xbhXZCH_w4gIokP2ttLUpE",
+                for:"language",
+                div_id:"#language",
+                totalSlots:50
+            },
+            {
+                sheetId:"1DlrFFlCKpP7X0rJtBL0IWjGx50knpvCzYNwVn_r2Uag",
+                for:"mandala",
+                div_id:"#mandala",
+                totalSlots:50
+            },
+            {
+                sheetId:"1SoQHse6weV_tfyUQvkNFc0j1eL5ks240BkwQdTlkNNk",
+                for:"physical",
+                div_id:"#physical",
+                totalSlots:50
+            },
+            {
+                sheetId:"18Vpkeo9Ogdr3XOIa-Xyan4dQkOc7MUK_GWPy9Bo2jPk",
+                for:"watercolor",
+                div_id:"#watercolor",
+                totalSlots:50
+            },
+            {
+                sheetId:"1gNoZhRdmh9VtOVG9fspe5p846y_wugrNpy8hz_QUSU4",
+                for:"charcoal",
+                div_id:"#charcoal",
+                totalSlots:50
             }
         ]
         dataArr.forEach((item)=>{
@@ -925,9 +1058,9 @@
             var url = "https://sheets.googleapis.com/v4/spreadsheets/"+ sheetId + "/?key=AIzaSyBbJvryo-jZGBGGvOjyJ3nMMuhF2x8uguA";
            
             $.getJSON(url, function(result){
-                var filled=result.sheets[0].basicFilter?.range?.endRowIndex
+                var filled=result.sheets[0].properties?.gridProperties?.rowCount
                 if(filled<item.totalSlots)
-                    $(item.div_id).html(`Available ${300 - filled}/300`)
+                    $(item.div_id).html(`Available ${item.totalSlots - filled+1}/${item.totalSlots}`)
                 else if (filled>=item.totalSlots)
                     $(item.div_id).html(`All spots are filled, but you can still register to be on the waiting list. And, if a spot frees up, we’ll let you know.`)
             });

@@ -89,23 +89,26 @@
     </div>
     <!-- end loader -->
     <div class="container_center">
-        <!-- <div style="position: relative;">
-            <canvas id='canv'>
-            </canvas>
-            <p style="    position: absolute;
-            top: 10px;
-            right: 48%;
-            color: white;
-            font-weight: 700;
-        ">Mint is live</p>
-        </div> -->
         <!-- start header -->
+        <div id="gradientMint" class="gradient" style="position: relative;height: 40px;overflow: hidden;">
+           
+            <div class="wave" style=" z-index: 1000;">
+                
+            </div>
+            <p class="mintlive" style=" z-index: 1000;">
+                <a id="hovertoPro">
+                <!-- MINT IS LIVE -->
+                The Prologue Minting starts on 10 May 2022 at 10 PM IST
+                </a>
+            </p>
+            
+        </div>
         <header>
             <!-- start navigation -->
             <nav
             class="navbar navbar-default bootsnav navbar-fixed-top nav-white header-light bg-transparent nav-box-width white-link on no-full">
             <div class="container nav-header-container">
-                <!-- <canvas height="10"></canvas> -->
+                <canvas height="10" id="canvastohide"></canvas>
                 <div class="row">
                         <!-- start logo -->
                         <div class="col-md-2 col-xs-5">
@@ -167,7 +170,7 @@
             </nav>
         </header>
         <!-- end header -->
-
+        
         <section class="example no-padding no-transition" id="home" style="height:auto;">
             <div class="slider_main" style="height:auto;">
                 <div class="owl-testimonial owl-carousel ">

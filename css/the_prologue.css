@@ -1,7 +1,7 @@
 #the_prologue_main{ background:url(../img/the_prologue_bg.jpg) no-repeat center top; background-size:cover; padding:250px 0px;}
 
 .prologue_logo { width:70%; position:relative;}
-.prologue_logo .minting_title{ position:absolute; right:0; top:10px;}
+.prologue_logo .minting_title{ position:absolute; right:0; top:0px;}
 .prologue_logo img{ max-width:100%; display:block;}
 .buttons_div{ width:30%; text-align:right;}
 .buttons_div .btn-small{ background:none !important; border: 1px solid #6D46FF !important; box-sizing: border-box; border-radius: 8px; font-family: 'Montserrat', sans-serif; font-style: normal; font-weight: 600; font-size: 12px; line-height: 20px; text-align: center; color: #6D46FF !important; padding:7px 0px; min-width:180px; text-align:center;}
@@ -89,7 +89,7 @@
     width: 100%;
     
 }
-.wallet_box_connected p{
+.wallet_box_connected > p{
     font-family: 'Rubik', sans-serif;
     color: #ffffff;
     font-size:12px;
@@ -298,9 +298,10 @@
 .count-how-many-left{
     display: flex;
     width: 50%;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;    
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+    padding-right: 10px;
 }
 .count-how-many{
     display: flex;
@@ -343,6 +344,36 @@ form {
 
 .value-button:hover {
   cursor: pointer;
+}
+.changePremiumSpecial{
+        font-size: 20px;
+        font-weight: bold;
+}
+.changePremiumSpecial2{
+    font-size: 15px;
+}
+@media(max-width: 600px){
+    .category_tags_2{
+        flex-direction: column;
+    }
+    .Photography_category, .Traditional_Art, .Digital_Media_category, .Music_category, .Poetry_category, .Film_category, .count-how-many, .count-how-many-left {
+        width: 100%;
+    }
+    #choose_bundle{
+        padding: 
+        0%;
+    }
+    .btn_choose{
+        font-size: 15px;
+    }
+    .final_result_calculate > p{
+        padding: 0%;
+        font-size: 12px;
+    }
+    .changePremiumSpecial2{
+        padding: 0px 10px;
+        font-size: 12px;
+    }
 }
 
 form #decrease1 { margin-right: -4px; border-radius: 8px 0 0 8px; }

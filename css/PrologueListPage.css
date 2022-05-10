@@ -32,53 +32,15 @@
         width: 100%;
     }
     .events_container .backgroud {
-        padding-top: 16rem;
+        padding-top: 12rem;
     }
 }
-/* Search Bar */
-.form{
-    position: relative;
-    width: 100%;
-    margin: 0px 30px;
-}
-.form > .fa-search{
-    position: absolute;
-    top:15px;
-    left: 20px;
-    color: white;
-}
-.form>span{
-    position: absolute;
-    right: 17px;
-    top: 13px;
-    padding: 0px;
-    border-left: 1px solid #d1d5db;
-}
-.form-input{
-    width: 542px;
-    height: 44px;
-    left: 129px;
-    top: 199px;
-    text-indent: 33px;
-    border-radius: 10px;
-    background-color: transparent;
-    border: 1px solid #FFFFFF;
-    border-radius:12px;
-}
-
 /* Filter Row */
 .filter_row{
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  justify-content: space-between;
-}
-.filter_row_left {
-  display: flex;
-  flex-wrap: wrap;
-}
-.filter_row_left > div{
-  margin: 0px 20px;
+  justify-content: flex-end;
 }
 .filter_row_right {
   display: flex;
@@ -93,10 +55,12 @@
     color: white;
     border-color: #FFFFFF;
     border-style: solid;
-    padding: 5px 30px 5px 10px;
+    /* padding: 5px 30px 5px 10px; */
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
     border-radius: 20px;
 }
-
 /*  DROPDOWN FOR FILTER START */
 
 .dropbtn {
@@ -108,11 +72,11 @@
   border-radius: 12px;
   padding: 0px 20px;
   font-family: Rubik;
-  font-size: 20px;
   font-weight: 400;
   line-height: 24px;
   letter-spacing: 0em;
   padding: 5px 5px;
+  
 }
 .dropdown {
   position: relative;
@@ -124,6 +88,7 @@
   position: absolute;
   background-color: #000000;
   min-width: 160px;
+  
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
@@ -133,6 +98,9 @@
   padding: 0px 5px;
   text-decoration: none;
   display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .dropdown-content a:hover {background-color: #ff0000; color: rgb(255, 255, 255);}
@@ -145,6 +113,9 @@
   background-color: transparent;
 }
 /* DROPDOWN FOR FILTER END */
+#page_outline{
+    padding: 0px 10px;
+}
 
 @media(max-width: 992px){
     .filter_row_left{
@@ -157,6 +128,9 @@
         width: 100%;
         justify-content: space-between;
         font-size: 15px;
+    }
+    .dropbtn{
+        font-size: 12px;
     }
 }
 
@@ -218,8 +192,10 @@
     flex-wrap: wrap;
     flex-direction: row;
     margin-top: 50px;
-    justify-content: space-between;
-    row-gap: 5rem;
+    justify-content: center;
+    gap: 5rem;
+    
+    
 }
 .result_box_main{
     display: grid;
@@ -228,17 +204,24 @@
     grid-template-rows: 80% 10% 10%;
     border-color: #FFFFFF;
     border-width: 1px;
-    border-radius: 12px;
+    /* border-radius: 12px; */
     border-style: solid;
 }
 .artwork-image{
-    width: 320px;
+    width: 319px;
     height: 320px;
     left: 129px;
     top: 589px;
-    border-radius: 12px 12px 0px 0px;
+    /* border-radius: 12px 12px 0px 0px; */
     background-size:contain;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.artwork-image img{
+    max-width: 318px;
+    max-height: 320px;
+    /* border-radius: 12px 12px; */
 }
 .artwork-title{
     font-family: 'Rubik';
@@ -261,6 +244,31 @@
     font-size: 14px;
     line-height: 17px;
     text-align: center;
-
     color: #00EE6C;
+}
+@media(max-width: 1000px){
+    .result_box_main{
+        height: 200px;
+        width: 140px;
+    }
+    .artwork-image{
+        height: 160px;
+        width: 140px;
+    }
+    .artwork-image img{
+        max-height: 160px;
+        max-width: 138px;
+    }
+    .artwork-title{
+        font-size: 10px;
+        line-height: 12px;
+    }
+    .artist-name{
+        font-size: 10px;
+        line-height: 17px;
+    }
+    .dropbtn{
+        font-size: 15px;
+        padding: 5px 10px;
+    }
 }
