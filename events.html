@@ -126,12 +126,24 @@
     <div class="container_center">
         <!-- <canvas id='canv'></canvas> -->
         <!-- start header -->
+        <div id="gradientMint" class="gradient" style="position: relative;height: 40px;overflow: hidden;">
+            <div class="wave" style=" z-index: 1000;">
+            </div>
+            <p class="mintlive" style=" z-index: 1000;">
+                <a id="hovertoPro" >
+                <!-- MINT IS LIVE -->
+                <span class="">The Prologue Minting starts on 10 May 2022 at 10 PM IST </span>
+                </a>
+            </p>
+            
+            </a>
+        </div>
         <header>
             
             <!-- start navigation -->
             <nav class="navbar navbar-default bootsnav navbar-fixed-top nav-white header-light bg-transparent nav-box-width white-link on no-full">
                 <div class="container nav-header-container">
-                    <!-- <canvas height="10"></canvas> -->
+                    <canvas height="10" id="canvastohide"></canvas>
                     <div class="row">
                         <!-- start logo -->
                         <div class="col-md-2 col-xs-5">
@@ -215,22 +227,8 @@
 
         <!-- end popup -->
         <section class="example no-padding no-transition event_hero_bg" id="home">
-            <div id="gradient" class="gradient" style="position: relative;height: 40px;overflow: hidden;">
-            <div class="wave" style=" z-index: 1000;">
-                <a href="the_prologue.html">
-            </div>
-            <p class="mintlive" style=" z-index: 1000;">
-                <a id="hovertoPro" href="the_prologue.html">
-                <!-- MINT IS LIVE -->
-                The Prologue Minting starts on 10 May 2022 at 10 PM IST
-                </a>
-            </p>
-            
-            </a>
-        </div>
             <div class="events_container">
-                <div class="wrap-2"><canvas id="liquid">
-                    </canvas></div>
+                <div class="wrap-2"><canvas id="liquid"></canvas></div>
                 <div class='page backgroud home'>
                     <img class="event_background" src="img/event_background.jpeg" />
                     <div class="Event_Schedule_side"> 
