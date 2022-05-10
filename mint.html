@@ -139,8 +139,12 @@
       </div>
     </div>
     <!-- end loader -->
-    <div class="conteiner_center">
-      <!-- start header -->
+    
+    <!-- IF PAGE IS LOADING THEN FLEX -->
+    <!-- IF PAGE IS NOT LOADING THEN DISPLAY NONE -->
+    <div id="loader-class" style="display:none ;">
+      <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+    </div>
       <header>
         <!-- start navigation -->
         <nav
@@ -956,7 +960,7 @@ Each of these 300 pieces were hand-picked by a team of curators out of more than
                   }
                 }
               }
-
+              document.getElementById("loader-class").style.display ="flex";
               try {
                 var value;
                 if (qty === 8) {
@@ -1026,6 +1030,7 @@ Each of these 300 pieces were hand-picked by a team of curators out of more than
         if (sum >= 5) {
           value -= value / 10;
         }
+        document.getElementById("loader-class").style.display ="flex";
         try {
           await contract.methods
             .mintCustom(types, qtys)

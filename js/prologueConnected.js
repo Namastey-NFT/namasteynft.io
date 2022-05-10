@@ -24,6 +24,8 @@ function reset() {
   document.getElementById("number6").value = 0;
   document.getElementById("total_artworks").innerHTML = 0;
   document.getElementById("find_res_ETH").innerHTML = 0;
+  document.getElementById("loader-class").style.display ="none";
+
 }
 
 // var photoAvailable = 0,
