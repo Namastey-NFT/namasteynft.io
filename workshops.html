@@ -1045,7 +1045,7 @@
             var url = "https://sheets.googleapis.com/v4/spreadsheets/"+ sheetId + "/?key=AIzaSyBbJvryo-jZGBGGvOjyJ3nMMuhF2x8uguA";
            
             $.getJSON(url, function(result){
-                var filled=result.sheets[0].basicFilter?.range?.endRowIndex
+                var filled=result.sheets[0].properties?.gridProperties?.rowCount
                 if(filled<item.totalSlots)
                     $(item.div_id).html(`Available ${item.totalSlots - filled+1}/${item.totalSlots}`)
                 else if (filled>=item.totalSlots)
