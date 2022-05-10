@@ -366,6 +366,7 @@ canvas {
 	z-index: -999;
 }
 #hovertoPro{
+	text-transform: uppercase;
 	letter-spacing: 8px;
 	font-weight: 700;
 	color: black;
