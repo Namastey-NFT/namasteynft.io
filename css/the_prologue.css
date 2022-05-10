@@ -298,9 +298,10 @@
 .count-how-many-left{
     display: flex;
     width: 50%;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;    
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+    padding-right: 10px;
 }
 .count-how-many{
     display: flex;
