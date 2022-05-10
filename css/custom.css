@@ -359,3 +359,20 @@ canvas {
 	left: 0%;
 	width: 100%;
 }
+#hovertoPro{
+	letter-spacing: 8px;
+	font-weight: 700;
+	color: black;
+}
+@media(max-width: 1000px){
+	#hovertoPro{
+		letter-spacing: 4px;
+		font-size: 13px;
+	}
+}
+@media(max-width: 600px){
+	#hovertoPro{
+		letter-spacing: 0px;
+		font-size: 10px;
+	}
+}
