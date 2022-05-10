@@ -216,9 +216,9 @@
             <div class="col-md-12 prologue_head text-center">
               <img src="img/prologue_logo.png"/>
               <p class="margin-50px-top">
-                <a href="#" class="btn btn-blue btn-small goto_mint">VIEW COLLECTION</a>
+                <a href="ThePrologue.html" class="btn btn-blue btn-small">VIEW COLLECTION</a>
                 <!-- <a href="#" class="btn btn-blue btn-small view_collection">VIEW COLLECTION</a> -->
-                <a href="#" class="btn btn-blue btn-small goto_mint">GO TO MINT</a>
+                <a href="mint.html" class="btn btn-blue btn-small">GO TO MINT</a>
               </p>
             </div>
           </div>
@@ -255,7 +255,7 @@
               <div class="minting_box">
                 <h4 class="alt-font text-capitalize alt-font font-weight-400 sm-width-100 xs-width-100">The 300 Artwork Collection will be available for Category-wise Blind Minting on a custom Smart Contract by NamasteyNFT for a fixed price of <span>0.25</span> ETH per NFT.</h4>
                 <p class="margin-30px-top">
-                  <a href="#" class="btn btn-blue btn-small minting_live">Minting In</a>
+                  <a id="makeThisHide" href="#" class="btn btn-blue btn-small minting_live">Minting In</a>
                 </p>
                 <div class="event-container">
                 <div class="event-inner" style="background-color:transparent;">
@@ -461,7 +461,9 @@
             // IF FINISH
             if (distance < 0) {
                 clearInterval(x);
-                countDownBox.innerHTML = "EVENT STARTED";
+                document.getElementById('makeThisHide').innerHTML = 'MINT NOW';
+                document.getElementById('makeThisHide').setAttribute("href", "mint.html");;
+                countDownBox.innerHTML = "";
             }
         }, 1000);
     </script>
