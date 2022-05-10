@@ -487,9 +487,8 @@ canvas {
 .Event_Schedule_side{
     position: absolute;
     position: fixed;
-    
     top: 50%;
-    right: -110px;
+    right: -150px;
     transform: rotate(-90deg) translateX(-50%);
     transform-origin: left top;
     background-color: #ff2600;
@@ -502,8 +501,12 @@ canvas {
     max-width: 540px;
     height: 48px;
     font-family: Helvetica, Arial, sans-serif;
-    font-size: 18px;
+    font-size: 23px;
     z-index: 99 !important;
+}
+.Event_Schedule_side a{
+    text-decoration: none;
+    color: white;
 }
 /* 
 @media(max-width: 990px){
