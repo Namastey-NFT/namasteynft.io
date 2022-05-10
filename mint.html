@@ -243,7 +243,11 @@
                   <img src="img/prologue_logo.png" />
                 </div>
                 <div class="buttons_div">
-                  <a id="hide_1" href="https://etherscan.io/address/0xd8AFd6B2320594495729c9856A6C52E07579Dd7C#code" class="btn btn-blue btn-small"
+                  <a
+                    id="hide_1"
+                    href="https://etherscan.io/address/0xd8AFd6B2320594495729c9856A6C52E07579Dd7C#code"
+                    target="_blank"
+                    class="btn btn-blue btn-small"
                     >VERIFIED CONTRACT</a
                   >
                   <a
@@ -427,7 +431,7 @@ Each of these 300 pieces were hand-picked by a team of curators out of more than
                           color: #ff4320;
                         "
                       >
-                        133/300 Minted
+                        0/300 Minted
                       </p>
                       <p
                         style="
@@ -648,8 +652,12 @@ Each of these 300 pieces were hand-picked by a team of curators out of more than
                   </p>
                   <p style="width: 301px; color: #748ec7">
                     After minting, head to
-                    <a style="color: #748ec7" href="#">your wallet</a> on
-                    OpenSea to view.
+                    <a
+                      style="color: #748ec7"
+                      href="https://opensea.io/login?referrer=%2Faccount"
+                      >your wallet</a
+                    >
+                    on OpenSea to view.
                   </p>
                 </div>
               </div>
@@ -819,12 +827,12 @@ Each of these 300 pieces were hand-picked by a team of curators out of more than
       console.log(value);
       let web3 = new Web3(
         Web3.givenProvider ||
-          "https://speedy-nodes-nyc.moralis.io/4ed632e1419adca7fea61365/eth/rinkeby"
+          "https://speedy-nodes-nyc.moralis.io/4ed632e1419adca7fea61365/eth/mainnet"
       );
       if (web3.currentProvider.isMetaMask !== true) {
         document.getElementById("wallet-connect").style.display = "none";
       }
-      let address = "0xd75CeF84D9F5AAf094088016c86f3dD5215F1556";
+      let address = "0xd8AFd6B2320594495729c9856A6C52E07579Dd7C";
 
       let contract = new web3.eth.Contract(abi, address);
       console.log(contract);
@@ -846,20 +854,20 @@ Each of these 300 pieces were hand-picked by a team of curators out of more than
           window.user = userObj;
           window.show = true;
 
-          document.getElementById("connect").style.display = "none";
-          document.getElementById("connected").style.display = "block";
-
-          document.getElementById("hide_1").style.display = "none";
-          document.getElementById("hide_2").style.display = "none";
-
-          var changeWid = document.getElementById("changeWWid");
-          changeWid.classList.add("col-md-5");
-
           try {
             await window.ethereum.request({
               method: "wallet_switchEthereumChain",
-              params: [{ chainId: "0x4" }],
+              params: [{ chainId: "0x1" }],
             });
+
+            document.getElementById("connect").style.display = "none";
+            document.getElementById("connected").style.display = "block";
+
+            document.getElementById("hide_1").style.display = "none";
+            document.getElementById("hide_2").style.display = "none";
+
+            var changeWid = document.getElementById("changeWWid");
+            changeWid.classList.add("col-md-5");
           } catch (switchError) {
             // This error code indicates that the chain has not been added to MetaMask.
             if (switchError.code === 4902) {
@@ -868,12 +876,20 @@ Each of these 300 pieces were hand-picked by a team of curators out of more than
                   method: "wallet_addEthereumChain",
                   params: [
                     {
-                      chainId: "0x4",
-                      chainName: "Rinkeby Test Network",
-                      rpcUrls: ["https://rinkeby.infura.io/v3/"] /* ... */,
+                      chainId: "0x1",
+                      chainName: "Ethereum Mainnet",
+                      rpcUrls: ["https://mainnet.infura.io/v3/"] /* ... */,
                     },
                   ],
                 });
+                document.getElementById("connect").style.display = "none";
+                document.getElementById("connected").style.display = "block";
+
+                document.getElementById("hide_1").style.display = "none";
+                document.getElementById("hide_2").style.display = "none";
+
+                var changeWid = document.getElementById("changeWWid");
+                changeWid.classList.add("col-md-5");
               } catch (addError) {
                 alert("Please switch to ethereum network.");
               }
