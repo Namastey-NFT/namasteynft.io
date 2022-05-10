@@ -14,7 +14,7 @@ h6{font-size:25px;line-height:30px}
 
 /* General */
 body{font-family:'Open Sans',sans-serif;font-size:16px;color:#565656;line-height:24px;font-weight:400;overflow-x:hidden}
-a,a:active,a:focus{color:#17acc6;text-decoration:none}
+a,a:active,a:focus{color:#17acc6;text-decoration:none; color: white;}
 a:hover,a:active{color:#f1f1f1;text-decoration:none}
 a:focus,a:active,button:focus,button:active,.btn.active.focus,.btn.active:focus,.btn.focus,.btn:active.focus,.btn:active:focus,.btn:focus{outline:0}
 img{max-width:100%;height:auto}
@@ -775,7 +775,8 @@ header{width:100%;z-index:99}
 header nav .row{align-items:center;display:-ms-flex;display:-webkit-flex;display:-moz-flex;display:flex;height:auto;padding:0}
 header nav .row>div:first-child{flex:1 1 auto}
 header nav.navbar{border-radius:0;padding:0}
-header nav.navbar-default,nav.navbar.bootsnav{border-bottom:0}
+header nav.navbar-default,nav.navbar.bootsnav{border-bottom:0;
+z-index: 1000;}
 header nav{width:100%;top:0;z-index:99;margin-bottom:0;display:table}
 header nav .nav-header-container{display:table-cell;vertical-align:middle;position:relative}
 header nav .navbar-nav>li>a{color:#232323;font-size:20px;font-weight:800;margin:0 20px;padding:5px 0 5px;text-transform:capitalize;letter-spacing:.015em}
