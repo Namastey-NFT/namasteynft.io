@@ -662,7 +662,7 @@ $("#my_designation").typeIt({
       });
       $("header").on("click",function(e){
           if(e?.target?.id=="canvastohide")
-            location.href="the_prologue.html"
+            location.href="mint.html"
       })
 })()
 
