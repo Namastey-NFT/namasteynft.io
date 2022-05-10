@@ -22,6 +22,7 @@ function reset() {
   document.getElementById("number4").value = 0;
   document.getElementById("number5").value = 0;
   document.getElementById("number6").value = 0;
+  document.getElementById("total_artworks").value = 0;
 }
 var count_total = 0;
 // var photoAvailable = 0,
