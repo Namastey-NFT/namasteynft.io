@@ -345,10 +345,10 @@ form {
   cursor: pointer;
 }
 .changePremiumSpecial{
-        font: 20px;
+        font-size: 20px;
 }
 .changePremiumSpecial2{
-    font-size: 20px;
+    font-size: 15px;
 }
 @media(max-width: 600px){
     .category_tags_2{
@@ -369,8 +369,9 @@ form {
         font-size: 12px;
     }
     .changePremiumSpecial2{
-    font-size: 12px;
-}
+        padding: 0px 10px;
+        font-size: 12px;
+    }
 }
 
 form #decrease1 { margin-right: -4px; border-radius: 8px 0 0 8px; }
