@@ -317,7 +317,7 @@
     <script>
         $.getJSON( "data/PrologueListData/AllEntries.json", function( data ) {
           $.each( data.Sheet1, function( key, val ) {
-              $(".filter-result").append('<div class="result_box_main"><div class="artwork-image"><img src="'+val.GoogleDriveLink+'" alt=""></div><div class="artwork-title">'+val.Title+'</div><div class="artist-name">'+val.NameOfArtist+'</div></div>');
+              $(".filter-result").append('<div class="result_box_main"><div class="artwork-image"><img src="data/allCompressed/'+val.fileName+'" alt=""></div><div class="artwork-title">'+val.Title+'</div><div class="artist-name">'+val.NameOfArtist+'</div></div>');
           });
         });
         
@@ -329,7 +329,7 @@
                 $.getJSON( "data/PrologueListData/Photography.json", function( data ) {
                     $count = 0;
                   $.each( data.Sheet1, function( key, val ) {
-                      $(".filter-result").append('<div class="result_box_main"><div class="artwork-image"><img src="'+val.GoogleDriveLink+'" alt=""></div><div class="artwork-title">'+val.Title+'</div><div class="artist-name">'+val.NameOfArtist+'</div></div>');
+                      $(".filter-result").append('<div class="result_box_main"><div class="artwork-image"><img src="data/allCompressed/'+val.fileName+'" alt=""></div><div class="artwork-title">'+val.Title+'</div><div class="artist-name">'+val.NameOfArtist+'</div></div>');
                       $count++;
                   });
                   $("#count_Items").html($count + " Items");
@@ -341,7 +341,7 @@
                 $.getJSON( "data/PrologueListData/Digitalart.json", function( data ) {
                     $count = 0;
                   $.each( data.Sheet1, function( key, val ) {
-                      $(".filter-result").append('<div class="result_box_main"><div class="artwork-image"><img src="'+val.GoogleDriveLink+'" alt=""></div><div class="artwork-title">'+val.Title+'</div><div class="artist-name">'+val.NameOfArtist+'</div></div>');$count++;
+                      $(".filter-result").append('<div class="result_box_main"><div class="artwork-image"><img src="data/allCompressed/'+val.fileName+'" alt=""></div><div class="artwork-title">'+val.Title+'</div><div class="artist-name">'+val.NameOfArtist+'</div></div>');$count++;
                   });
                   $("#count_Items").html($count + " Items");
                   $(".item_tag_name").html("Digital Media");
@@ -352,7 +352,7 @@
                 $.getJSON( "data/PrologueListData/TraditionalArt.json", function( data ) {
                     $count = 0;
                   $.each( data.Sheet1, function( key, val ) {
-                      $(".filter-result").append('<div class="result_box_main"><div class="artwork-image"><img src="'+val.GoogleDriveLink+'" alt=""></div><div class="artwork-title">'+val.Title+'</div><div class="artist-name">'+val.NameOfArtist+'</div></div>');$count++;
+                      $(".filter-result").append('<div class="result_box_main"><div class="artwork-image"><img src="data/allCompressed/'+val.fileName+'" alt=""></div><div class="artwork-title">'+val.Title+'</div><div class="artist-name">'+val.NameOfArtist+'</div></div>');$count++;
                   });
                   $("#count_Items").html($count + " Items");
                   $(".item_tag_name").html("Traditional Art");
@@ -363,7 +363,7 @@
                 $.getJSON( "data/PrologueListData/Music.json", function( data ) {
                     $count = 0;
                   $.each( data.Sheet1, function( key, val ) {
-                      $(".filter-result").append('<div class="result_box_main"><div class="artwork-image"><img src="'+val.GoogleDriveLink+'" alt=""></div><div class="artwork-title">'+val.Title+'</div><div class="artist-name">'+val.NameOfArtist+'</div></div>');$count++;
+                      $(".filter-result").append('<div class="result_box_main"><div class="artwork-image"><img src="data/allCompressed/'+val.fileName+'" alt=""></div><div class="artwork-title">'+val.Title+'</div><div class="artist-name">'+val.NameOfArtist+'</div></div>');$count++;
                   });
                   $("#count_Items").html($count + " Items");
                   $(".item_tag_name").html("Music");
@@ -374,7 +374,7 @@
                 $.getJSON( "data/PrologueListData/Poetry.json", function( data ) {
                     $count = 0;
                   $.each( data.Sheet1, function( key, val ) {
-                      $(".filter-result").append('<div class="result_box_main"><div class="artwork-image"><img src="'+val.GoogleDriveLink+'" alt=""></div><div class="artwork-title">'+val.Title+'</div><div class="artist-name">'+val.NameOfArtist+'</div></div>');$count++;
+                      $(".filter-result").append('<div class="result_box_main"><div class="artwork-image"><img src="data/allCompressed/'+val.fileName+'" alt=""></div><div class="artwork-title">'+val.Title+'</div><div class="artist-name">'+val.NameOfArtist+'</div></div>');$count++;
                   });
                   $("#count_Items").html($count + " Items");
                   $(".item_tag_name").html("Poetry");
@@ -385,7 +385,7 @@
                 $.getJSON( "data/PrologueListData/Film.json", function( data ) {
                     $count = 0;
                   $.each( data.Sheet1, function( key, val ) {
-                      $(".filter-result").append('<div class="result_box_main"><div class="artwork-image"><img src="'+val.GoogleDriveLink+'" alt=""></div><div class="artwork-title">'+val.Title+'</div><div class="artist-name">'+val.NameOfArtist+'</div></div>');$count++;
+                      $(".filter-result").append('<div class="result_box_main"><div class="artwork-image"><img src="data/allCompressed/'+val.fileName+'" alt=""></div><div class="artwork-title">'+val.Title+'</div><div class="artist-name">'+val.NameOfArtist+'</div></div>');$count++;
                   });
                   $("#count_Items").html($count + " Items");
                   $(".item_tag_name").html("Film");
@@ -396,7 +396,7 @@
                  $.getJSON( "data/PrologueListData/AllEntries.json", function( data ) {
                     $count = 0;
                   $.each( data.Sheet1, function( key, val ) {
-                      $(".filter-result").append('<div class="result_box_main"><div class="artwork-image"><img src="'+val.GoogleDriveLink+'" alt=""></div><div class="artwork-title">'+val.Title+'</div><div class="artist-name">'+val.NameOfArtist+'</div></div>');$count++;
+                      $(".filter-result").append('<div class="result_box_main"><div class="artwork-image"><img src="data/allCompressed/'+val.fileName+'" alt=""></div><div class="artwork-title">'+val.Title+'</div><div class="artist-name">'+val.NameOfArtist+'</div></div>');$count++;
                   });
                   $("#count_Items").html($count + " Items");
                   $(".item_tag_name").html("All");
