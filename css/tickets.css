@@ -118,5 +118,36 @@
 #modelWin{
     display: flex;
     justify-content: center;
+}
+#chooseWalletWin{
+    transition: 1s;
+}
+.innerboxwallet{
+    width: 710px;
+    padding: 10px 40px;
+    background-color: #6D46FF;
+    border-radius: 20px;
+}
+.innerconnect{
+    display: grid;
+    grid-template-columns: 75% 25%;
     
+}
+.matam{
+    background-color: #000000;
+    width: 586px;
+    height: 113px;
+    justify-content: flex-start;
+    font-size: 30px;
+    color: white;
+}
+.metas{
+    background-color: #000000;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 586px;
+    height: 113px;
+    justify-content: flex-start;
+    font-size: 30px;
+    color: white;
 }
