@@ -138,6 +138,10 @@
         <div class="sk-cube sk-cube9"></div>
       </div>
     </div>
+    <div id="loader-class" style="display: none">
+      <div class="loader"></div>
+    </div>
+
     <!-- end loader -->
     <div class="conteiner_center">
       <!-- start header -->
@@ -252,11 +256,13 @@
                   >
                   <a
                     id="hide_2"
-                    href="https://opensea.io/collection/the-prologue-v3"
+                    target="_blank"
+                    href="https://opensea.io/collection/the-prologue"
                     class="btn btn-blue btn-small margin-10px-top"
                     >OPENSEA COLLECTION</a
                   >
                 </div>
+
                 <h5
                   class="alt-font text-capitalize alt-font text-white margin-10px-bottom margin-10px-top font-weight-400 sm-width-100 xs-width-100 prologue_title"
                 >
@@ -290,7 +296,7 @@
               <div
                 class="wallet_box padding-70px-top padding-30px-bottom padding-30px-right padding-30px-left"
               >
-                <h5
+                <!-- <h5
                   class="alt-font text-capitalize alt-font text-white margin-5px-bottom font-weight-300 sm-width-100 xs-width-100"
                 >
                   Minted
@@ -300,7 +306,7 @@
                   class="alt-font text-capitalize alt-font text-white margin-5px-bottom font-weight-300 sm-width-100 xs-width-100"
                 >
                   0/300
-                </h1>
+                </h1> -->
                 <a
                   id="wallet-connect"
                   href="#"
@@ -526,7 +532,7 @@
                 <div id="selectCustomise">
                   <div class="dark-theme">
                     <div class="dark-theme-top">
-                      <p
+                      <!-- <p
                         id="total-minted"
                         style="
                           font-family: 'Rubik';
@@ -537,7 +543,7 @@
                         "
                       >
                         0/300 Minted
-                      </p>
+                      </p> -->
                       <p
                         style="
                           font-family: 'Rubik';
@@ -751,6 +757,7 @@
                 >
                   <p style="width: 301px">
                     <a
+                      target="_blank"
                       style="color: #748ec7"
                       href="https://etherscan.io/address/0xd8AFd6B2320594495729c9856A6C52E07579Dd7C#code"
                       >Verified Contract</a
@@ -758,14 +765,16 @@
                   </p>
                   <p style="width: 301px">
                     <a
+                      target="_blank"
                       style="color: #748ec7"
-                      href="https://opensea.io/collection/the-prologue-v3"
+                      href="https://opensea.io/collection/the-prologue"
                       >Opensea Collection</a
                     >
                   </p>
                   <p style="width: 301px; color: #748ec7">
                     After minting, head to
                     <a
+                      target="_blank"
                       style="color: #748ec7"
                       href="https://opensea.io/login?referrer=%2Faccount"
                       >your wallet</a
@@ -940,7 +949,7 @@
       console.log(value);
       let web3 = new Web3(
         Web3.givenProvider ||
-          "https://speedy-nodes-nyc.moralis.io/4ed632e1419adca7fea61365/eth/mainnet"
+          "https://mainnet.infura.io/v3/4cbf928fc51d44e79e47e20ba55c98f2"
       );
       if (web3.currentProvider.isMetaMask !== true) {
         document.getElementById("wallet-connect").style.display = "none";
@@ -969,6 +978,31 @@
 
           try {
             await window.ethereum.request({
+              method: "wallet_addEthereumChain",
+              params: [
+                {
+                  chainId: "0x1",
+                  chainName: "Ethereum Mainnet (Custom)",
+                  rpcUrls: [
+                    "https://mainnet.infura.io/v3/4cbf928fc51d44e79e47e20ba55c98f2",
+                  ] /* ... */,
+                },
+              ],
+            });
+            document.getElementById("connect").style.display = "none";
+            document.getElementById("connected").style.display = "block";
+
+            document.getElementById("hide_1").style.display = "none";
+            document.getElementById("hide_2").style.display = "none";
+
+            var changeWid = document.getElementById("changeWWid");
+            changeWid.classList.add("col-md-5");
+          } catch (addError) {
+            alert("Please switch to ethereum network.");
+          }
+
+          /*try {
+            await window.ethereum.request({
               method: "wallet_switchEthereumChain",
               params: [{ chainId: "0x1" }],
             });
@@ -990,8 +1024,10 @@
                   params: [
                     {
                       chainId: "0x1",
-                      chainName: "Ethereum Mainnet",
-                      rpcUrls: ["https://mainnet.infura.io/v3/"] /* ... */,
+                      chainName: "Ethereum Mainnet (Custom)",
+                      rpcUrls: [
+                        "https://mainnet.infura.io/v3/4cbf928fc51d44e79e47e20ba55c98f2",
+                      ] ,
                     },
                   ],
                 });
@@ -1008,7 +1044,7 @@
               }
             }
             // handle other "switch" errors
-          }
+          }*/
         });
       }
 
