@@ -60,7 +60,44 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+    <style>
+	.popup .popuptext {
+	  visibility: hidden;
+	  background-color: #555;
+	  color: #fff;
+	  text-align: center;
+	  border-radius: 6px;
+	  padding: 8px 0;
+	  z-index: 1;
+	  bottom: 125%;
+	  left: 50%;
+	  margin-left: -80px;
+	}
+
+	.popup .show {
+	  visibility: visible;
+	  -webkit-animation: fadeIn 1s;
+	  animation: fadeIn 1s;
+	}
+
+	@-webkit-keyframes fadeIn {
+	  from {
+		opacity: 0;
+	  }
+	  to {
+		opacity: 1;
+	  }
+	}
+
+	@keyframes fadeIn {
+	  from {
+		opacity: 0;
+	  }
+	  to {
+		opacity: 1;
+	  }
+	}
+</style>
 
     <!-- SCRIPT FOR EXCEL FILE -->
 
@@ -317,9 +354,21 @@
     <script>
         $.getJSON( "data/PrologueListData/AllEntries.json", function( data ) {
           $.each( data.Sheet1, function( key, val ) {
-              $(".filter-result").append('<div class="result_box_main"><div class="artwork-image"><img src="'+val.GoogleDriveLink+'" alt=""></div><div class="artwork-title">'+val.Title+'</div><div class="artist-name">'+val.NameOfArtist+'</div></div>');
+              $(".filter-result").append('<div class="result_box_main"><div class="artwork-image"><img src="data/allCompressed/'+val.fileName+'" alt=""></div><div class="artwork-title">'+val.Title+'</div><div class="artist-name">'+val.NameofArtist+'</div></div>');
           });
         });
+		
+		function myFunction(element) {
+		  var popup = $(element).find('#myPopup');
+			console.log(popup);
+			console.log(popup[0]);
+		  if (popup[0].paused){ 
+			popup[0].play(); 
+			}
+		  else{ 
+			popup[0].pause();
+			}
+		}
         
         function showAllCategories(category) {
             
@@ -329,8 +378,13 @@
                 $.getJSON( "data/PrologueListData/Photography.json", function( data ) {
                     $count = 0;
                   $.each( data.Sheet1, function( key, val ) {
-                      $(".filter-result").append('<div class="result_box_main"><div class="artwork-image"><img src="'+val.GoogleDriveLink+'" alt=""></div><div class="artwork-title">'+val.Title+'</div><div class="artist-name">'+val.NameOfArtist+'</div></div>');
+                      var type = (/[.]/.exec(val.fileName)) ? /[^.]+$/.exec(val.fileName) : undefined;
                       $count++;
+					  if(type == "jpg") {
+						$(".filter-result").append('<div class="result_box_main"><div class="artwork-image"><img src="data/allCompressed/'+val.fileName+'" alt=""></div><div class="artwork-title">'+val.Title+'</div><div class="artist-name">'+val.NameofArtist+'</div></div>');
+					  } else if(type == "mp4") {
+						$(".filter-result").append('<div class="result_box_main"><div class="artwork-image" onclick="myFunction(this)" ><video  class="popuptext" id="myPopup" style="width:100%; max-height: 320px;"><source src="data/allCompressed/'+val.fileName+'"  type="video/mp4"></video></div><div class="artwork-title">'+val.Title+'</div><div class="artist-name">'+val.NameofArtist+'</div></div>');
+					  } 
                   });
                   $("#count_Items").html($count + " Items");
                   $(".item_tag_name").html("Photography");
@@ -341,7 +395,14 @@
                 $.getJSON( "data/PrologueListData/Digitalart.json", function( data ) {
                     $count = 0;
                   $.each( data.Sheet1, function( key, val ) {
-                      $(".filter-result").append('<div class="result_box_main"><div class="artwork-image"><img src="'+val.GoogleDriveLink+'" alt=""></div><div class="artwork-title">'+val.Title+'</div><div class="artist-name">'+val.NameOfArtist+'</div></div>');$count++;
+				  
+                      var type = (/[.]/.exec(val.fileName)) ? /[^.]+$/.exec(val.fileName) : undefined;
+                      $count++;
+					  if(type == "jpg") {
+						$(".filter-result").append('<div class="result_box_main"><div class="artwork-image"><img src="data/allCompressed/'+val.fileName+'" alt=""></div><div class="artwork-title">'+val.Title+'</div><div class="artist-name">'+val.NameofArtist+'</div></div>');
+					  } else if(type == "mp4") {
+						$(".filter-result").append('<div class="result_box_main"><div class="artwork-image" onclick="myFunction(this)" ><video  class="popuptext" id="myPopup" style="width:100%; max-height: 320px;"><source src="data/allCompressed/'+val.fileName+'"  type="video/mp4"></video></div><div class="artwork-title">'+val.Title+'</div><div class="artist-name">'+val.NameofArtist+'</div></div>');
+					  } 
                   });
                   $("#count_Items").html($count + " Items");
                   $(".item_tag_name").html("Digital Media");
@@ -352,7 +413,13 @@
                 $.getJSON( "data/PrologueListData/TraditionalArt.json", function( data ) {
                     $count = 0;
                   $.each( data.Sheet1, function( key, val ) {
-                      $(".filter-result").append('<div class="result_box_main"><div class="artwork-image"><img src="'+val.GoogleDriveLink+'" alt=""></div><div class="artwork-title">'+val.Title+'</div><div class="artist-name">'+val.NameOfArtist+'</div></div>');$count++;
+                      var type = (/[.]/.exec(val.fileName)) ? /[^.]+$/.exec(val.fileName) : undefined;
+                      $count++;
+					  if(type == "jpg") {
+						$(".filter-result").append('<div class="result_box_main"><div class="artwork-image"><img src="data/allCompressed/'+val.fileName+'" alt=""></div><div class="artwork-title">'+val.Title+'</div><div class="artist-name">'+val.NameofArtist+'</div></div>');
+					  } else if(type == "mp4") {
+						$(".filter-result").append('<div class="result_box_main"><div class="artwork-image" onclick="myFunction(this)" ><video  class="popuptext" id="myPopup" style="width:100%; max-height: 320px;"><source src="data/allCompressed/'+val.fileName+'"  type="video/mp4"></video></div><div class="artwork-title">'+val.Title+'</div><div class="artist-name">'+val.NameofArtist+'</div></div>');
+					  } 
                   });
                   $("#count_Items").html($count + " Items");
                   $(".item_tag_name").html("Traditional Art");
@@ -363,7 +430,13 @@
                 $.getJSON( "data/PrologueListData/Music.json", function( data ) {
                     $count = 0;
                   $.each( data.Sheet1, function( key, val ) {
-                      $(".filter-result").append('<div class="result_box_main"><div class="artwork-image"><img src="'+val.GoogleDriveLink+'" alt=""></div><div class="artwork-title">'+val.Title+'</div><div class="artist-name">'+val.NameOfArtist+'</div></div>');$count++;
+                      var type = (/[.]/.exec(val.fileName)) ? /[^.]+$/.exec(val.fileName) : undefined;
+                      $count++;
+					  if(type == "jpg") {
+						$(".filter-result").append('<div class="result_box_main"><div class="artwork-image"><img src="data/allCompressed/'+val.fileName+'" alt=""></div><div class="artwork-title">'+val.Title+'</div><div class="artist-name">'+val.NameofArtist+'</div></div>');
+					  } else if(type == "mp4") {
+						$(".filter-result").append('<div class="result_box_main"><div class="artwork-image" onclick="myFunction(this)" ><video  class="popuptext" id="myPopup" style="width:100%; max-height: 320px;"><source src="data/allCompressed/'+val.fileName+'"  type="video/mp4"></video></div><div class="artwork-title">'+val.Title+'</div><div class="artist-name">'+val.NameofArtist+'</div></div>');
+					  } 
                   });
                   $("#count_Items").html($count + " Items");
                   $(".item_tag_name").html("Music");
@@ -374,7 +447,13 @@
                 $.getJSON( "data/PrologueListData/Poetry.json", function( data ) {
                     $count = 0;
                   $.each( data.Sheet1, function( key, val ) {
-                      $(".filter-result").append('<div class="result_box_main"><div class="artwork-image"><img src="'+val.GoogleDriveLink+'" alt=""></div><div class="artwork-title">'+val.Title+'</div><div class="artist-name">'+val.NameOfArtist+'</div></div>');$count++;
+                      var type = (/[.]/.exec(val.fileName)) ? /[^.]+$/.exec(val.fileName) : undefined;
+                      $count++;
+					  if(type == "jpg") {
+						$(".filter-result").append('<div class="result_box_main"><div class="artwork-image"><img src="data/allCompressed/'+val.fileName+'" alt=""></div><div class="artwork-title">'+val.Title+'</div><div class="artist-name">'+val.NameofArtist+'</div></div>');
+					  } else if(type == "mp4") {
+						$(".filter-result").append('<div class="result_box_main"><div class="artwork-image" onclick="myFunction(this)" ><video  class="popuptext" id="myPopup" style="width:100%; max-height: 320px;"><source src="data/allCompressed/'+val.fileName+'"  type="video/mp4"></video></div><div class="artwork-title">'+val.Title+'</div><div class="artist-name">'+val.NameofArtist+'</div></div>');
+					  } 
                   });
                   $("#count_Items").html($count + " Items");
                   $(".item_tag_name").html("Poetry");
@@ -385,7 +464,13 @@
                 $.getJSON( "data/PrologueListData/Film.json", function( data ) {
                     $count = 0;
                   $.each( data.Sheet1, function( key, val ) {
-                      $(".filter-result").append('<div class="result_box_main"><div class="artwork-image"><img src="'+val.GoogleDriveLink+'" alt=""></div><div class="artwork-title">'+val.Title+'</div><div class="artist-name">'+val.NameOfArtist+'</div></div>');$count++;
+                      var type = (/[.]/.exec(val.fileName)) ? /[^.]+$/.exec(val.fileName) : undefined;
+                      $count++;
+					  if(type == "jpg") {
+						$(".filter-result").append('<div class="result_box_main"><div class="artwork-image"><img src="data/allCompressed/'+val.fileName+'" alt=""></div><div class="artwork-title">'+val.Title+'</div><div class="artist-name">'+val.NameofArtist+'</div></div>');
+					  } else if(type == "mp4") {
+						$(".filter-result").append('<div class="result_box_main"><div class="artwork-image" onclick="myFunction(this)" ><video  class="popuptext" id="myPopup" style="width:100%; max-height: 320px;"><source src="data/allCompressed/'+val.fileName+'"  type="video/mp4"></video></div><div class="artwork-title">'+val.Title+'</div><div class="artist-name">'+val.NameofArtist+'</div></div>');
+					  } 
                   });
                   $("#count_Items").html($count + " Items");
                   $(".item_tag_name").html("Film");
@@ -396,7 +481,13 @@
                  $.getJSON( "data/PrologueListData/AllEntries.json", function( data ) {
                     $count = 0;
                   $.each( data.Sheet1, function( key, val ) {
-                      $(".filter-result").append('<div class="result_box_main"><div class="artwork-image"><img src="'+val.GoogleDriveLink+'" alt=""></div><div class="artwork-title">'+val.Title+'</div><div class="artist-name">'+val.NameOfArtist+'</div></div>');$count++;
+                      var type = (/[.]/.exec(val.fileName)) ? /[^.]+$/.exec(val.fileName) : undefined;
+                      $count++;
+					  if(type == "jpg") {
+						$(".filter-result").append('<div class="result_box_main"><div class="artwork-image"><img src="data/allCompressed/'+val.fileName+'" alt=""></div><div class="artwork-title">'+val.Title+'</div><div class="artist-name">'+val.NameofArtist+'</div></div>');
+					  } else if(type == "mp4") {
+						$(".filter-result").append('<div class="result_box_main"><div class="artwork-image" onclick="myFunction(this)" ><video  class="popuptext" id="myPopup" style="width:100%; max-height: 320px;"><source src="data/allCompressed/'+val.fileName+'"  type="video/mp4"></video></div><div class="artwork-title">'+val.Title+'</div><div class="artist-name">'+val.NameofArtist+'</div></div>');
+					  } 
                   });
                   $("#count_Items").html($count + " Items");
                   $(".item_tag_name").html("All");

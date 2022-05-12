@@ -24,8 +24,9 @@ function reset() {
   document.getElementById("number6").value = 0;
   document.getElementById("total_artworks").innerHTML = 0;
   document.getElementById("find_res_ETH").innerHTML = 0;
+  document.getElementById("loader-class").style.display = "none";
 }
-var count_total = 0;
+
 // var photoAvailable = 0,
 //   TraditionalArtAvailable = 0,
 //   digitalArtAvailable = 0,
@@ -60,9 +61,7 @@ function increaseValue1() {
   if (val <= numberA - 1) {
     val++;
     document.getElementById("number1").value = val;
-    count_total++;
   } else {
-    count_total += 0;
   }
   console.log(val);
   changeResult();
@@ -73,7 +72,6 @@ function decreaseValue1() {
   value < 1 ? (value = 0) : "";
   if (value > 0) {
     value--;
-    count_total--;
     document.getElementById("number1").value = value;
   }
   console.log(value);
@@ -89,9 +87,7 @@ function increaseValue2() {
   if (value <= numberB - 1) {
     value++;
     document.getElementById("number2").value = value;
-    count_total++;
   } else {
-    count_total += 0;
   }
   console.log(value);
   changeResult();
@@ -102,7 +98,6 @@ function decreaseValue2() {
   value < 1 ? (value = 0) : "";
   if (value > 0) {
     value--;
-    count_total--;
     document.getElementById("number2").value = value;
   }
   console.log(value);
@@ -118,9 +113,7 @@ function increaseValue3() {
   if (value <= numberC - 1) {
     value++;
     document.getElementById("number3").value = value;
-    count_total++;
   } else {
-    count_total += 0;
   }
   console.log(value);
   changeResult();
@@ -131,7 +124,6 @@ function decreaseValue3() {
   value < 1 ? (value = 0) : "";
   if (value > 0) {
     value--;
-    count_total--;
     document.getElementById("number3").value = value;
   }
   console.log(value);
@@ -145,9 +137,7 @@ function increaseValue4() {
   if (value <= numberD - 1) {
     value++;
     document.getElementById("number4").value = value;
-    count_total++;
   } else {
-    count_total += 0;
   }
   console.log(value);
   changeResult();
@@ -158,7 +148,6 @@ function decreaseValue4() {
   value < 1 ? (value = 0) : "";
   if (value > 0) {
     value--;
-    count_total--;
     document.getElementById("number4").value = value;
   }
   console.log(value);
@@ -172,9 +161,7 @@ function increaseValue5() {
   if (value <= numberE - 1) {
     value++;
     document.getElementById("number5").value = value;
-    count_total++;
   } else {
-    count_total += 0;
   }
   console.log(value);
   changeResult();
@@ -185,7 +172,6 @@ function decreaseValue5() {
   value < 1 ? (value = 0) : "";
   if (value > 0) {
     value--;
-    count_total--;
     document.getElementById("number5").value = value;
   }
   console.log(value);
@@ -199,9 +185,7 @@ function increaseValue6() {
   if (value <= numberF - 1) {
     value++;
     document.getElementById("number6").value = value;
-    count_total++;
   } else {
-    count_total += 0;
   }
   console.log(value);
   changeResult();
@@ -212,7 +196,6 @@ function decreaseValue6() {
   value < 1 ? (value = 0) : "";
   if (value > 0) {
     value--;
-    count_total--;
     document.getElementById("number6").value = value;
   }
   console.log(value);
@@ -245,7 +228,19 @@ function clickSpecial() {
 }
 
 function changeResult() {
+  let count_total = 0;
+  console.log("count_total =", count_total);
+  count_total =
+    Number(document.getElementById("number1").value) +
+    Number(document.getElementById("number2").value) +
+    Number(document.getElementById("number3").value) +
+    Number(document.getElementById("number4").value) +
+    Number(document.getElementById("number5").value) +
+    Number(document.getElementById("number6").value);
+  console.log("count_total =", count_total);
+
   document.getElementById("total_artworks").innerHTML = count_total;
+
   if (count_total <= 4) {
     let ans = 0;
     ans = 0.25 * count_total;

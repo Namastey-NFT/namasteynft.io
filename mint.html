@@ -143,8 +143,12 @@
     </div>
 
     <!-- end loader -->
-    <div class="conteiner_center">
-      <!-- start header -->
+    
+    <!-- IF PAGE IS LOADING THEN FLEX -->
+    <!-- IF PAGE IS NOT LOADING THEN DISPLAY NONE -->
+    <div id="loader-class" style="display:none ;">
+      <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+    </div>
       <header>
         <!-- start navigation -->
         <nav
@@ -574,13 +578,7 @@
                             >
                               -
                             </div>
-                            <input
-                              min="0"
-                              max="8"
-                              type="number"
-                              id="number1"
-                              value="0"
-                            />
+                            <input type="number" id="number1" value="0" disabled />
                             <div
                               class="value-button"
                               id="increase1"
@@ -610,7 +608,7 @@
                             >
                               -
                             </div>
-                            <input type="number" id="number2" value="0" />
+                            <input type="number" id="number2" value="0"  disabled />
                             <div
                               class="value-button"
                               id="increase2"
@@ -640,7 +638,7 @@
                             >
                               -
                             </div>
-                            <input type="number" id="number3" value="0" />
+                            <input type="number" id="number3" value="0"  disabled />
                             <div
                               class="value-button"
                               id="increase3"
@@ -669,7 +667,7 @@
                             >
                               -
                             </div>
-                            <input type="number" id="number4" value="0" />
+                            <input type="number" id="number4" value="0"  disabled />
                             <div
                               class="value-button"
                               id="increase4"
@@ -698,7 +696,7 @@
                             >
                               -
                             </div>
-                            <input type="number" id="number5" value="0" />
+                            <input type="number" id="number5" value="0"  disabled />
                             <div
                               class="value-button"
                               id="increase5"
@@ -727,7 +725,7 @@
                             >
                               -
                             </div>
-                            <input type="number" id="number6" value="0" />
+                            <input type="number" id="number6" value="0"  disabled />
                             <div
                               class="value-button"
                               id="increase6"
@@ -1024,10 +1022,15 @@
                   params: [
                     {
                       chainId: "0x1",
+<<<<<<< HEAD
                       chainName: "Ethereum Mainnet (Custom)",
                       rpcUrls: [
                         "https://mainnet.infura.io/v3/4cbf928fc51d44e79e47e20ba55c98f2",
                       ] ,
+=======
+                      chainName: "Ethereum Mainnet",
+                      rpcUrls: ["https://mainnet.infura.io/v3/4cbf928fc51d44e79e47e20ba55c98f2"] /* ... */,
+>>>>>>> 5ca95fde430297ef23267e80a9f9149e155a2fa0
                     },
                   ],
                 });
@@ -1104,7 +1107,7 @@
                   }
                 }
               }
-
+              document.getElementById("loader-class").style.display ="flex";
               try {
                 var value;
                 if (qty === 8) {
@@ -1130,6 +1133,7 @@
                 setMinted();
                 reset();
                 console.log(err);
+                alert(err.message);
               }
             }
           }
@@ -1176,6 +1180,7 @@
         if (sum >= 5) {
           value -= value / 10;
         }
+        document.getElementById("loader-class").style.display ="flex";
         try {
           var result = await contract.methods
             .mintCustom(types, qtys)
@@ -1192,6 +1197,7 @@
           setMinted();
           reset();
           console.log(err);
+          alert(err.message);
         }
       }
 

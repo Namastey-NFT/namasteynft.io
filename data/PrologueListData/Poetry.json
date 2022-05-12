@@ -1,76 +1,82 @@
 {
     "Sheet1": [
         {
-            "#": "183",
-            "NameOfArtist": "Marilyn Candice D'Cruz",
+            "fileName": "270.jpg",
+            "sNo": "270",
+            "NameofArtist": "Marilyn Candice D'Cruz",
             "WalletAddress": "0x9FF63279a9B6BEb535f51A0a849d6Bf7E8D80325",
             "EmailAddress": "marilyndcruz9@gmail.com",
-            "Catagory": "Poetry",
-            "SubCatagory": "Poetry",
-            "TwitterHandle": "https://twitter.com/Tea_at_11",
+            "Category": "Poetry",
+            "SubCategory": "Poetry",
+            "Twitter Handle": "https://twitter.com/Tea_at_11",
             "Title": "Over and over again",
             "Description": "He doesn't know what he's apologising for. He thinks he's hurt me, but it's worse than he thinks. He ruined every relationship I will ever have with men. It's the same nightmare over and over again.",
-            "GoogleDriveLink": "https://drive.google.com/uc?export=view&id=1VKGTF7ruAOUe8z3zbKHd6olF-X3SJsDN"
+            "GoogleDriveLink": "https://drive.google.com/file/d/1VKGTF7ruAOUe8z3zbKHd6olF-X3SJsDN/view?usp=sharing"
         },
         {
-            "#": "184",
-            "NameOfArtist": "Faye Brooke D'Cruz",
+            "fileName": "271.jpg",
+            "sNo": "271",
+            "NameofArtist": "Faye Brooke D'Cruz",
             "WalletAddress": "0x3f01056868458E2Dd5A0D158f1334a5a523aE835",
             "EmailAddress": "fayebrookedcruz@gmail.com",
-            "Catagory": "Poetry",
-            "SubCatagory": "Poetry",
-            "TwitterHandle": "https://twitter.com/faye47dcruz",
+            "Category": "Poetry",
+            "SubCategory": "Poetry",
+            "Twitter Handle": "https://twitter.com/faye47dcruz",
             "Title": "You're my favourite book",
             "Description": "Books are simply portals. And I imagine, if lovers were books, we'd be indulging in interdimensional travel by the minute. Oh, the joy of losing oneself in the pages of a story, and especially when the story has a beating heart! 💜",
-            "GoogleDriveLink": "https://drive.google.com/uc?export=view&id=1kzOAgODpv7FrKO-eN0CgA0w9w2h00Rbb"
+            "GoogleDriveLink": "https://drive.google.com/file/d/1kzOAgODpv7FrKO-eN0CgA0w9w2h00Rbb/view?usp=sharing"
         },
         {
-            "#": "185",
-            "NameOfArtist": "Angana Choudhury",
+            "fileName": "272.jpg",
+            "sNo": "272",
+            "NameofArtist": "Angana Choudhury",
             "WalletAddress": "0x0ebab87946f86da75fbebaee6ad052d51b68500f",
             "EmailAddress": "angana061018@gmail.com",
-            "Catagory": "Poetry",
-            "SubCatagory": "Poetry",
-            "TwitterHandle": "https://twitter.com/Angana1403",
+            "Category": "Poetry",
+            "SubCategory": "Poetry",
+            "Twitter Handle": "https://twitter.com/Angana1403",
             "Title": "Words from a Country Girl",
             "Description": "The poem is about a country girl who moves to a new city and feels like an alien. She misses her country life. She finds it difficult to adjust and wishes to go back home.",
-            "GoogleDriveLink": "https://drive.google.com/uc?export=view&id=1hsK60v6U5KSi3b6XV3kgbFnJWHUMTEZa"
+            "GoogleDriveLink": "https://drive.google.com/file/d/1hsK60v6U5KSi3b6XV3kgbFnJWHUMTEZa/view?usp=sharing"
         },
         {
-            "#": "186",
-            "NameOfArtist": "Eliana Tanjung",
+            "fileName": "273.mp4",
+            "sNo": "273",
+            "NameofArtist": "Eliana Tanjung",
             "WalletAddress": "0x92c9BA64cD4bFc2862a9a7B261460FF5388fCAb0",
             "EmailAddress": "rentadsitorus@gmail.com",
-            "Catagory": "Poetry",
-            "SubCatagory": "Poetry",
-            "TwitterHandle": "https://twitter.com/eliana_tanjung",
+            "Category": "Poetry",
+            "SubCategory": "Poetry",
+            "Twitter Handle": "https://twitter.com/eliana_tanjung",
             "Title": "My Human Nature",
-            "Description": "This poetry talks about the intricacy of the human being's personality. As human beings, we are not an angel, nor are we a demon. We are much more in between the two opposing natures. And the beauty in between is only visible to a patient eye.\r\n\r\nThis poetry was inspired by the author's personal experience in one of her intimate relationships and also by Albert Camus' philosophy of acceptance that he explains using the analogy of Sysiphus, a Greek mythological character.",
-            "GoogleDriveLink": "https://drive.google.com/uc?export=view&id=1T2xhkj5Zc_VtY7S8JGJj4Z1d93EOrftO"
+            "Description": "This poetry talks about the intricacy of the human being's personality. As human beings, we are not an angel, nor are we a demon. We are much more in between the two opposing natures. And the beauty in between is only visible to a patient eye.\r\n \r\n This poetry was inspired by the author's personal experience in one of her intimate relationships and also by Albert Camus' philosophy of acceptance that he explains using the analogy of Sysiphus, a Greek mythological character.",
+            "GoogleDriveLink": "https://drive.google.com/file/d/1T2xhkj5Zc_VtY7S8JGJj4Z1d93EOrftO/view?usp=sharing"
         },
         {
-            "#": "187",
-            "NameOfArtist": "C. W. Kagé",
+            "fileName": "274.jpg",
+            "sNo": "274",
+            "NameofArtist": "C. W. Kagé",
             "WalletAddress": "0xb0032435D7F25af56F9bcfC8b0888AF7084F273E",
             "EmailAddress": "cwkage@gmail.com",
-            "Catagory": "Poetry",
-            "SubCatagory": "Poetry",
-            "TwitterHandle": "https://twitter.com/cwkage",
+            "Category": "Poetry",
+            "SubCategory": "Poetry",
+            "Twitter Handle": "https://twitter.com/cwkage",
             "Title": "Pit-Stop",
-            "Description": "Pit-Stop is a poem about half-heartedness. \r\nAbout always having one foot at the door in case we fail. \r\nNot knowing that the foot seals our failure.\r\n\r\nPit-Stop reminds us that failures in life are inevitable!\r\nWhy not fail whole-heartedly instead of half-heartedly?",
-            "GoogleDriveLink": "https://drive.google.com/uc?export=view&id=1MGO0QgylJh20TroiUD5IkfVOqAZ3Nopu"
+            "Description": "Pit-Stop is a poem about half-heartedness. \r\n About always having one foot at the door in case we fail. \r\n Not knowing that the foot seals our failure.\r\n \r\n Pit-Stop reminds us that failures in life are inevitable!\r\n Why not fail whole-heartedly instead of half-heartedly?",
+            "GoogleDriveLink": "https://drive.google.com/file/d/1MGO0QgylJh20TroiUD5IkfVOqAZ3Nopu/view?usp=sharing"
         },
         {
-            "#": "188",
-            "NameOfArtist": "Sumedh Kulkarni",
+            "fileName": "275.jpg",
+            "sNo": "275",
+            "NameofArtist": "Sumedh Kulkarni",
             "WalletAddress": "0x0Ee5C624c46631A17B26bAe5f62c707be376b281",
             "EmailAddress": "sumedhkulkarni14@gmail.com",
-            "Catagory": "Poetry",
-            "SubCatagory": "Poetry",
-            "TwitterHandle": "https://twitter.com/Sumedhk14",
+            "Category": "Poetry",
+            "SubCategory": "Poetry",
+            "Twitter Handle": "https://twitter.com/Sumedhk14",
             "Title": "✨Magic✨",
-            "Description": "There are two parts to this poem. Have you ever had those days where you feel lesser of yourself? Well, me too. So, I tried to write something totally opposite and counter that negativity. This piece I wrote in July 2020 in the lockdown. A time when a lot of us were dealing with our inner demons. All of us have your strengths, and we shouldn’t put ourselves down for something we haven’t been able to do “YET”. The other would be my love for fantasy as a genre. Every good book, movie and series brings great joy to me. But it also makes me feel disappointed that I live in this reality, it’s so bound together. So, I thought, I’d change the very definition of “Magic”. That would be my magic. So, I felt like I should \"Spread a little magic!\"",
-            "GoogleDriveLink": "https://drive.google.com/uc?export=view&id=1u-oqjxLb8gP4fWJyvN8KpCalao9UW0q3"
+            "Description": "There are two parts to this poem. Have you ever had those days where you feel lesser of yourself? Well, me too. So, I tried to write something totally opposite and counter that negativity. This piece I wrote in July 2020 in the lockdown. A time when a lot of us were dealing with our inner demons. All of us have your strengths, and we shouldn’t put ourselves down for something we haven’t been able to do “YET”. The other would be my love for fantasy as a genre. Every good book, movie and series brings great joy to me. But it also makes me feel disappointed that I live in this reality, it’s so bound together. So, I thought, I’d change the very definition of “Magic”. That would be my magic. So, I felt like I should \"Spread a little magic!",
+            "GoogleDriveLink": "https://drive.google.com/file/d/1u-oqjxLb8gP4fWJyvN8KpCalao9UW0q3/view?usp=sharing"
         }
     ]
 }

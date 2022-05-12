@@ -254,10 +254,12 @@
               >
                 Collect for IRL utilities at NamasteyNFT Bengaluru 2022 and
                 future perks
+                <p> <i>In partnership/collaboration with Metasky</i> </p>
               </h6>
             </div>
-            <div class="col-sm-4 fadeInLeft text-right">
-              <a href="#" class="btn btn-blue btn-large" id="wallet-connect"
+            <div  class="col-sm-4 fadeInLeft text-right" onclick="showOption()">
+              <a href="#" class="btn btn-blue btn-large" 
+                
                 >CONNECT</a
               >
             </div>
@@ -309,19 +311,58 @@
                   Event Schedule
               </a> 
           </div>
-          <!-- <div class="row">
-            <div class="col-sm-12 title">
-              <h5
-                class="text-white text-capitalize alt-font margin-5px-bottom font-weight-600 sm-width-100 xs-width-100"
-              >
-                Experience Zone Passes
-              </h5>
-              <p>
-                Copy that explains the benefits of this passes for the event and
-                future
-              </p>
+          <div id="chooseWalletWin" class="row" style="  display: none;
+  justify-content: center;
+  align-items: center;">
+            <div class="col-md-6 col-md-offset-3 col-sm-12 col-xs-11 title" style="margin: 0 auto; background: #36266F; padding:30px 50px; border-radius: 10px;">
+              <div class="" >
+                <h2 style="font-family: 'Montserrat'; font-style: normal; font-weight: 700; font-size: 36px; line-height: 49px; color:white">
+                  CHOOSE YOUR WALLET
+                </h2>
+                <div class="row">
+                  <div class="col-sm-12 metam" id="wallet-connect" style="background: rgba(0,0,0,0.5);  border-radius: 20px; text-align: left; padding: 20px; margin-bottom: 20px;" onMouseOver="this.style.background='rgba(255,67,32,0.75)'" onMouseOut="this.style.backgroundColor='rgba(0,0,0,0.5)'">
+                    <div class="row"  style="cursor: pointer;">
+                      <div class="col-sm-10 col-xs-12">
+                        <h2 style="font-family: 'Montserrat'; font-style: normal; font-weight: 600; font-size: 24px; color: white; line-height: 36px; margin-bottom: 0px;">
+                        CONNECT WITH METAMASK
+                      </h2>
+                      <a style="font-family: 'Montserrat'; text-align: left; font-style: normal; font-weight: 600; font-size: 18px; line-height: 22px;">Pay with MATIC</a>
+                      </div>
+                    <div  class="col-sm-2 col-sm-offset-0 col-xs-4 col-xs-offset-4" style="text-align: right;">
+                      <img src="img/passes/MetaMask_Fox.png" class="img-responsive" alt="">
+                    </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 metam" id="wallet-connect" style="background: rgba(0,0,0,0.5); border-radius: 20px; text-align: left; padding: 20px;"  onMouseOver="this.style.background='rgba(255,67,32,0.75)'" onMouseOut="this.style.backgroundColor='rgba(0,0,0,0.5)'">
+                    <div class="row" style="cursor: pointer;" onclick="window.open('https://wallet.metasky.me/login?client_id=namastey-nft','mywindow');">
+                      <div class="col-sm-10 col-xs-12">
+                        <h2 style="font-family: 'Montserrat'; font-style: normal; font-weight: 600; font-size: 24px; color: white; line-height: 36px; margin-bottom: 0px;">
+                          CONNECT WITH METASKY
+                        </h2>
+                      </a>
+                      <a style="font-family: 'Montserrat'; font-style: normal; font-weight: 600; font-size: 18px; line-height: 22px;">Pay with INR ₹ through Skywallet</a>
+                      </div>
+                    <div  class="col-sm-2 col-xs-4 col-sm-offset-0 col-xs-offset-4" style="text-align: right;">
+                      <img src="img/passes/metas.png" style="height: 70px;" alt="">
+                    </div>
+                      
+                    </div>
+                  </div>
+				  
+                </div>
+				<div class="row">
+                  <div class="col-sm-12"style="padding-top: 20px;">
+					<p style="font-family: 'Montserrat'; font-style: normal; font-weight: 600; font-size: 18px; color: white;">
+                          In partnership/colllaboration with Metasky
+                    </p>
+					<p style="font-family: 'Montserrat'; font-style: normal;font-weight: 600; font-size: 16px; color: white;">
+                          Now pay with INR through Skywallet, the world’s simplest NFT Cryptowallet
+                        </p>
+				  </div>
+				 </div>
+              </div>
             </div>
-          </div> -->
+          </div>
           <div class="row">
             <div class="col-md-12">
               <div class="list-main">
@@ -367,6 +408,10 @@
                         <button id="mint-moon">mint</button>
                       </div>
                     </div>
+                    <div class="action" style=" background-color: #FF4320; border-radius: 10px; font-weight: 600; font-size: 20px; height:60px; display: flex; justify-content: center; align-items: center;">
+                      <a target="_blank" href="https://wallet.metasky.me/purchase-nft/nams7bc6-pild-4b16-a580-2e29cb8e73e7?client_id=namastey-nft" style="text-decoration: none;"> COLLECT IN INR <img src="img/passes/metas.png" style="max-width:30px;  margin-left: 15px" /></a>
+					  
+                    </div>
                   </li>
                   <li class="sun_pass">
                     <div class="thumb">
@@ -409,6 +454,8 @@
                         <button id="mint-sun">mint</button>
                       </div>
                     </div>
+                    <div class="action" style=" background-color: #FF4320; border-radius: 10px; font-weight: 600; font-size: 20px; height:60px; display: flex; justify-content: center; align-items: center;">
+                      <a target="_blank" href="https://wallet.metasky.me/purchase-nft/nams8bc6-pild-4b16-a580-2e29cb8e73e7?client_id=namastey-nft" style="text-decoration: none;"> COLLECT IN INR <img src="img/passes/metas.png" style="max-width:30px; margin-left: 15px" /></a>
                   </li>
                   <li class="stars_pass">
                     <div class="thumb">
@@ -452,11 +499,17 @@
                         <button id="mint-stars">mint</button>
                       </div>
                     </div>
+                    <div class="action" style=" background-color: #FF4320; border-radius: 10px; font-weight: 600; font-size: 20px; height:60px; display: flex; justify-content: center; align-items: center;">
+                      <a target="_blank" href="https://wallet.metasky.me/purchase-nft/nams9bc6-pild-4b16-a580-2e29cb8e73e7?client_id=namastey-nft" style="text-decoration: none;"> COLLECT IN INR <img src="img/passes/metas.png" style="max-width:30px;  margin-left: 15px" /></a>
                   </li>
                 </ul>
               </div>
             </div>
+            
           </div>
+          <p style="display: flex;
+  justify-content: center;
+  align-items: center; margin-top: 50px;">Note: Please edit your gas option from suggested to Agressive/high when buying with MATIC through Metamask wallet. Else the transaction might fail.</p>
         </div>
       </section>
       <!-- Zone Passes End -->
@@ -608,6 +661,9 @@
     <script src="js/abi.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script>
+      function showOption(){
+        document.getElementById('chooseWalletWin').style.display = 'flex';
+      }
       let web3 = new Web3(Web3.givenProvider || "https://polygon-rpc.com/");
       let address = "0x48dbbC2a9da1efB2671bbF7910b3Ca02f1e3f581";
 
@@ -624,6 +680,7 @@
               res[0].length
             )}`;
             document.getElementById("wallet-connect").innerText = add1;
+            //document.getElementById('matasky').style.display='none';
 
             let userObj = {
               address: res[0],
@@ -658,6 +715,7 @@
             }
           });
         } catch (err) {
+          console.log(err.message)
           alert("Please make sure you have metamask installed.");
         }
       }
