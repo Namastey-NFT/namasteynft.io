@@ -974,7 +974,7 @@
           window.user = userObj;
           window.show = true;
 
-          try {
+          /*try {
             await window.ethereum.request({
               method: "wallet_addEthereumChain",
               params: [
@@ -983,7 +983,7 @@
                   chainName: "Ethereum Mainnet (Custom)",
                   rpcUrls: [
                     "https://mainnet.infura.io/v3/4cbf928fc51d44e79e47e20ba55c98f2",
-                  ] /* ... */,
+                  ] 
                 },
               ],
             });
@@ -997,9 +997,9 @@
             changeWid.classList.add("col-md-5");
           } catch (addError) {
             alert("Please switch to ethereum network.");
-          }
+          }*/
 
-          /*try {
+          try {
             await window.ethereum.request({
               method: "wallet_switchEthereumChain",
               params: [{ chainId: "0x1" }],
@@ -1040,7 +1040,7 @@
               }
             }
             // handle other "switch" errors
-          }*/
+          }
         });
       }
 
