@@ -219,7 +219,12 @@
     align-items: center;
 }
 .artwork-image img{
-    max-width: 318px;
+    max-width: 317px;
+    max-height: 320px;
+    /* border-radius: 12px 12px; */
+}
+.artwork-image video{
+    max-width: 317px;
     max-height: 320px;
     /* border-radius: 12px 12px; */
 }
@@ -257,7 +262,11 @@
     }
     .artwork-image img{
         max-height: 160px;
-        max-width: 138px;
+        max-width: 136px;
+    }
+    .artwork-image video{
+        max-height: 160px;
+        max-width: 136px;
     }
     .artwork-title{
         font-size: 10px;
